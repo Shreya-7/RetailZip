@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+body {
+  font-family: "Varela Round", sans-serif !important; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Varela Round", sans-serif !important; }
+
+.container {
+  width: 100% !important; }
+
+#mainNav {
+  background-color: white !important;
+  font-family: "Varela Round", sans-serif !important; }
+  #mainNav .nav-link {
+    color: black !important; }
+
+.header-logo {
+  width: 200px;
+  height: 80px; }
+
+.symbol {
+  width: 30px;
+  height: 30px;
+  display: inline; }
+
+.with-logo {
+  display: inline;
+  vertical-align: middle; }
+
+.btn {
+  margin-top: 20px;
+  font-family: "Varela Round", sans-serif !important; }
+
+.card-deck,
+.card-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center !important; }
+
+.main-banner {
+  margin-top: 35px;
+  height: 50vh;
+  max-height: 50vh; }
+
+.main-strip {
+  color: white;
+  background-color: #ee4631;
+  text-align: center;
+  height: 80px;
+  display: flexbox;
+  flex-wrap: no-wrap;
+  flex-direction: row;
+  border-bottom: 5px solid white; }
+  .main-strip a {
+    color: black; }
+  .main-strip .symbol-container {
+    position: absolute;
+    left: 0;
+    overflow: hidden; }
+    .main-strip .symbol-container .symbol {
+      width: 80px;
+      height: 80px; }
+  .main-strip .header-logo-container {
+    position: absolute;
+    right: 0;
+    overflow: hidden; }
+  .main-strip .main-strip-text {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    position: absolute;
+    padding: 25px 250px 10px 180px;
+    text-align: center; }
+
+#services .card,
+#segments .card,
+#partners .card,
+#contact .card,
+#about .card, .service-container-bg .card {
+  align-items: center;
+  padding: 10px; }
+
+.plain-link {
+  text-decoration: none;
+  color: black; }
+  .plain-link :hover {
+    color: black !important; }
+
+.main-section {
+  padding: 0px !important; }
+  .main-section .section-heading,
+  .main-section .col-lg-12 {
+    padding-bottom: 20px !important; }
+
+#services,
+#segments,
+#partners,
+#contact,
+#about {
+  background-color: #0f60b2;
+  color: white !important;
+  justify-content: center;
+  padding: 70px !important; }
+  #services .card,
+  #segments .card,
+  #partners .card,
+  #contact .card,
+  #about .card {
+    margin-bottom: 20px;
+    color: black;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    border-left: 5px solid #ee4631;
+    border-right: 5px solid #ee4631;
+    padding-bottom: 5px; }
+  #services .main-container,
+  #segments .main-container,
+  #partners .main-container,
+  #contact .main-container,
+  #about .main-container {
+    padding-top: 0px !important; }
+  #services .card-body,
+  #segments .card-body,
+  #partners .card-body,
+  #contact .card-body,
+  #about .card-body {
+    padding: 10px !important; }
+  #services .card-img-top,
+  #segments .card-img-top,
+  #partners .card-img-top,
+  #contact .card-img-top,
+  #about .card-img-top {
+    margin-bottom: 10px !important;
+    height: 50% !important; }
+  #services p,
+  #segments p,
+  #partners p,
+  #contact p,
+  #about p {
+    font-weight: 900 !important;
+    margin-bottom: 2px; }
+  #services .card-title,
+  #segments .card-title,
+  #partners .card-title,
+  #contact .card-title,
+  #about .card-title {
+    color: #ee4631 !important;
+    font-weight: bolder; }
+  #services > .container,
+  #segments > .container,
+  #partners > .container,
+  #contact > .container,
+  #about > .container {
+    flex: 1;
+    padding-top: 50px; }
+  #services h2,
+  #segments h2,
+  #partners h2,
+  #contact h2,
+  #about h2 {
+    font-weight: bolder; }
+
+#contact h2 {
+  text-align: center;
+  margin-top: 10px !important; }
+#contact .card {
+  margin-top: 20px !important;
+  padding-top: 20px !important;
+  border: 5px solid #ee4631 !important; }
+  #contact .card .card-text {
+    font-weight: normal !important;
+    text-align: center; }
+#contact a {
+  color: #0f60b2; }
+#contact form {
+  text-align: center !important; }
+#contact .form-group {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important; }
+#contact .btn {
+  margin-top: 8px !important; }
+
+#about {
+  background-color: #0f60b2; }
+  #about .card-header {
+    text-align: left; }
+  #about .card-body ul li {
+    margin-bottom: 5px; }
+  #about .card-title {
+    color: #0f60b2 !important;
+    margin-bottom: 25px; }
+  #about .card-subtitle {
+    margin-bottom: 15px;
+    color: black;
+    font-weight: bold; }
+  #about .card {
+    border: none; }
+  #about .point {
+    color: #0f60b2; }
+  #about .image-inlay {
+    overflow: hidden;
+    margin-top: 1rem; }
+    #about .image-inlay img {
+      width: 300px;
+      height: 300px;
+      border-radius: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
+
+.service-container-bg .row {
+  justify-content: center;
+  align-items: center; }
+.service-container-bg h1 {
+  color: #0f60b2; }
+.service-container-bg p {
+  font-weight: bold; }
+.service-container-bg .service-container-img {
+  text-align: center;
+  height: 380px; }
+
+.service-detail {
+  padding-top: 20px;
+  color: black; }
+  .service-detail div {
+    padding: 5px;
+    border-bottom: 1px #b7b7b7 solid; }
+
+.service-content {
+  text-align: center;
+  font-weight: bold; }
+  .service-content h1 {
+    font-weight: bolder; }
+
+.content-img {
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.footer {
+  min-height: 100px;
+  border-top: 5px blue solid;
+  padding: 25px;
+  background-color: black;
+  color: #aebcbd !important; }
+  .footer h4 {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white; }
+  .footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+  .footer #site-map {
+    font-weight: bold; }
+  .footer #middle {
+    font-weight: lighter; }
+    .footer #middle i {
+      font-size: x-large;
+      color: #ee4631; }
+    .footer #middle #icons {
+      font-weight: bold; }
+      .footer #middle #icons i {
+        color: #0f60b2; }
+      .footer #middle #icons table {
+        vertical-align: middle; }
+        .footer #middle #icons table td {
+          padding: 3px; }
+  .footer #contact-generic {
+    padding-right: 10px;
+    position: absolute;
+    right: 0; }
+    .footer #contact-generic .form-group {
+      margin-bottom: 5px !important; }
+    .footer #contact-generic ::placeholder {
+      color: #0f60b2 !important; }
+    .footer #contact-generic .row {
+      margin-bottom: 5px !important; }
+    .footer #contact-generic .btn {
+      margin: 5px !important; }
+
+#credits {
+  width: 100%;
+  text-align: center;
+  font-size: small;
+  color: #5e5e5e;
+  padding: 10px;
+  line-height: 2.5; }
+  #credits span {
+    color: #0f60b2;
+    font-weight: bold; }
+
+@media (min-width: 0) {
+  .card-deck .card {
+    flex: 0 0 calc(100% - 30px); } }
+@media (min-width: 576px) {
+  .card-deck .card {
+    flex: 0 0 calc(100% - 30px); } }
+@media (min-width: 768px) {
+  .card-deck .card {
+    flex: 0 0 calc(50% - 30px); } }
+@media (min-width: 992px) {
+  .card-deck .card {
+    flex: 0 0 calc(25% - 30px); } }
+@media (min-width: 1200px) {
+  .card-deck .card {
+    flex: 0 0 calc(25% - 30px); } }
+@media (min-width: 0) {
+  #partners .card-deck .card {
+    flex: 0 0 calc(100% - 30px); } }
+@media (min-width: 576px) {
+  #partners .card-deck .card {
+    flex: 0 0 calc(100% - 30px); } }
+@media (min-width: 768px) {
+  #partners .card-deck .card {
+    flex: 0 0 calc(50% - 30px); } }
+@media (min-width: 992px) {
+  #partners .card-deck .card {
+    flex: 0 0 calc(33.33333% - 30px); } }
+@media (min-width: 1200px) {
+  #partners .card-deck .card {
+    flex: 0 0 calc(20% - 30px); } }
+@media (min-width: 0) {
+  .new-page .card-deck .card {
+    flex: 0 0 calc(100% - 30px); } }
+@media (min-width: 576px) {
+  .new-page .card-deck .card {
+    flex: 0 0 calc(100% - 30px); } }
+@media (min-width: 768px) {
+  .new-page .card-deck .card {
+    flex: 0 0 calc(50% - 30px); } }
+@media (min-width: 992px) {
+  .new-page .card-deck .card {
+    flex: 0 0 calc(33.33333% - 30px); } }
+@media (min-width: 1200px) {
+  .new-page .card-deck .card {
+    flex: 0 0 calc(33.33333% - 30px); } }
+
+/*# sourceMappingURL=styles.css.map */

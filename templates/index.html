@@ -1,0 +1,133 @@
+{% extends 'layout.html' %}
+{% block title %} Home - RetailZip {% endblock %}
+{% block body %}
+    <header class="main-section masthead main-banner text-center text-white d-flex" style="background-color: black;">
+        <!-- <div class="container my-auto">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1 class="text-uppercase"><strong>DEVELOP. EXPAND. GROW.</strong></h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <p class="text-faded mb-5">Solutions Unzipped for Retailers to Mall Developers<br><br>25 Years of Experience at your service</p><a class="btn btn-primary btn-xl js-scroll-trigger" role="button" href="#services">Find Out More</a>
+            </div>
+        </div> -->
+        <img class="img-fluid" src="static/img/zip_photos/banner.jpg">
+    </header>
+    <section id="segments" class="main-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mx-auto text-center">
+                    <img src="static/img/symbol.jpg" class="symbol">
+                    <h2 class="text-white section-heading with-logo">BUSINESS VERTICALS</h2>
+                </div>
+            </div>
+            <div class="container main-container">
+                <div class="card-deck text-center">
+                    {% for key, value in business.items() %}
+                    <div class="card">
+                        <img class="card-img-top small" src="static/img/zip_photos/segments/{{ value.image }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ value.segment_name }}</h5>
+                            <p class="card-text text-muted">{{ value.retail_type }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="text-center button-div">
+                    <a href="{{ url_for('segments') }}">
+                        <button class="btn btn-primary btn-lg" type="button">READ MORE</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="main-strip container">
+        <div class="symbol-container">
+            <img src="static/img/symbol.jpg" class="symbol">
+        </div>
+        <div class="main-strip-text">
+            To get your Solutions Unzipped, please fill up <a href="#">this Google form</a> and we will get back to you!
+        </div>
+        <div class="header-logo-container">
+            <img src="static/img/logo.jpg" class="header-logo">
+        </div>
+    </div>
+    <section id="services" class="main-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <img src="static/img/symbol.jpg" class="symbol">
+                    <h2 class="section-heading with-logo" >RETAIL SERVICES OFFERED</h2>
+                </div>
+            </div>
+            <div class="container main-container">
+                <div class="row card-deck text-center" style="margin: 9px;">
+                    {% for key, value in services.items() %}
+            
+                    <div class="card text-center col-md-4">
+            
+                        <img class="card-img-top" src="static/img/zip_photos/services/{{ value.image }}">
+                        <a href="{{ url_for('service',id=key) }}" class="plain-link">
+                            <h5 class="card-title">{{ value.service_name }}</h5>
+                        </a>
+                        <p class="card-text text-muted">{{ value.mini_description }}</p>
+            
+                    </div>
+            
+                    {% endfor %}
+            
+                </div>
+                <div class="text-center button-div">
+                    <a href="{{ url_for('services') }}">
+                        <button class="btn btn-primary btn-lg" type="button">READ MORE</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <div class="main-strip container">
+        <div class="symbol-container">
+            <img src="static/img/symbol.jpg" class="symbol">
+        </div>
+        <div class="main-strip-text">
+            To get your Solutions Unzipped, please fill up <a href="#">this Google form</a> and we will get back to you!
+        </div>
+        <div class="header-logo-container">
+            <img src="static/img/logo.jpg" class="header-logo">
+        </div>
+    </div>
+    <section id="partners" class="main-section" style="padding: 90px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <img src="static/img/symbol.jpg" class="symbol">
+                    <h2 class="section-heading with-logo">PARTNER ASSOCIATES</h2>
+                </div>
+            </div>
+            <div class="container main-container">
+                <div class="row card-deck text-center" style="margin: 9px;">
+                    {% for key, value in associate.items() %}
+            
+                    <div class="card text-center col-md-4">
+                        <img class="card-img-top" src="static/img/zip_photos/services/{{ value.image }}">
+                        <a href="{{ url_for('service', id=key) }}">
+                            <h5 class="card-title">{{ value.service_name }}</h5>
+                        </a>
+                        <p class="text-muted">{{ value.mini_description }}</p>
+                    </div>            
+                    {% endfor %}
+            
+                </div>
+                <div class="text-center button-div">
+                    <a href="{{ url_for('partners') }}">
+                        <button class="btn btn-primary btn-lg" type="button">READ MORE</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

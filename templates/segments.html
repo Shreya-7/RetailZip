@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %} Business Verticals - RetailZip {% endblock %}
+
+{% block body %}
+    <section id="segments" class="main-section new-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <img src="static/img/symbol.jpg" class="symbol">
+                    <h2 class="section-heading with-logo">BUSINESS VERTICALS</h2>
+                    <hr class="light my-4">
+                    <p class="text-faded mb-4">These are the retail businesses for which solutions can be unzipped for you.<br></p>
+                </div>
+            </div>
+            <div class="card-deck text-center">
+                {% for key, segment in segments.items() %}
+                    <div class="card">
+                        <img class="card-img-top small" src="static/img/zip_photos/segments/{{ segment.image }}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ segment.segment_name }}</h5>
+                            <p class="card-text text-muted">{{ segment.retail_type }}</p>
+                            <small><b>{{ segment.product_categories }}</b></small>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %} {{ service.service_name }} - RetailZip {% endblock %}
+
+{% block body %}
+
+<section id="services" class="main-section service-container-bg" style="background-color: {{ service.bg_color }} !important">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-m-12 service-container-img">
+                <img class="content-img" src="static/img/zip_photos/services/{{ service.image }}">
+            </div>
+            <div class="col-lg-6 col-m-12 service-content">
+                <div class="card">
+                    <h1 class="section-heading" style="padding: 5px;">{{ service.service_name }}</h1>
+                    <p class="text-muted card-subtitle">{{ service.mini_description }}</p>
+                    <div class="container main-container">
+                        <div class="row service-detail text-left" style="margin: 9px;">
+                    
+                            {% for item in service.sub_services %}
+                            <div class="col-md-6 col-sm-12">{{ item }}</div>
+                            {% endfor %}
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<section id="services" class="main-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <img src="static/img/symbol.jpg" class="symbol">
+                <h2 class="section-heading with-logo" style="padding: 5px;">RETAIL SERVICES</h2>
+                <hr class="light my-4">
+                <p class="text-faded mb-4">These are the solutions we can unzip for you. Click on each to know more!<br></p>
+            </div>
+        </div>
+    </div>
+    <div class="container main-container">
+        <div class="row card-deck text-center" style="margin: 9px;">
+            {% for key, value in services.items() %}
+
+                <div class="card text-center col-md-4">
+
+                    <img class="card-img-top" src="static/img/zip_photos/services/{{ value.image }}">
+
+                    {% if key == 'S18' %}
+                        <a href="{{ url_for('partners') }}" class="plain-link">
+                            <h5 class="card-title">{{ value.service_name }}</h5>
+                        </a>
+                    {% else %}
+                        <a href="{{ url_for('service',id=key) }}" class="plain-link">
+                            <h5 class="card-title">{{ value.service_name }}</h5>
+                        </a>
+                    {% endif %}
+                    <p class="card-text text-muted">{{ value.mini_description }}</p>
+                    
+                </div>
+            
+            {% endfor %}          
+            
+        </div>
+    </div>
+</section>
+
+{% endblock %}

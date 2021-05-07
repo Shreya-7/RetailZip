@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title> {% block title %}{% endblock %} </title>
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic">
+    
+    <link href="static/icons/font-awesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="{{ url_for('index') }}">
+                <img src="static/img/logo.jpg" class="header-logo">
+            </a>
+            
+            <button
+                data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
+                type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
+                    class="fa fa-align-justify"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><img src="static/img/symbol.jpg" class="symbol"><a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('index') }}">HOME</a></li>
+                    <li class="nav-item"><img src="static/img/symbol.jpg" class="symbol"><a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('segments') }}">VERTICALS</a></li>
+                    <li class="nav-item"><img src="static/img/symbol.jpg" class="symbol"><a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('services') }}">SERVICES</a></li>
+                    <li class="nav-item"><img src="static/img/symbol.jpg" class="symbol"><a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('partners') }}">ASSOCIATES</a></li>
+                    <li class="nav-item"><img src="static/img/symbol.jpg" class="symbol"><a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('about') }}">ABOUT US</a></li>
+                    <li class="nav-item"><img src="static/img/symbol.jpg" class="symbol"><a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('contact') }}">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block body %}
+    {% endblock %}
+    <div class="main-strip container">
+        <div class="symbol-container">
+            <img src="static/img/symbol.jpg" class="symbol">
+        </div>
+        <div class="main-strip-text">
+            To get your Solutions Unzipped, please fill up <a href="#">this Google form</a> and we will get back to you!
+        </div>
+        <div class="header-logo-container">
+            <img src="static/img/logo.jpg" class="header-logo">
+        </div>
+    </div>
+    <footer class="footer row">
+        <div id="site-map" class="col-lg-2 col-s-12">
+            <h4> Site Map </h4>
+            <ul class="text-muted">
+                <a href="{{ url_for('index') }}"><li>Home</li></a>
+                <a href="{{ url_for('segments') }}">
+                    <li>Business Verticals</li>
+                </a>
+                <a href="{{ url_for('services') }}">
+                    <li>Retail Services</li>
+                </a>
+                <a href="{{ url_for('partners') }}">
+                    <li>Associate Services</li>
+                </a>
+                <a href="{{ url_for('about') }}">
+                    <li>About Us</li>
+                </a>
+                <a href="{{ url_for('contact') }}">
+                    <li>Contact Us</li>
+                </a>
+            </ul>
+
+        </div>
+        <div id="middle" class="col-lg-4 col-s-12">
+            <h4>Web Connects</h4>
+            <span class="oi oi-account-login" title="icon name" aria-hidden="true"></span>
+            <div id="icons">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                </ul>
+                <table>
+                    <tr>
+                        <td><i class="fas fa-envelope"></i></td>
+                        <td><span><a href="mailto:manish@retailzip.in">manish@retailzip.in</a></span></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-mouse"></i></td>
+                        <td><span><a href="#">www.retailzip.in</a></span></td>
+                    </tr>
+                </table>
+                <!-- <div>
+                    <i class="fas fa-envelope"></i> 
+                    <span>manish@retailzip.in</span>
+                    
+                </div>
+                <div>
+                    <i class="fas fa-mouse"></i> 
+                    <span>www.retailzip.in</span>
+                    
+                </div> -->
+            </div>
+        </div>
+        <div id="contact-generic" class="col-lg-6 col-s-12">
+            <h4>Can I Help You?</h4>
+
+            <form>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="E-mail address">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input type="text" name="name" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="col">
+                        <input type="number" name="phone" class="form-control" placeholder="Mobile Number">
+                    </div>
+                </div>                
+                <div class="form-group">
+                    <textarea type="text" name="message" class="form-control" placeholder="Your message"></textarea>
+
+                </div>
+            </form>
+        </div>
+    </footer>
+    <div id="credits">
+        <b>Design & Development:</b> Shreya Agarwal <span>|</span> <b>Brand Creatives:</b> Rajarshi Bhattacharyya, Sacred Communications <span>|</span> <b>Support:</b> Satrajit Bhattacharya
+    </div>
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="static/js/creative.js"></script>
+</body>
+
+</html>
