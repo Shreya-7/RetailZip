@@ -2,6 +2,7 @@ $logo-red: #ee4631;
 $logo-blue: #0f60b2;
 $logo-blue-light: #5287bd;
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
   font-family: "Varela Round", sans-serif !important;
@@ -25,6 +26,10 @@ h6 {
   font-family: "Varela Round", sans-serif !important;
   .nav-link {
     color: black !important;
+  }
+  .active {
+    background-color: #c5c8cc;
+    border-radius: 10px;
   }
 }
 
@@ -66,39 +71,11 @@ h6 {
   color: white;
   background-color: $logo-red;
   text-align: center;
-  height: 80px;
-  display: flexbox;
-  flex-wrap: no-wrap;
-  flex-direction: row;
   border-bottom: 5px solid white;
+  padding: 10px;
 
   a {
     color: black;
-  }
-
-  .symbol-container {
-    position: absolute;
-    left: 0;
-    overflow: hidden;
-    .symbol {
-      width: 80px;
-      height: 80px;
-    }
-  }
-
-  .header-logo-container {
-    position: absolute;
-    right: 0;
-    overflow: hidden;
-  }
-
-  .main-strip-text {
-    font-weight: bold;
-    text-align: center;
-    padding-top: 10px;
-    position: absolute;
-    padding: 25px 250px 10px 180px;
-    text-align: center;
   }
 }
 
@@ -127,7 +104,8 @@ h6 {
 #segments,
 #partners,
 #contact,
-#about {
+#story,
+#error {
   background-color: $logo-blue;
   color: white !important;
   justify-content: center;
@@ -183,6 +161,10 @@ h6 {
       font-weight: normal !important;
       text-align: center;
     }
+    .card-subtitle {
+      color: black !important;
+      font-weight: bold;
+    }
   }
   a {
     color: $logo-blue;
@@ -199,41 +181,51 @@ h6 {
   }
 }
 
-#about {
-  background-color: $logo-blue;
-  .card-header {
-    text-align: left;
-  }
-  .card-body ul {
-    li {
-      margin-bottom: 5px;
-    }
-  }
-  .card-title {
-    color: $logo-blue !important;
-    margin-bottom: 25px;
-  }
-  .card-subtitle {
-    margin-bottom: 15px;
-    color: black;
+#story {
+  background-color: white;
+  font-family: "Roboto", sans-serif !important;
+  h2 {
+    color: $logo-red;
     font-weight: bold;
   }
-  .card {
-    border: none;
-  }
-  .point {
+  h4 {
+    font-weight: bold;
+    width: 100%;
+    text-decoration-line: underline;
     color: $logo-blue;
   }
-  .image-inlay {
-    overflow: hidden;
-    margin-top: 1rem;
-    img {
-      width: 300px;
-      height: 300px;
-      border-radius: 10px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+  ul {
+    list-style-type: square;
+    padding: 0;
+    margin: 0;
+    color: black;
+  }
+  .story {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    padding: 0px 0px;
+  }
+  .story-text {
+    margin-top: 10px;
+  }
+  p {
+    color: black;
+  }
+  figure {
+    text-align: center;
+    .manish {
+      padding: 0px 0px;
+      object-fit: cover;
+      width: 90%;
+      height: auto;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    figcaption {
+      color: black;
+      font-weight: bold;
     }
   }
 }
@@ -273,6 +265,13 @@ h6 {
   h1 {
     font-weight: bolder;
   }
+  .card {
+    margin-bottom: 0px !important;
+  }
+}
+
+.explore {
+  margin: 20px;
 }
 
 .content-img {
@@ -281,21 +280,20 @@ h6 {
   overflow: hidden;
 }
 
-.footer {
-  min-height: 100px;
+.my-footer {
   border-top: 5px blue solid;
   padding: 25px;
+  padding-bottom: 10px;
   background-color: black;
   color: #aebcbd !important;
+
   h4 {
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-top: 10px;
     color: white;
   }
   ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: square;
   }
   #site-map {
     font-weight: bold;
@@ -318,25 +316,34 @@ h6 {
         }
       }
     }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
   }
   #contact-generic {
+    margin-top: 5px;
     padding-right: 10px;
-    position: absolute;
-
-    .form-group {
-      margin-bottom: 5px !important;
-    }
-    ::placeholder {
+    li {
       color: $logo-blue !important;
+      font-weight: bold !important;
     }
-    right: 0;
     .row {
       margin-bottom: 5px !important;
     }
-    .btn {
-      margin: 5px !important;
+  }
+  .copyright {
+    color: gray;
+    margin-bottom: 0;
+    i {
+      color: gray !important;
     }
   }
+}
+
+.click {
+  color: white;
 }
 
 #credits {

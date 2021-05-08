@@ -1,4 +1,3 @@
 retailzip.code-workspace
-static/.sass-cache/
-static/img/
+.sass-cache/
 __pycache__/

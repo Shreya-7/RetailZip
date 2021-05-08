@@ -1,87 +1,175 @@
+<!-- accessible at /about -->
+
 {% extends "layout.html" %}
 
 {% block title %} About Us - RetailZip {% endblock %}
 
 {% block body %}
-<section id="about" class="main-section">
+<section id="story" class="main-section new-page" data-tab_id="about-tab">
+
+    <!-- story & idea panel starts -->
     <div class="container">
+
+        <!-- story & idea panel heading starts-->
+        <div class="row">            
+            <div class="col-lg-12 text-center">
+                <img src="static/img/brand/symbol.jpg" class="symbol">
+                <h2 class="section-heading with-logo">THE STORY BEHIND RETAILZIP</h2>
+            </div>            
+        </div>
+        <!-- story & idea panel heading ends-->
+
         <div class="row">
-            <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-header">
-                        <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#description" role="tab" aria-controls="description"
-                                    aria-selected="true">How RetailZip Can Help You</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#history" role="tab" aria-controls="history"
-                                    aria-selected="false">The Story behind RetailZip</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#deals" role="tab" aria-controls="deals"
-                                    aria-selected="false">About the Founder of RetailZip</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="row card-body">    
-                        <div class="col-lg-8 tab-content mt-3">
-                            <div class="tab-pane active" id="description" role="tabpanel">
-                                <h4 class="card-title">At RetailZip, our aim is to Unzip Solutions for all types of retail businesses.</h4>
-                                <p class="card-subtitle">
-                                    Solutions Unzipped for Retailers to Mall Developers to Develop, Expand & Grow.
-                                <table class="table table-sm">
-                                    <tr>
-                                        <td><span class="point">Vision</span></td>
-                                        <td>Customer is our God and we hope that at RetailZip all the Solutions will get Unzipped for them.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="point">Mission</span></td>
-                                        <td>Engaging with entrepreneurs in their existing businesses and
-                                            creating new retail start-ups.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><span class="point">Reach</span></td>
-                                        <td>RetailZip solutions will be available in Eastern India and will gradually expand to Pan-India.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="{{ url_for('segments') }}">Business Verticals</a></td>
-                                        <td>Serving needs of various retail formats</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="{{ url_for('services') }}">Retail Services</a></td>
-                                        <td>Services for managing and growing retail business</td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="{{ url_for('partners') }}">Associate Services</a></td>
-                                        <td>Collaboration with Business Associates for providing solutions</td>                                        
-                                    </tr>
-                                    
-                                </table>
-                            </div>
-    
-                            <div class="tab-pane" id="history" role="tabpanel" aria-labelledby="history-tab">
-                                <p class="card-text">First settled around 1000 BCE and then founded as the Etruscan Felsina
-                                    about 500 BCE, it was occupied by the Boii in the 4th century BCE and became a Roman
-                                    colony and municipium with the name of Bononia in 196 BCE. </p>
-                                <a href="#" class="card-link text-danger">Read more</a>
-                            </div>
-    
-                            <div class="tab-pane" id="deals" role="tabpanel" aria-labelledby="deals-tab">
-                                <p class="card-text">Immerse yourself in the colours, aromas and traditions of
-                                    Emilia-Romagna with a holiday in Bologna, and discover the city's rich artistic
-                                    heritage.</p>
-                                <a href="#" class="btn btn-danger btn-sm">Get Deals</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 image-inlay">
-                            <img src="static/img/zip_photos/symbols/trolley(8).jpg">
-                        </div>
-                    </div>
-                    
-                </div>
+            <!-- story panel content starts -->
+            <div class="col-lg-6 col-sm-12 story-text">
+
+                <!-- story panel content heading -->
+                <h4> {{ content.story.india.heading }} </h4>
+                <br>
+                <!-- story panel content items start -->
+                <ul>
+                    {% for point in content.story.india.points %}
+                    <li>{{ point }}</li>
+                    {% endfor %}
+                </ul>
+                <!-- story panel content items end -->
+            </div>
+            <!-- story panel content ends -->
+
+            <!-- story panel image-->
+            <div class="col-lg-6 col-sm-12">
+                <img src="static/img/about/{{content.story.india.image}}" class="story">
+            </div>
+        
+        </div>
+        <br><br>
+        <div class="row">
+            <!-- idea panel image -->
+            <div class="col-lg-6 col-sm-12">
+                <img src="static/img/about/{{content.story.idea.image}}" class="story img-fluid">
+            </div>
+
+            <!-- idea panel content starts -->
+            <div class="col-lg-6 col-sm-12 story-text">
+                <br><br>
+
+                <!-- idea panel content heading -->
+                <h4> {{ content.story.idea.heading }} </h4>
+
+                <!-- ideal panel content items start -->
+                <ul>
+                    {% for point in content.story.idea.points %}
+                    <li>{{ point }}</li>
+                    {% endfor %}
+                </ul>
+                <!-- ideal panel content items end -->
+            </div>
+            <!-- idea panel content ends -->
+        </div>      
+        
+    </div>
+
+    <!-- values & help panel starts -->
+    <div class="container">
+
+        <!-- values & help panel heading starts -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <img src="static/img/brand/symbol.jpg" class="symbol">
+                <h2 class="section-heading with-logo">HOW RETAILZIP CAN HELP YOU</h2>
             </div>
         </div>
+        <!-- values & help panel heading ends -->
+        <br>
+        <div class="row">
+
+            <!-- values panel content starts -->
+            <div class="col-lg-6 col-sm-12 story-text">  
+                <br>
+
+                <!-- values panel content items start -->
+                {% for heading, point in content.ideals.points.items() %}
+                    <h4>{{ heading }}</h4>
+                    <p>{{ point }}</p>
+                    <br>
+                {% endfor %}   
+                <!-- values panel content items end -->
+            </div>
+            <!-- values panel content ends -->
+
+            <!-- values panel image -->
+            <div class="col-lg-6 col-sm-12">
+                <img src="static/img/about/{{content.ideals.image}}" class="story img-fluid">
+            </div>
+    
+        </div>
+        <br><br>
+        <div class="row">
+
+            <!-- help panel image -->
+            <div class="col-lg-6 col-sm-12">
+                <img src="static/img/about/{{content.work.image}}" class="story">
+            </div>
+
+            <!-- help panel content starts -->
+            <div class="col-lg-6 col-sm-12 story-text">
+                <br><br>
+
+                <!-- help panel content items start -->
+                {% for heading, point in content.work.points.items() %}
+                    <h4>{{ heading }}</h4>
+                    <p>{{ point }}</p>
+                    <br>
+                {% endfor %}
+                <!-- help panel content items end -->
+
+            </div>
+            <!-- help panel content ends -->
+    
+        </div>
+    
+    </div>
+
+    <!-- about panel starts -->
+    <div class="container">
+
+        <!-- about panel heading starts -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <img src="static/img/brand/symbol.jpg" class="symbol">
+                <h2 class="section-heading with-logo">ABOUT THE FOUNDER</h2>
+            </div>
+        </div>
+        <!-- about panel heading ends -->
+
+        <div class="row">
+
+            <!-- about panel content starts -->
+            <div class="col-lg-8 col-sm-12 story-text">
+
+                <!-- about panel content items start -->
+                <table class="table table-sm">
+                    {% for point in content.founder %}
+                        <tr><td>{{ point }}</td></tr>
+                    {% endfor %}
+                </table>  
+                <!-- about panel content items end -->
+
+            </div>
+            <!-- about panel content ends -->
+
+            <!-- about panel image starts -->
+            <div class="col-lg-4 col-sm-12">
+                <figure>
+                    <img src="static/img/about/manish.jpeg" class="manish img-fluid">
+
+                    <!-- about panel image captions -->
+                    <figcaption>Manish Agarwal</figcaption>
+                    <p class="text-muted">Founder @ RetailZip</p>
+                </figure>                
+            </div>
+            <!-- about panel image ends -->
+        </div>    
     </div>
 </section>
 <script src="static/js/script.js"></script>

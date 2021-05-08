@@ -1,3 +1,5 @@
+<!-- accessible at /services?id=<ID> -->
+
 {% extends "layout.html" %}
 
 {% block title %} {{ service.service_name }} - RetailZip {% endblock %}
@@ -6,14 +8,24 @@
 
 <section id="services" class="main-section service-container-bg" style="background-color: {{ service.bg_color }} !important">
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
+
+            <!-- service image -->
             <div class="col-lg-6 col-m-12 service-container-img">
-                <img class="content-img" src="static/img/zip_photos/services/{{ service.image }}">
+                <img class="content-img" src="static/img/services/{{ service.image }}">
             </div>
+
+            <!-- service content starts -->
             <div class="col-lg-6 col-m-12 service-content">
                 <div class="card">
+
+                    <!-- service name -->
                     <h1 class="section-heading" style="padding: 5px;">{{ service.service_name }}</h1>
+
+                    <!-- service description -->
                     <p class="text-muted card-subtitle">{{ service.mini_description }}</p>
+
+                    <!-- service sub-services-->
                     <div class="container main-container">
                         <div class="row service-detail text-left" style="margin: 9px;">
                     
@@ -25,6 +37,17 @@
                     </div>
                 </div>
             </div>
+            <!-- service content ends -->
+
+            <!-- back to services link -->
+            <p class="explore">
+                <a href="{{ url_for('services') }}">
+
+                    <!-- backward arrows icon -->
+                    <i class="fas fa-backward"></i> 
+                    Explore Other Services
+                </a>
+            </p>
         </div>
     </div>
 </section>

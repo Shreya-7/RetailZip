@@ -1,159 +1,271 @@
+<!-- not accessible, extended by every page -->
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- page title -->
     <title> {% block title %}{% endblock %} </title>
-    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+
+    <!-- icons & fonts -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic">
-    
     <link href="static/icons/font-awesome/css/all.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-    <link rel="stylesheet" href="static/css/styles.css">
+    
 </head>
 
 <body id="page-top">
+
+    <!-- navbar starts -->
     <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container">
+        <div class="container-fluid">
+
+            <!-- brand image -->
             <a class="navbar-brand js-scroll-trigger" href="{{ url_for('index') }}">
-                <img src="static/img/logo.jpg" class="header-logo">
+                <img src="static/img/brand/logo.jpg" class="header-logo">
             </a>
             
+            <!-- toggle menu icon -->
             <button
                 data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
-                type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i
-                    class="fa fa-align-justify"></i></button>
+                type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-align-justify"></i></button>
+
+            <!-- navbar items start -->
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><img src="static/img/symbol.jpg" class="symbol"><a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('index') }}">HOME</a></li>
-                    <li class="nav-item"><img src="static/img/symbol.jpg" class="symbol"><a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('segments') }}">VERTICALS</a></li>
-                    <li class="nav-item"><img src="static/img/symbol.jpg" class="symbol"><a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('services') }}">SERVICES</a></li>
-                    <li class="nav-item"><img src="static/img/symbol.jpg" class="symbol"><a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('partners') }}">ASSOCIATES</a></li>
-                    <li class="nav-item"><img src="static/img/symbol.jpg" class="symbol"><a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('about') }}">ABOUT US</a></li>
-                    <li class="nav-item"><img src="static/img/symbol.jpg" class="symbol"><a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('contact') }}">CONTACT US</a></li>
+
+                    <!-- HOME -->
+                    <li class="nav-item active" id="home-tab">
+                        <img src="static/img/brand/symbol.jpg" class="symbol">
+                        <a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('index') }}">
+                            HOME
+                        </a>
+                    </li>
+
+                    <!-- VERTICALS -->
+                    <li class="nav-item" id="segments-tab">
+                        <img src="static/img/brand/symbol.jpg" class="symbol">
+                        <a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('segments') }}">
+                            VERTICALS
+                        </a>
+                    </li>
+
+                    <!-- SERVICES -->
+                    <li class="nav-item" id="services-tab">
+                        <img src="static/img/brand/symbol.jpg" class="symbol">
+                        <a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('services') }}">
+                            SERVICES
+                        </a>
+                    </li>
+
+                    <!-- ASSOCIATES -->
+                    <li class="nav-item" id="partners-tab">
+                        <img src="static/img/brand/symbol.jpg" class="symbol">
+                        <a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('partners') }}">
+                            ASSOCIATES
+                        </a>
+                    </li>
+
+                    <!-- ABOUT US -->
+                    <li class="nav-item" id="about-tab">
+                        <img src="static/img/brand/symbol.jpg" class="symbol">
+                        <a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('about') }}">
+                            ABOUT US
+                        </a>
+                    </li>
+
+                    <!-- CONTACT US -->
+                    <li class="nav-item" id="contact-tab">
+                        <img src="static/img/brand/symbol.jpg" class="symbol">
+                        <a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('contact') }}">
+                            CONTACT US
+                        </a>
+                    </li>
                 </ul>
             </div>
+            <!-- navbar items end -->
         </div>
     </nav>
+    <!-- navbar ends -->
     {% block body %}
     {% endblock %}
-    <div class="main-strip container">
-        <div class="symbol-container">
-            <img src="static/img/symbol.jpg" class="symbol">
-        </div>
-        <div class="main-strip-text">
-            To get your Solutions Unzipped, please fill up <a href="#">this Google form</a> and we will get back to you!
-        </div>
-        <div class="header-logo-container">
-            <img src="static/img/logo.jpg" class="header-logo">
-        </div>
-    </div>
-    <footer class="footer row">
-        <div id="site-map" class="col-lg-2 col-s-12">
-            <h4> Site Map </h4>
-            <ul class="text-muted">
-                <a href="{{ url_for('index') }}"><li>Home</li></a>
-                <a href="{{ url_for('segments') }}">
-                    <li>Business Verticals</li>
-                </a>
-                <a href="{{ url_for('services') }}">
-                    <li>Retail Services</li>
-                </a>
-                <a href="{{ url_for('partners') }}">
-                    <li>Associate Services</li>
-                </a>
-                <a href="{{ url_for('about') }}">
-                    <li>About Us</li>
-                </a>
-                <a href="{{ url_for('contact') }}">
-                    <li>Contact Us</li>
-                </a>
-            </ul>
 
-        </div>
-        <div id="middle" class="col-lg-4 col-s-12">
-            <h4>Web Connects</h4>
-            <span class="oi oi-account-login" title="icon name" aria-hidden="true"></span>
-            <div id="icons">
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </li>
-                </ul>
-                <table>
-                    <tr>
-                        <td><i class="fas fa-envelope"></i></td>
-                        <td><span><a href="mailto:manish@retailzip.in">manish@retailzip.in</a></span></td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-mouse"></i></td>
-                        <td><span><a href="#">www.retailzip.in</a></span></td>
-                    </tr>
-                </table>
-                <!-- <div>
-                    <i class="fas fa-envelope"></i> 
-                    <span>manish@retailzip.in</span>
-                    
-                </div>
-                <div>
-                    <i class="fas fa-mouse"></i> 
-                    <span>www.retailzip.in</span>
-                    
-                </div> -->
+    <!-- contact strip -->
+    <div class="main-strip container-fluid">
+        <div class="row">
+            <div class="col">
+                To get your Solutions Unzipped, 
+                <a href="{{ url_for('contact') }}">click here</a> 
+                to fill the Google Form and we will get back to you!
             </div>
-        </div>
-        <div id="contact-generic" class="col-lg-6 col-s-12">
-            <h4>Can I Help You?</h4>
-
-            <form>
-                <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="E-mail address">
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <input type="text" name="name" class="form-control" placeholder="Name">
-                    </div>
-                    <div class="col">
-                        <input type="number" name="phone" class="form-control" placeholder="Mobile Number">
-                    </div>
-                </div>                
-                <div class="form-group">
-                    <textarea type="text" name="message" class="form-control" placeholder="Your message"></textarea>
-
-                </div>
-            </form>
-        </div>
-    </footer>
-    <div id="credits">
-        <b>Design & Development:</b> Shreya Agarwal <span>|</span> <b>Brand Creatives:</b> Rajarshi Bhattacharyya, Sacred Communications <span>|</span> <b>Support:</b> Satrajit Bhattacharya
+        </div>        
     </div>
+
+    <!-- footer starts -->
+    <footer class="my-footer container-fluid">
+        <div class="row">
+
+            <!-- site map starts -->
+            <div class="col-lg-4 col-m-12" id="site-map">
+
+                <!-- site map heading -->
+                <h4> Site Map </h4>
+
+                <!-- site map links -->
+                <ul class="text-muted">
+                    <a href="{{ url_for('index') }}">
+                        <li>Home</li>
+                    </a>
+                    <a href="{{ url_for('segments') }}">
+                        <li>Business Verticals</li>
+                    </a>
+                    <a href="{{ url_for('services') }}">
+                        <li>Retail Services</li>
+                    </a>
+                    <a href="{{ url_for('partners') }}">
+                        <li>Associate Services</li>
+                    </a>
+                    <a href="{{ url_for('about') }}">
+                        <li>About Us</li>
+                    </a>
+                    <a href="{{ url_for('contact') }}">
+                        <li>Contact Us</li>
+                    </a>
+                </ul>
+            
+            </div>
+            <!-- site map ends -->
+
+            <!-- web connect starts -->
+            <div class="col-lg-4 col-m-12" id="middle">
+
+                <!-- web connect heading -->
+                <h4>Web Connects</h4>
+                <span class="oi oi-account-login" title="icon name" aria-hidden="true"></span>
+
+                <!-- web connect icons start -->
+                <div id="icons">
+
+                    <!-- socials start -->
+                    <ul class="list-inline">
+
+                        <!-- twitter -->
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/manishagarwal20">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+
+                        <!-- facebook -->
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/RetailZip-100854875480975/">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+
+                        <!-- instagram -->
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/manishagarwal0508/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+
+                        <!-- youtube -->
+                        <li class="list-inline-item">
+                            <a href="https://youtube.com/channel/UCHJp6YPqhUMLZTfGTHqs5Ng">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+
+                        <!-- linkedin -->
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/in/manish-agarwal-0b808420b/">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- socials end -->
+
+                    <!-- addresses start -->
+                    <table>
+                        <!-- email -->
+                        <tr>
+                            <td><i class="fas fa-envelope"></i></td>
+                            <td><span><a href="mailto:manish@retailzip.in">manish@retailzip.in</a></span></td>
+                        </tr>
+                        <!-- website -->
+                        <tr>
+                            <td><i class="fas fa-mouse"></i></td>
+                            <td><span><a href="#">www.retailzip.in</a></span></td>
+                        </tr>
+                    </table>
+                    <!-- addresses end -->
+
+                </div>
+                <!-- web connect icons end -->
+                <br>
+                <br>
+
+                <!-- copyright -->
+                <p class="copyright">
+                    <i class="far fa-copyright"></i>
+                    RetailZip
+                </p>
+            </div>
+            <!-- web connect ends -->
+
+            <!-- help starts -->
+            <div class="col-lg-4 col-m-12" id="contact-generic">
+
+                <!-- help heading -->
+                <h4>Can I Help You?</h4>
+
+                <!-- help links start -->
+                <ul class="text-muted">
+                    <a href="{{ url_for('contact') }}">
+                        <li>Visit the Contact Us page</li>
+                    </a>
+                    <a href="{{ url_for('about') }}">
+                        <li>Visit the About Us Page</li>
+                    </a>
+                    <a href="{{ url_for('contact') }}">
+                        <li>
+                            <span class="click">Click</span> 
+                            to fill the Google Form to make a consultation request
+                        </li>
+                    </a>
+                </ul>
+                <!-- help links end -->
+            </div>
+            <!-- help ends -->
+        </div>
+        
+    </footer>
+    <!-- footer ends  -->
+
+    <!-- credits start -->
+    <div id="credits">
+        <b>Design & Development:</b> Shreya Agarwal 
+        <span>|</span> 
+        <b>Brand Creatives:</b> Rajarshi Bhattacharyya, Sacred Communications 
+        <span>|</span> 
+        <b>Support:</b> Satrajit Bhattacharya
+    </div>
+    <!-- credits end -->
+
+    <!-- js files -->
     <script src="static/js/jquery.min.js"></script>
     <script src="static/bootstrap/js/bootstrap.min.js"></script>
     <script src="static/js/bs-init.js"></script>

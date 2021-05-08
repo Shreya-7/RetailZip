@@ -2,34 +2,61 @@
 
 {% block body %}
 
-<section id="services" class="main-section">
+<section id="services" class="main-section" data-tab_id="services-tab">
+
+    <!-- heading starts -->
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <img src="static/img/symbol.jpg" class="symbol">
+
+                <!-- zip symbol -->
+                <img src="static/img/brand/symbol.jpg" class="symbol">
+                <!-- section heading -->
                 <h2 class="section-heading with-logo" style="padding: 5px;">RETAIL SERVICES</h2>
                 <hr class="light my-4">
+
+                <!-- section description -->
                 <p class="text-faded mb-4">These are the solutions we can unzip for you. Click on each to know more!<br></p>
             </div>
         </div>
     </div>
+    <!-- heading ends -->
+
+    <!-- content starts -->
     <div class="container main-container">
         <div class="row card-deck text-center" style="margin: 9px;">
             {% for key, value in services.items() %}
 
                 <div class="card text-center col-md-4">
 
-                    <img class="card-img-top" src="static/img/zip_photos/services/{{ value.image }}">
+                    <!-- service image -->
+                    <img class="card-img-top" src="static/img/services/{{ value.image }}">
 
+                    <!-- different link if the service is associate services -->
                     {% if key == 'S18' %}
                         <a href="{{ url_for('partners') }}" class="plain-link">
-                            <h5 class="card-title">{{ value.service_name }}</h5>
+
+                            <!-- service name -->
+                            <h5 class="card-title">
+                                {{ value.service_name }} 
+                                <i class="far fa-hand-pointer"></i>
+                            </h5>
                         </a>
+
+                    <!-- all services except associate services -->
                     {% else %}
                         <a href="{{ url_for('service',id=key) }}" class="plain-link">
-                            <h5 class="card-title">{{ value.service_name }}</h5>
+
+                            <!-- service name -->
+                            <h5 class="card-title">
+                                {{ value.service_name }} 
+                                <i class="far fa-hand-pointer"></i>
+                            </h5>
                         </a>
+
                     {% endif %}
+
+                    <!-- service description -->
                     <p class="card-text text-muted">{{ value.mini_description }}</p>
                     
                 </div>
@@ -38,6 +65,8 @@
             
         </div>
     </div>
+    <!-- content ends -->
+    
 </section>
-
+<script src="static/js/script.js"></script>
 {% endblock %}
