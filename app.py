@@ -3,7 +3,10 @@ from flask import Flask, render_template, request
 from util import get_retail_services, get_associate_services, get_service, get_segments, get_main_content, get_about_us, misc_error
 
 app = Flask('app', static_url_path='/static')
-app.secret_key = 'very very secret'
+app.secret_key = 'veryverysecretisntitormaybeitis'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
 
 
 @app.route('/')

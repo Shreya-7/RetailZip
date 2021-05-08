@@ -1,3 +1,4 @@
 retailzip.code-workspace
 .sass-cache/
 __pycache__/
+venv/
