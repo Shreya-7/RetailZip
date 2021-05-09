@@ -6,6 +6,8 @@ $logo-blue-light: #5287bd;
 
 body {
   font-family: "Varela Round", sans-serif !important;
+  padding: 0 !important;
+  width: 100% !important;
 }
 
 h1,
@@ -24,6 +26,7 @@ h6 {
 #mainNav {
   background-color: white !important;
   font-family: "Varela Round", sans-serif !important;
+  padding: 0 !important;
   .nav-link {
     color: black !important;
   }
@@ -51,6 +54,7 @@ h6 {
 
 .btn {
   margin-top: 20px;
+  margin-bottom: 20px;
   font-family: "Varela Round", sans-serif !important;
 }
 
@@ -62,9 +66,12 @@ h6 {
 }
 
 .main-banner {
-  margin-top: 35px;
-  height: 50vh;
-  max-height: 50vh;
+  width: 100%;
+  max-height: calc(100vh - 100px);
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .main-strip {
@@ -109,8 +116,8 @@ h6 {
   background-color: $logo-blue;
   color: white !important;
   justify-content: center;
-  padding: 70px !important;
-
+  border-bottom: 2px white solid;
+  padding-bottom: 10px !important;
   .card {
     @extend %card;
     margin-bottom: 20px;
@@ -157,6 +164,10 @@ h6 {
     margin-top: 20px !important;
     padding-top: 20px !important;
     border: 5px solid $logo-red !important;
+
+    .card-body {
+      width: 100%;
+    }
     .card-text {
       font-weight: normal !important;
       text-align: center;
@@ -184,6 +195,11 @@ h6 {
 #story {
   background-color: white;
   font-family: "Roboto", sans-serif !important;
+  hr {
+    width: 100% !important;
+    color: $logo-blue !important;
+  }
+
   h2 {
     color: $logo-red;
     font-weight: bold;
@@ -217,7 +233,7 @@ h6 {
     .manish {
       padding: 0px 0px;
       object-fit: cover;
-      width: 90%;
+      width: 70%;
       height: auto;
       border-radius: 20px;
       margin-bottom: 10px;
@@ -243,7 +259,7 @@ h6 {
   }
   .service-container-img {
     text-align: center;
-    height: 380px;
+    height: auto;
   }
   .card {
     @extend %card;
@@ -276,7 +292,7 @@ h6 {
 
 .content-img {
   max-width: 100%;
-  height: 100%;
+  height: auto;
   overflow: hidden;
 }
 
@@ -381,6 +397,18 @@ $cards-per-line: (
 
 @each $name, $breakpoint in $grid-breakpoints {
   @media (min-width: $breakpoint) {
+    .content-img {
+      padding-bottom: 5px;
+    }
+    #services,
+    #partners,
+    #segments {
+      .container,
+      .main-container {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
     .card-deck .card {
       flex: 0 0
         calc(#{100 / map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
@@ -415,7 +443,7 @@ $cards-per-line: (
 
 @each $name, $breakpoint in $grid-breakpoints {
   @media (min-width: $breakpoint) {
-    .new-page .card-deck .card {
+    .segments-special .card-deck .card {
       flex: 0 0
         calc(#{100 / map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
     }

@@ -9602,8 +9602,8 @@ header.masthead p {
 }
 @media (min-width: 992px) {
   header.masthead {
-    height: 100vh;
-    min-height: 650px;
+    /* height: 100vh;
+    min-height: 650px; */
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -9734,7 +9734,7 @@ header.masthead p {
 .mfp-wrap {
   z-index: 1043;
   outline: none !important;
-  -webkit-backface-visibility: hidden;
+  /* -webkit-backface-visibility: hidden; */
 }
 .mfp-container {
   text-align: center;
