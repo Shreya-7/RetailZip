@@ -17,10 +17,10 @@
 
             <!-- service content starts -->
             <div class="col-lg-6 col-m-12 service-content">
-                <div class="card">
+                <div class="card card-border card-border-gradient">
 
                     <!-- service name -->
-                    <h1 class="section-heading" style="padding: 5px;">{{ service.service_name }}</h1>
+                    <h1 class="section-heading">{{ service.service_name }}</h1>
 
                     <!-- service description -->
                     <p class="text-muted card-subtitle">{{ service.mini_description }}</p>
@@ -40,14 +40,17 @@
             <!-- service content ends -->
 
             <!-- back to services link -->
-            <p class="explore">
+            <div class="text-center button-div">
                 <a href="{{ url_for('services') }}">
+                    <button class="btn btn-primary btn-lg" type="button">
 
-                    <!-- backward arrows icon -->
-                    <i class="fas fa-backward"></i> 
-                    Explore Other Services
+                        <!-- hand icon -->
+                        <i class="fas fa-backward"></i>
+                        Explore Other Services
+                        
+                    </button>
                 </a>
-            </p>
+            </div>
         </div>
     </div>
 </section>

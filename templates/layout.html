@@ -46,48 +46,42 @@
 
                     <!-- HOME -->
                     <li class="nav-item active" id="home-tab">
-                        <img src="static/img/brand/symbol.jpg" class="symbol">
-                        <a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('index') }}">
+                        <a class="nav-link color-red js-scroll-trigger" href="{{ url_for('index') }}">
                             HOME
+                        </a>
+                    </li>
+                    
+                    <!-- ABOUT US -->
+                    <li class="nav-item" id="about-tab">
+                        <a class="nav-link color-blue js-scroll-trigger" href="{{ url_for('about') }}">
+                            ABOUT US
                         </a>
                     </li>
 
                     <!-- VERTICALS -->
                     <li class="nav-item" id="segments-tab">
-                        <img src="static/img/brand/symbol.jpg" class="symbol">
-                        <a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('segments') }}">
-                            VERTICALS
+                        <a class="nav-link color-red js-scroll-trigger" href="{{ url_for('segments') }}">
+                            BUSINESS VERTICALS
                         </a>
                     </li>
 
                     <!-- SERVICES -->
                     <li class="nav-item" id="services-tab">
-                        <img src="static/img/brand/symbol.jpg" class="symbol">
-                        <a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('services') }}">
-                            SERVICES
+                        <a class="nav-link color-blue js-scroll-trigger" href="{{ url_for('services') }}">
+                            RETAIL SERVICES
                         </a>
                     </li>
 
                     <!-- ASSOCIATES -->
                     <li class="nav-item" id="partners-tab">
-                        <img src="static/img/brand/symbol.jpg" class="symbol">
-                        <a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('partners') }}">
-                            ASSOCIATES
-                        </a>
-                    </li>
-
-                    <!-- ABOUT US -->
-                    <li class="nav-item" id="about-tab">
-                        <img src="static/img/brand/symbol.jpg" class="symbol">
-                        <a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('about') }}">
-                            ABOUT US
+                        <a class="nav-link color-red js-scroll-trigger" href="{{ url_for('partners') }}">
+                            ASSOCIATE SERVICES
                         </a>
                     </li>
 
                     <!-- CONTACT US -->
                     <li class="nav-item" id="contact-tab">
-                        <img src="static/img/brand/symbol.jpg" class="symbol">
-                        <a class="nav-link js-scroll-trigger with-logo" href="{{ url_for('contact') }}">
+                        <a class="nav-link color-blue js-scroll-trigger" href="{{ url_for('contact') }}">
                             CONTACT US
                         </a>
                     </li>
@@ -97,6 +91,13 @@
         </div>
     </nav>
     <!-- navbar ends -->
+
+    <div class="contact-sticky">        
+        <a href="{{ url_for('contact') }}" >
+            <img src="static/img/brand/symbol.jpg">
+        </a>        
+    </div>
+
     {% block body %}
     {% endblock %}
 
@@ -106,7 +107,7 @@
             <div class="col">
                 To get your Solutions Unzipped, 
                 <a href="{{ url_for('contact') }}">click here</a> 
-                to fill the Google Form and we will get back to you!
+                and fill the Consultation form!
             </div>
         </div>        
     </div>
@@ -208,19 +209,19 @@
                             <td><i class="fas fa-mouse"></i></td>
                             <td><span><a href="#">www.retailzip.in</a></span></td>
                         </tr>
+                        <tr>
+                            <td><i class="fas fa-mobile-alt"></i></td>
+                            <td><span><a href="#">+91 9339570332</a></span></td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-map-marker-alt"></i></td>
+                            <td><span><a href="#">Kolkata</a></span></td>
+                        </tr>
                     </table>
                     <!-- addresses end -->
 
                 </div>
                 <!-- web connect icons end -->
-                <br>
-                <br>
-
-                <!-- copyright -->
-                <p class="copyright">
-                    <i class="far fa-copyright"></i>
-                    All rights reserved by RetailZip, Kolkata
-                </p>
             </div>
             <!-- web connect ends -->
 
@@ -240,8 +241,8 @@
                     </a>
                     <a href="{{ url_for('contact') }}">
                         <li>
-                            <span class="click">Click</span> 
-                            to fill the Google Form to make a consultation request
+                            <span class="click">Click Here</span> 
+                            for a consultation request
                         </li>
                     </a>
                 </ul>
@@ -260,6 +261,9 @@
         <b>Brand Creatives:</b> Rajarshi Bhattacharyya (Sacred)  
         <span>|</span> 
         <b>Support:</b> Satrajit Bhattacharya
+        <span>|</span>
+        <b><i class="far fa-copyright"></i></b>        
+        All rights reserved by <b>RetailZip Solutions Pvt. Ltd.</b>
     </div>
     <!-- credits end -->
 

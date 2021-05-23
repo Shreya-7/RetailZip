@@ -16,7 +16,7 @@
                 <hr class="light my-4">
 
                 <!-- section description -->
-                <p class="text-faded mb-4">These are the solutions we can unzip for you. Click on each to know more!<br></p>
+                <p class="section-description text-faded mb-4">These are the solutions we can unzip for you. Click on each to know more!<br></p>
             </div>
         </div>
     </div>
@@ -27,37 +27,39 @@
         <div class="row card-deck text-center" style="margin: 9px;">
             {% for key, value in services.items() %}
 
-                <div class="card text-center col-md-4">
+                <div class="card  card-border card-border-gradient text-center col-md-4">
 
                     <!-- service image -->
                     <img class="card-img-top" src="static/img/services/{{ value.image }}">
 
-                    <!-- different link if the service is associate services -->
-                    {% if key == 'S18' %}
-                        <a href="{{ url_for('partners') }}" class="plain-link">
-
+                    <div class="card-body">
+                        <!-- different link if the service is associate services -->
+                        {% if key == 'S18' %}
+                        <a href="{{ url_for('partners') }}">
+                        
                             <!-- service name -->
                             <h5 class="card-title">
-                                {{ value.service_name }} 
+                                {{ value.service_name }}
                                 <i class="far fa-hand-pointer"></i>
                             </h5>
                         </a>
-
-                    <!-- all services except associate services -->
-                    {% else %}
-                        <a href="{{ url_for('service',id=key) }}" class="plain-link">
-
+                        
+                        <!-- all services except associate services -->
+                        {% else %}
+                        <a href="{{ url_for('service',id=key) }}">
+                        
                             <!-- service name -->
                             <h5 class="card-title">
-                                {{ value.service_name }} 
+                                {{ value.service_name }}
                                 <i class="far fa-hand-pointer"></i>
                             </h5>
                         </a>
-
-                    {% endif %}
-
-                    <!-- service description -->
-                    <p class="card-text text-muted">{{ value.mini_description }}</p>
+                        
+                        {% endif %}
+                        
+                        <!-- service description -->
+                        <p class="card-text text-muted">{{ value.mini_description }}</p>
+                    </div>
                     
                 </div>
             

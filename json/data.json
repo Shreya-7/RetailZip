@@ -69,7 +69,7 @@
         },
         "S8": {
             "service_name": "Digital Strategy",
-            "mini_description": "Integration of Physical and Digital ",
+            "mini_description": "Integration of Physical & Digital ",
             "extended_description": "",
             "image": "omni.jpg",
             "bg_color": "#2f848c",
@@ -387,11 +387,11 @@
                 "Target Customer Segment",
                 "Competition Mapping",
                 "Brand & Business Mix",
-                "Community Understanding",
+                "Footfall Enhancement",
                 "Shopping Occasions",
                 "Retailer Tie Ups",
-                "Other Income Opportunities",
-                "Marketing  Calendar",
+                "Other Income Monetisation",
+                "Events & Promotions",
                 "Service Standards",
                 "Report Dashboards",
                 "Review"
@@ -506,38 +506,35 @@
         },
         "story": {
             "india": {
-                "heading": "India Retail Opportunity",
+                "heading": "India Consumption Story",
                 "image": "india.png",
                 "points": [
-                    "India is a Young and Aspirational nation.",
-                    "High potential for Consumption of Goods & Services.",
-                    "Invest in India is the new desire of Entrepreneurs & Investors.",
-                    "Rural India is gaining pace and outperforming Urban India on many parameters of growth and success.",
-                    "Rising Income levels have led to huge demand for consumption of goods and services in Rural India. Even in Urban India, there is competition to increase market share.",
-                    "Retail businesses as well as Consumers are changing rapidly. Covid 19 has accelerated this change at a fast pace.",
-                    "New Normal has emerged for businesses, especially for retail and consumer facing businesses. These changes are permanent and will keep gaining pace going forward."
+                    "India is <span class='color-blue'>1.3 billion people</span>. About <span class='color-red'>65% live in rural India.</span>",
+                    "India is a Young and Aspirational nation. <span class='color-blue'>High potential for Consumption of Goods & Services.</span>",
+                    "<span class='color-blue'>Invest in India</span> is the new desire of <span class='color-red'>Entrepreneurs</span> & Investors.",
+                    "<span class='color-blue'>Rising Income levels</span> have led to huge demand for consumption of goods and services in <span class='color-red'>Rural India</span>.",
+                    "<span class='color-red'>Rural India</span> is new growth engine and outperforming Urban India.  In <span class='color-blue'>Urban India</span>, there is competition to increase market share.",
+                    "Retail businesses as well as <span class='color-blue'>Consumers are changing rapidly</span>. Covid 19 has accelerated this change at a fast pace.</span>",
+                    "<span class='color-red'>New Normal</span> has emerged for businesses, especially for retail and consumer facing businesses. These changes are permanent and will keep gaining pace going forward."
                 ]
             },            
             "idea": {
                 "heading": "RetailZip Idea",
                 "image": "rz_idea.jpg",
                 "points": [
-                    "Entrepreneurs desire to create their own Retail Brand or a Retail Destination Mall. ",
-                    "Entrepreneurs need Consultants/Advisors who can provide One Stop Solutions for all their Retail business needs.",
-                    "Our Business Idea will have Retail at its Core. ",
-                    "Objective is to help Entrepreneurs to Develop, Expand and Grow their business in a most efficient and profitable manner.", 
-                    "Thus, RetailZip was BORN."
+                    "<span class='color-red'>Entrepreneurs</span> desire to create their own Retail Brand or a Retail Destination Mall. ",
+                    "Entrepreneurs need Consultants/Advisors who can provide <span class='color-blue'>One Stop Solutions</span> for all their Retail business needs.",
+                    "Our <span class='color-red'>Business Idea</span> will have <span class='color-blue'>Retail Consultancy & Advisory services</span> at its Core. ",
+                    "Objective is to help Entrepreneurs to <span class='color-blue'>Develop, Expand and Grow</span> their business in a most efficient and profitable manner.", 
+                    "Thus, <span class='color-red'>Retail</span><span class='color-blue'>Zip</span> was BORN."
                 ]
             }             
         },
         "founder": [
-            "A Retail Professional with 25 years of experience with Future Group, based at Kolkata.",
-            "Associated with Future Group since 1997 with the start of group’s first foray into department store retail with Pantaloons at Kolkata.",
-            "Member of the core Strategic Team of Big Bazaar. Worked closely with Promoters of Future Group.",
-            "Had a key role in making East India most Profitable Market for Future Group.",
-            "Experience in managing business in more than 50 cities of East India, 100 Big Bazaar stores, spread across 30 lac sft with revenues of 5000 cr. ",
-            
-            "Passed Chartered Accountancy in 1996. Graduation from Saint Xavier’s College, Kolkata in 1992. ",
+            "A <span class='color-blue'>Retail Professional</span> with <span class='color-blue'>25 years of experience</span> with Future Group, based at Kolkata.",
+            "Member of the core Strategic Team of Big Bazaar, had a key role in making East India most Profitable Market for Future Group.",
+            "Experience in managing business in <span class='color-red'>more than 50 cities</span> of <span class='color-blue'>East India</span>, <span class='color-red'>100 Big Bazaar stores</span>, spread across <span class='color-red'>30 lac sft</span> with revenues of <span class='color-red'>5000 cr</span>. ",
+            "Passed Chartered Accountancy in 1996. Graduated from Saint Xavier’s College, Kolkata in 1992. ",
             "Interest in Sports, Stock Market, believes and practices Healthy Living",
             "Strong belief in the principles of Ownership, Respect, Honesty, Simplicity & Supporting people."
         ]

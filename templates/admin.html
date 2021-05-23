@@ -1,0 +1,49 @@
+{% extends "layout.html" %} 
+
+{% block title %} Admin Dashboard {% endblock %}
+
+{% block body %}
+
+<section class="main-section" id="admin">
+    <div class="container">
+        <div class="row">
+            <h2>Detail Consultation</h2>
+            <table class="table table-bordered table-striped table-responsive">
+                <tr>
+                    {% for heading in detail_headings %}
+                    <th>{{ heading }}</th>
+                    {% endfor %}
+                </tr>
+            
+                {% for client in detail %}
+                <tr>
+                    {% for key, value in client.items() %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="row">
+            <h2>Short Consultation</h2>
+            <table class="table table-bordered table-striped table-responsive">
+                <tr>
+                    {% for heading in short_headings %}
+                    <th>{{ heading }}</th>
+                    {% endfor %}
+                </tr>
+        
+                {% for client in short %}
+                <tr>
+                    {% for key, value in client.items() %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    
+</section>
+
+{% endblock %}

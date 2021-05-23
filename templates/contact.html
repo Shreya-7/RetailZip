@@ -5,61 +5,263 @@
 {% block title %} Contact Us - RetailZip {% endblock %}
 
 {% block body %}
-<section id="contact" class="main-section" data-tab_id="contact-tab">
+<section id="contact" class="main-section bg-section" data-tab_id="contact-tab">
     <div class="container">
 
         <!-- contact section heading -->
-        <h2>There are 2 ways you can contact us:</h2>
+        <h2 class="section-heading">Contact Us for a Consultation</h2>
+        <p>
+            Please fill up either the 
+          <a href="#contact_detail"> Detailed Form </a>
+          or the 
+           <a href= "#contact_short" >Short Form</a> 
+        </p>
+
+        <!-- detail query area starts -->
         <div class="row">
-
-            <!-- detail query area starts -->
-            <div class="col-lg-6 col-m-12">
-                <div class="card">
-
-                    <!-- card heading -->
-                    <h4 class="card-title" >via a Detail Query Form</h4>
-
-                    <!-- when to use helptext -->
-                    <p class="card-subtitle text-muted">Use when you know what you need</p>
-
-                    <!-- form not visible helptext -->
-                    <a class="card-link" href="https://forms.gle/AFPqBEeD1rsGRuYPA">Form not visible? <span style="color: red">Click here</span> to fill.</a>
-                    
-                    <!-- google form embed-->
-                    <div class="card-body">
-                        <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSd7-KZwIsXHH5_TcfQjusISG6WZgdQOr3b2qGDUU7uJsFB01w/viewform?embedded=true"
-                            width="100%" height="1100" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                    </div>
-                </div>
-            </div>
-            <!-- detail query area ends -->
-
-            <!-- short query area starts -->
-            <div class="col-lg-6 col-m-12">
-                <div class="card">
-
-                    <!-- area heading -->
-                    <h4 class="card-title">via a Short Query Form</h4>
-
-                    <!-- when to use helptext -->
-                    <p class="card-subtitle text-muted">Use when you're unsure of what you want</p>
-
-                    <!-- form not visible helptext -->
-                    <a class="card-link" href="https://forms.gle/PSHt2qdKtFzbjiCz6">Form not visible? <span style="color: red">Click
-                            here</span> to fill.</a>
-
-                    <!-- google form embed -->
-                    <div class="card-body">
-                        <iframe
-                            src="https://docs.google.com/forms/d/e/1FAIpQLScy2lje6rmuGAU1np4O_hzNSjZAJtuzlkpDykvdWW2sW7Ge6w/viewform?embedded=true"
-                            width="100%" height="1100" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-                    </div>
-                </div>
-            </div>
-            <!-- short query area ends -->
+            <div class="card card-border card-border-gradient" id="contact_detail">
+                <!-- card heading -->
+                <h4 class="card-title">Detail Consultation Form</h4>
+                <div class="card-body">
+                    <form id="contact_detail_form" method="post">
+                        <div class="row">
+                            <div class="col-lg-6 col-m-12">
+                                <h5>Personal Details</h5>
+                                <div class="form-group">
+                                    <input class="form-control" type="email" name="email" placeholder="Contact Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="name" placeholder="Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="number" name="number" placeholder="Contact Number" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="number" name="alt-number" placeholder="Alternative Number">
+                                </div>
+                                
+                                <input type="hidden" name="country" id="countryId" value="IN" />
+                                
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="address" placeholder="Address" required>
+                                </div>
+                                <div class="form-group">
+                                    <select name="state" class="states order-alpha custom-select" id="stateId" required>
+                                        <option value="">Select State</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select name="city" class="cities order-alpha custom-select" id="cityId" required>
+                                        <option value="">Select City</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="number" name="pincode" placeholder="Pincode" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="firm" placeholder="Firm Name">
+                                </div>
+                                
+                                <fieldset class="form-group">
+                                    <legend>
+                                        <h6>Your Ownership Profile</h6>
+                                    </legend>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" id="land-owner" name="ownership" class="custom-control-input" value="Land Owner">
+                                        <label class="custom-control-label" for="land-owner">Land Owner</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" id="developer" name="ownership" class="custom-control-input" value="Developer">
+                                        <label class="custom-control-label" for="developer">Developer</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" id="retailer" name="ownership" class="custom-control-input" value="Retailer">
+                                        <label class="custom-control-label" for="retailer">Retailer</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" id="other" name="ownership" class="custom-control-input" value="Other">
+                                        <label class="custom-control-label" for="other">Other</label>
+                                    </div>
+                                    <img src="/static/img/slideshow/form-image.jpg" class="img-fluid">
+                                    <div class="alert" id="ownership"></div>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <h5>Business Details</h5>
+                                <fieldset class="form-group">
+                                    <legend>
+                                        <h6>Your Business Vertical(s) <a href="{{ url_for('segments') }}">(details <i
+                                                    class="far fa-hand-pointer"></i>)</a></h6>
+                                    </legend>
+                            
+                                    <div class="row">
+                                        {% for key, segment in business.items() %}
+                                        <div class="col-s-12 col-lg-6 custom-control custom-checkbox">
+                                            <input type="checkbox" id="{{ key }}" name="vertical" class="custom-control-input"
+                                                value="{{ segment.segment_name }}">
+                                            <label class="custom-control-label" for="{{ key }}">{{ segment.segment_name }}</label>
+                                        </div>
+                                        {% endfor %}
+                                    </div>                                  
+                            
+                                    <div class="alert" id="vertical"></div>
+                                </fieldset>
+                            
+                                <fieldset class="form-group">
+                                    <legend>
+                                        <h6>Retail Service(s) <a href="{{ url_for('services') }}">(details <i class="far fa-hand-pointer"></i>)</a>
+                                        </h6>
+                                    </legend>
+                            
+                                    <div class="row">
+                                        {% for key, service in services.items() %}
+                                        <div class="col-s-12 col-lg-6 custom-control custom-checkbox">
+                                            <input type="checkbox" id="{{ key }}" name="service" class="custom-control-input"
+                                                value="{{ service.service_name }}">
+                                            <label class="custom-control-label" for="{{ key }}">{{ service.service_name }}</label>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="alert" id="service"></div>
+                                </fieldset>
+                            
+                                <fieldset class="form-group">
+                                    <legend>
+                                        <h6>Associate Service(s) <a href="{{ url_for('partners') }}">(details <i
+                                                    class="far fa-hand-pointer"></i>)</a>
+                                        </h6>
+                                    </legend>
+                            
+                                    {% for key, service in associate.items() %}
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="{{ key }}" name="associate" class="custom-control-input"
+                                            value="{{ service.service_name }}">
+                                        <label class="custom-control-label" for="{{ key }}">{{ service.service_name }}</label>
+                                    </div>
+                                    {% endfor %}
+                                </fieldset>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>         
+                       <div class="alert" id="contact-detail-alert"></div>
+                    </form>
+                </div>                
+            </div>                 
         </div>
+        <!-- detail query area ends -->
+
+        <!-- short query area starts -->
+        <div class="row">
+            <div class="col-lg-7 col-md-12">
+                <div class="card card-border card-border-gradient" id="contact_short">
+            
+                    <!-- area heading -->
+                    <h4 class="card-title">Short Consultation Form</h4>
+            
+                    <div class="card-body">
+                        <form id="contact_short_form" method="post">
+                            <div class="form-group">
+                                <input class="form-control" type="email" name="email" placeholder="Contact Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="name" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="number" name="number" placeholder="Contact Number" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" type="text" name="message" placeholder="Your Message"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="alert" id="contact-short-alert"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <div class="card  card-border card-border-gradient contact-connects">
+                    <h4 class="card-title">Web Connects</h4>
+
+                    <div class="card-body">
+                        <!-- web connect icons start -->
+                        <div id="icons">
+                            <!-- socials start -->
+                            <ul class="list-inline">
+                        
+                                <!-- twitter -->
+                                <li class="list-inline-item">
+                                    <a href="https://twitter.com/manishagarwal20">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                        
+                                <!-- facebook -->
+                                <li class="list-inline-item">
+                                    <a href="https://www.facebook.com/RetailZip-100854875480975/">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                        
+                                <!-- instagram -->
+                                <li class="list-inline-item">
+                                    <a href="https://www.instagram.com/manishagarwal0508/">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                        
+                                <!-- youtube -->
+                                <li class="list-inline-item">
+                                    <a href="https://youtube.com/channel/UCHJp6YPqhUMLZTfGTHqs5Ng">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                        
+                                <!-- linkedin -->
+                                <li class="list-inline-item">
+                                    <a href="https://www.linkedin.com/in/manish-agarwal-0b808420b/">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- socials end -->
+                            <!-- addresses start -->
+                            <table>
+                                <!-- email -->
+                                <tr>
+                                    <td><i class="fas fa-envelope"></i></td>
+                                    <td><span><a href="mailto:manish@retailzip.in">manish@retailzip.in</a></span></td>
+                                </tr>
+                                <!-- website -->
+                                <tr>
+                                    <td><i class="fas fa-mouse"></i></td>
+                                    <td><span><a href="#">www.retailzip.in</a></span></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-mobile-alt"></i></td>
+                                    <td><span><a href="#">+91 9339570332</a></span></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-map-marker-alt"></i></td>
+                                    <td><span><a href="#">Kolkata</a></span></td>
+                                </tr>
+                            </table>
+                            <!-- addresses end -->
+                        
+                        </div>
+                    </div>                   
+                    <img class="img-fluid" src="static/img/brand/logo.jpg">
+                </div>
+                
+            </div>
+        </div>
+        <!-- short query area ends -->
     </div>
 </section>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//geodata.solutions/includes/statecity.js"></script>
 <script src="static/js/script.js"></script>
+<script src="static/js/contact.js"></script>
 {% endblock %}

@@ -1,0 +1,30 @@
+{
+	"short": {
+	},
+	"detail": {
+
+	},
+	"short-headings": [
+		"email",
+		"name",
+		"number",
+		"message",
+		"timestamp"
+	],
+	"detail-headings": [
+		"email",
+		"name",
+		"number",
+		"alt-number",
+		"address",
+		"state",
+		"city",
+		"pincode",
+		"firm",
+		"ownership",
+		"vertical",
+		"service",
+		"associate",
+		"timestamp"
+	]
+}

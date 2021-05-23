@@ -11,10 +11,12 @@
     <div class="container">
 
         <!-- story & idea panel heading starts-->
-        <div class="row">            
+        <div class="row section-heading-area">            
             <div class="col-lg-12 text-center">
                 <img src="static/img/brand/symbol.jpg" class="symbol">
-                <h2 class="section-heading with-logo">THE STORY BEHIND RETAILZIP</h2>
+                <h2 class="section-heading with-logo">
+                    Story Behind <span class="color-red">Retail</span><span class="color-blue">Zip</span>
+                </h2>
             </div>            
         </div>
         <!-- story & idea panel heading ends-->
@@ -29,7 +31,7 @@
                 <!-- story panel content items start -->
                 <ul>
                     {% for point in content.story.india.points %}
-                    <li>{{ point }}</li>
+                    <li>{{ point|safe }}</li>
                     {% endfor %}
                 </ul>
                 <!-- story panel content items end -->
@@ -42,49 +44,56 @@
             </div>
         
         </div>
-        <br><hr><br>
+        <br><br>
         <div class="row">
-            <!-- idea panel image -->
-            <div class="col-lg-6 col-sm-12">
-                <img src="static/img/about/{{content.story.idea.image}}" class="story img-fluid">
-            </div>
 
             <!-- idea panel content starts -->
             <div class="col-lg-6 col-sm-12 story-text">
                 <br><br>
-
+            
                 <!-- idea panel content heading -->
-                <h4> {{ content.story.idea.heading }} </h4>
-
+                <h4> <span class="color-red">Retail</span><span class="color-blue">Zip</span> Idea </h4>
+            
                 <!-- ideal panel content items start -->
                 <ul>
                     {% for point in content.story.idea.points %}
-                    <li>{{ point }}</li>
+                    <li>{{ point|safe }}</li>
                     {% endfor %}
                 </ul>
                 <!-- ideal panel content items end -->
             </div>
             <!-- idea panel content ends -->
+            <!-- idea panel image -->
+            <div class="col-lg-6 col-sm-12">
+                <img src="static/img/about/{{content.story.idea.image}}" class="story img-fluid">
+            </div>
+
+            
         </div>      
         
-    </div>
-
-    <hr> 
+    </div>     
 
     <!-- values & help panel starts -->
-    <div class="container">
+    <div class="container" id="values-and-help">
 
         <!-- values & help panel heading starts -->
         <div class="row">
             <div class="col-lg-12 text-center">
                 <img src="static/img/brand/symbol.jpg" class="symbol">
-                <h2 class="section-heading with-logo">HOW RETAILZIP CAN HELP YOU</h2>
+                <h2 class="section-heading with-logo">
+                    How <span class="color-red">Retail</span><span class="color-blue">Zip</span> Can Help You
+                </h2>
             </div>
         </div>
         <!-- values & help panel heading ends -->
         <br>
         <div class="row">
 
+            <!-- values panel image -->
+            <div class="col-lg-6 col-sm-12">
+                <img src="static/img/about/{{content.ideals.image}}" class="story img-fluid">
+            </div>
+            
             <!-- values panel content starts -->
             <div class="col-lg-6 col-sm-12 story-text">  
                 <br>
@@ -98,14 +107,9 @@
                 <!-- values panel content items end -->
             </div>
             <!-- values panel content ends -->
-
-            <!-- values panel image -->
-            <div class="col-lg-6 col-sm-12">
-                <img src="static/img/about/{{content.ideals.image}}" class="story img-fluid">
-            </div>
     
         </div>
-        <br><hr><br>
+        <br><br>
         <div class="row">
 
             <!-- help panel image -->
@@ -130,9 +134,7 @@
     
         </div>
     
-    </div>
-
-    <hr>
+    </div>    
     
     <!-- about panel starts -->
     <div class="container">
@@ -141,7 +143,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <img src="static/img/brand/symbol.jpg" class="symbol">
-                <h2 class="section-heading with-logo">ABOUT THE FOUNDER</h2>
+                <h2 class="section-heading with-logo">About the Founder</h2>
             </div>
         </div>
         <!-- about panel heading ends -->
@@ -154,7 +156,7 @@
                 <!-- about panel content items start -->
                 <table class="table table-sm">
                     {% for point in content.founder %}
-                        <tr><td>{{ point }}</td></tr>
+                        <tr><td>{{ point|safe }}</td></tr>
                     {% endfor %}
                 </table>  
                 <!-- about panel content items end -->
@@ -177,4 +179,5 @@
     </div>
 </section>
 <script src="static/js/script.js"></script>
+<script src="static/js/about.js"></script>
 {% endblock %}

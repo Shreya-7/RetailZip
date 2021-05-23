@@ -4543,7 +4543,6 @@ input[type="submit"].btn-block {
   }
   .card-group > .card + .card {
     margin-left: 0;
-    border-left: 0;
   }
   .card-group > .card:not(:last-child) {
     border-top-right-radius: 0;
@@ -9552,10 +9551,6 @@ img::-moz-selection {
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link {
     padding: 0.5rem 1rem;
-  }
-  #mainNav .navbar-nav > li.nav-item > a.nav-link,
-  #mainNav .navbar-nav > li.nav-item > a.nav-link:focus {
-    color: hsla(0, 0%, 100%, 0.7);
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover,
   #mainNav .navbar-nav > li.nav-item > a.nav-link:hover {
