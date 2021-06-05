@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<section id="services" class="main-section" data-tab_id="services-tab">
+<section id="services" class="main-section bg-section" data-tab_id="services-tab">
 
     <!-- heading starts -->
     <div class="container">
@@ -16,7 +16,7 @@
                 <hr class="light my-4">
 
                 <!-- section description -->
-                <p class="section-description text-faded mb-4">These are the solutions we can unzip for you. Click on each to know more!<br></p>
+                <p class="section-description text-faded mb-4">Services for which Solutions can be Unzipped for You. Click on each to know more!<br></p>
             </div>
         </div>
     </div>
@@ -38,10 +38,10 @@
                         <a href="{{ url_for('partners') }}">
                         
                             <!-- service name -->
-                            <h5 class="card-title">
+                            <h4 class="card-title">
                                 {{ value.service_name }}
                                 <i class="far fa-hand-pointer"></i>
-                            </h5>
+                            </h4>
                         </a>
                         
                         <!-- all services except associate services -->
@@ -49,10 +49,10 @@
                         <a href="{{ url_for('service',id=key) }}">
                         
                             <!-- service name -->
-                            <h5 class="card-title">
+                            <h4 class="card-title">
                                 {{ value.service_name }}
                                 <i class="far fa-hand-pointer"></i>
-                            </h5>
+                            </h4>
                         </a>
                         
                         {% endif %}

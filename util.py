@@ -1,4 +1,5 @@
 import json
+import traceback
 from flask import render_template, jsonify, session
 
 # miscellaneous error decorator
@@ -8,8 +9,8 @@ def misc_error(my_function):
     def wrap(*args, **kwargs):
         try:
             return my_function(*args, **kwargs)
-        except Exception as e:
-            print(str(e))
+        except:
+            print(traceback.print_exc())
             return render_template('error.html')
 
     wrap.__name__ = my_function.__name__

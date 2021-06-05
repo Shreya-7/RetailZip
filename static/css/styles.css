@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
 .service-container-bg .card {
   align-items: center; }
 
@@ -8,7 +9,7 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  font-family: "Varela Round", sans-serif !important;
+  font-family: "PT Sans", sans-serif !important;
   padding: 0 !important;
   width: 100% !important;
   margin: 0 !important; }
@@ -19,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Comfortaa", cursive !important;
+  font-family: "PT Sans", sans-serif !important;
   font-weight: 700 !important; }
 
 .container {
@@ -28,7 +29,7 @@ h6 {
 #mainNav {
   padding: 0 !important; }
   #mainNav .nav-link {
-    font-family: "Comfortaa", cursive;
+    font-family: "PT Sans", sans-serif !important;
     font-weight: 700 !important; }
   #mainNav .active {
     background-color: #c5c8cc;
@@ -40,7 +41,12 @@ h6 {
 
 .symbol {
   width: 30px;
-  height: 30px;
+  height: auto;
+  display: inline; }
+
+.handshake {
+  width: 50px;
+  height: auto;
   display: inline; }
 
 .with-logo {
@@ -64,11 +70,8 @@ h6 {
 .button-div .btn {
   margin-top: 20px;
   margin-bottom: 20px;
-  font-family: "Comfortaa", sans-serif !important;
+  font-family: "PT Sans", sans-serif !important;
   font-size: small; }
-
-a :hover {
-  transform: scale(0.8); }
 
 .card-deck,
 .card-group {
@@ -115,7 +118,9 @@ a :hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   .main-section .section-description {
-    color: black; }
+    color: black;
+    font-weight: bold;
+    font-size: large; }
   .main-section .card-area {
     margin: auto; }
   .main-section .card {
@@ -123,6 +128,8 @@ a :hover {
     margin: 0px 10px 10px 10px;
     padding: 0 !important;
     transition: 0.4s ease-out; }
+    .main-section .card a :hover {
+      transform: scale(0.8); }
   .main-section .card:hover {
     transform: translateY(-20px);
     transition: 0.4s ease-out; }
@@ -131,8 +138,11 @@ a :hover {
   .main-section .card-body {
     padding: 10px !important; }
     .main-section .card-body p {
-      color: #0f60b2 !important;
-      font-weight: bold; }
+      font-weight: bolder;
+      font-size: large; }
+  .main-section small {
+    font-size: 90%;
+    color: gray; }
   .main-section .card-img-top {
     margin-bottom: 10px !important;
     height: 50% !important; }
@@ -151,11 +161,18 @@ a :hover {
   background-repeat: repeat;
   background-size: 50%; }
 
+.segment-retail-type {
+  color: #0f60b2 !important; }
+
 #contact h2 {
   text-align: center;
   margin-top: 10px !important; }
 #contact p {
-  text-align: center; }
+  text-align: center;
+  font-size: large; }
+#contact .color-blue,
+#contact .color-red {
+  font-weight: bold; }
 #contact a {
   color: black; }
 #contact .card {
@@ -187,6 +204,10 @@ a :hover {
   margin-top: 20px; }
 #contact form .ownership {
   margin: 5px; }
+#contact form .alert {
+  margin-bottom: 5px !important; }
+#contact form #adjust-margin .form-group {
+  padding-left: 0 !important; }
 #contact .contact-connects ul {
   list-style-type: none;
   padding: 0;
@@ -198,10 +219,12 @@ a :hover {
 #contact .contact-connects h5 {
   color: #ee4631 !important;
   margin-top: 10px; }
+#contact .contact-connects img {
+  max-width: 90%; }
 
 #story {
   background-color: white;
-  font-family: "Roboto", sans-serif !important; }
+  font-family: "PT Sans", sans-serif !important; }
   #story .container > .row {
     margin-bottom: 20px; }
   #story h2 {
@@ -239,6 +262,8 @@ a :hover {
     #story figure figcaption {
       color: black;
       font-weight: bold; }
+    #story figure p {
+      font-weight: bold; }
 
 .service-container-bg {
   min-height: calc(100vh - 100px);
@@ -262,8 +287,7 @@ a :hover {
     border-bottom: 1px #b7b7b7 solid; }
 
 .service-content {
-  text-align: center;
-  font-weight: bold; }
+  text-align: center; }
   .service-content h1 {
     font-weight: bolder; }
   .service-content .card {
@@ -271,36 +295,42 @@ a :hover {
     padding-top: 10px; }
 
 .content-img {
-  width: 100%;
+  min-width: 80%;
+  max-width: 100%;
   height: auto;
   overflow: hidden; }
+
+.icons i {
+  color: #0f60b2 !important;
+  font-weight: bold; }
+.icons table {
+  vertical-align: middle; }
+  .icons table td {
+    padding: 3px; }
 
 .my-footer {
   border-top: 5px blue solid;
   padding: 10px 25px;
   background-color: #f8f8f8;
-  color: #aebcbd !important; }
+  font-family: "PT Sans", sans-serif;
+  font-size: small; }
   .my-footer h4 {
-    font-weight: bold;
+    background: linear-gradient(to right, #ee4631, #0f60b2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-top: 10px;
-    color: black; }
+    font-family: "PT Sans", sans-serif !important; }
   .my-footer ul {
     list-style-type: square; }
   .my-footer #site-map {
     font-weight: bold; }
+    .my-footer #site-map a {
+      color: #0f60b2 !important; }
   .my-footer #middle {
-    font-weight: lighter; }
+    font-weight: bold; }
     .my-footer #middle i {
       font-size: x-large;
       color: #ee4631; }
-    .my-footer #middle #icons {
-      font-weight: bold; }
-      .my-footer #middle #icons i {
-        color: #0f60b2; }
-      .my-footer #middle #icons table {
-        vertical-align: middle; }
-        .my-footer #middle #icons table td {
-          padding: 3px; }
     .my-footer #middle ul {
       list-style-type: none;
       padding: 0;
@@ -310,7 +340,7 @@ a :hover {
     padding-right: 10px; }
     .my-footer #contact-generic li {
       color: #0f60b2 !important;
-      font-weight: bold !important; }
+      font-weight: bold; }
     .my-footer #contact-generic .row {
       margin-bottom: 5px !important; }
   .my-footer .copyright {
@@ -332,7 +362,7 @@ a :hover {
   padding: 10px;
   line-height: 2.5; }
   #credits span {
-    color: #0f60b2;
+    color: #ee4631;
     font-weight: bold; }
 
 #admin table {
@@ -344,6 +374,8 @@ a :hover {
   left: auto;
   right: 20px;
   z-index: 9999; }
+  .contact-sticky .tooltip-hide {
+    display: none; }
   .contact-sticky img {
     width: 70px;
     height: auto;
@@ -352,6 +384,11 @@ a :hover {
   .contact-sticky img:hover {
     border-radius: 15px;
     transform: scale(1.2); }
+    .contact-sticky img:hover .tooltip-hide {
+      display: block;
+      z-index: 99999; }
+  .contact-sticky a:hover p:after {
+    content: "Connect!"; }
 
 @media (min-width: 0) {
   .content-img {

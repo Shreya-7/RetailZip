@@ -41,15 +41,28 @@
 
             <!-- back to services link -->
             <div class="text-center button-div">
-                <a href="{{ url_for('services') }}">
-                    <button class="btn btn-primary btn-lg" type="button">
 
-                        <!-- hand icon -->
-                        <i class="fas fa-backward"></i>
-                        Explore Other Services
-                        
-                    </button>
-                </a>
+                {% if id == 'A' %}
+                    <a href="{{ url_for('partners') }}">
+                        <button class="btn btn-primary btn-lg" type="button">
+
+                            <!-- hand icon -->
+                            <i class="fas fa-backward"></i>
+                            Explore Other Associate Services
+                            
+                        </button>
+                    </a>
+                {% else %}
+                    <a href="{{ url_for('services') }}">
+                        <button class="btn btn-primary btn-lg" type="button">
+                    
+                            <!-- hand icon -->
+                            <i class="fas fa-backward"></i>
+                            Explore Other Retail Services
+                    
+                        </button>
+                    </a>
+                {% endif %}
             </div>
         </div>
     </div>

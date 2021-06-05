@@ -5,7 +5,7 @@
 {% block title %} Business Verticals - RetailZip {% endblock %}
 
 {% block body %}
-<section id="segments" class="main-section segments-special" data-tab_id="segments-tab">
+<section id="segments" class="main-section segments-special bg-section" data-tab_id="segments-tab">
 
     <div class="container">
 
@@ -17,11 +17,11 @@
                 <img src="static/img/brand/symbol.jpg" class="symbol">
 
                 <!-- section heading -->
-                <h2 class="section-heading with-logo">Business Verticals</h2>
+                <h2 class="section-heading with-logo">BUSINESS VERTICALS</h2>
                 <hr class="light my-4">
 
                 <!-- section description -->
-                <p class="section-description text-faded mb-4">These are the retail businesses for which solutions can be unzipped for you.<br></p>
+                <p class="section-description text-faded mb-4">Retail Businesses for which Solutions can be Unzipped for You.<br></p>
             </div>
         </div>
         <!-- heading ends -->
@@ -38,10 +38,10 @@
                     <div class="card-body">
 
                         <!-- vertical name -->
-                        <h5 class="card-title">{{ segment.segment_name }}</h5>
+                        <h4 class="card-title">{{ segment.segment_name }}</h4>
 
                         <!-- vertical description -->
-                        <p class="card-text text-muted">{{ segment.retail_type }}</p>
+                        <p class="card-text text-muted segment-retail-type">{{ segment.retail_type }}</p>
                         <small><b>{{ segment.product_categories }}</b></small>
                     </div>
                 </div>

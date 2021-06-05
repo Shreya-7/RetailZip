@@ -73,7 +73,8 @@ def service():
     """
         Opens the page for a particular service based on its ID (be it retail or associate)
     """
-    return render_template('service.html', service=get_service(request.args.get('id')))
+    id = request.args.get('id')
+    return render_template('service.html', service=get_service(id), id=id[0])
 
 
 @app.route('/verticals')
@@ -97,7 +98,13 @@ def about():
 @app.route('/contact')
 @misc_error
 def contact():
-    return render_template('contact.html',
+    return render_template('contact.html')
+
+
+@app.route('/consult')
+@misc_error
+def consult():
+    return render_template('consult.html',
                            business=get_segments(),
                            services=get_retail_services(),
                            associate=get_associate_services())

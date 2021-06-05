@@ -79,9 +79,16 @@
                         </a>
                     </li>
 
+                    <!-- CONSULTATION -->
+                    <li class="nav-item" id="consult-tab">
+                        <a class="nav-link color-blue js-scroll-trigger" href="{{ url_for('consult') }}">
+                            CONSULTATION FORM
+                        </a>
+                    </li>
+
                     <!-- CONTACT US -->
                     <li class="nav-item" id="contact-tab">
-                        <a class="nav-link color-blue js-scroll-trigger" href="{{ url_for('contact') }}">
+                        <a class="nav-link color-red js-scroll-trigger" href="{{ url_for('contact') }}">
                             CONTACT US
                         </a>
                     </li>
@@ -93,7 +100,8 @@
     <!-- navbar ends -->
 
     <div class="contact-sticky">        
-        <a href="{{ url_for('contact') }}" >
+        <a href="{{ url_for('consult') }}" >
+            <p class="text-center"></p>
             <img src="static/img/brand/symbol.jpg">
         </a>        
     </div>
@@ -106,7 +114,7 @@
         <div class="row">
             <div class="col">
                 To get your Solutions Unzipped, 
-                <a href="{{ url_for('contact') }}">click here</a> 
+                <a href="{{ url_for('consult') }}">click here <i class="far fa-hand-pointer"></i></a> 
                 and fill the Consultation form!
             </div>
         </div>        
@@ -155,67 +163,47 @@
                 <span class="oi oi-account-login" title="icon name" aria-hidden="true"></span>
 
                 <!-- web connect icons start -->
-                <div id="icons">
+                <div class="icons">
 
                     <!-- socials start -->
                     <ul class="list-inline">
-
                         <!-- twitter -->
                         <li class="list-inline-item">
-                            <a href="https://twitter.com/manishagarwal20">
+                            <a href="https://twitter.com/retail_zip" target="_blank">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </li>
-
-                        <!-- facebook -->
-                        <li class="list-inline-item">
-                            <a href="https://www.facebook.com/RetailZip-100854875480975/">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                        </li>
-
-                        <!-- instagram -->
-                        <li class="list-inline-item">
-                            <a href="https://www.instagram.com/manishagarwal0508/">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-
+                    
                         <!-- youtube -->
                         <li class="list-inline-item">
-                            <a href="https://youtube.com/channel/UCHJp6YPqhUMLZTfGTHqs5Ng">
+                            <a href="https://youtube.com/channel/UCDYI3cnZD0TxBBiUQJLXbXQ"  target="_blank">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </li>
 
-                        <!-- linkedin -->
+                        <!-- email -->
                         <li class="list-inline-item">
-                            <a href="https://www.linkedin.com/in/manish-agarwal-0b808420b/">
-                                <i class="fab fa-linkedin"></i>
+                            
+                            <a href="www.retailzip.in"  target="_blank">
+                                <i class="fas fa-laptop-code"></i>
                             </a>
                         </li>
                     </ul>
-                    <!-- socials end -->
 
                     <!-- addresses start -->
                     <table>
                         <!-- email -->
                         <tr>
-                            <td><i class="fas fa-envelope"></i></td>
+                            <td><i class="fas fa-at"></i></td>
                             <td><span><a href="mailto:manish@retailzip.in">manish@retailzip.in</a></span></td>
                         </tr>
-                        <!-- website -->
                         <tr>
-                            <td><i class="fas fa-mouse"></i></td>
-                            <td><span><a href="#">www.retailzip.in</a></span></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-mobile-alt"></i></td>
+                            <td><i class="fas fa-phone-alt"></i></td>
                             <td><span><a href="#">+91 9339570332</a></span></td>
                         </tr>
                         <tr>
-                            <td><i class="fas fa-map-marker-alt"></i></td>
-                            <td><span><a href="#">Kolkata</a></span></td>
+                            <td><i class="fab fa-whatsapp"></i></td>
+                            <td><span><a href="#">+91 9339570332</a></span></td>
                         </tr>
                     </table>
                     <!-- addresses end -->
@@ -229,22 +217,23 @@
             <div class="col-lg-4 col-m-12" id="contact-generic">
 
                 <!-- help heading -->
-                <h4>Can I Help You?</h4>
+                <h4 class="with-logo">Can I Help You</h4>
+                <img src="static/img/handshake.png" class="handshake">
 
                 <!-- help links start -->
                 <ul class="text-muted">
+                    <a href="{{ url_for('consult') }}">
+                        <li>
+                            <span class="click">Click Here <i class="far fa-hand-pointer"></i></span>
+                            for a consultation request
+                        </li>
+                    </a>
                     <a href="{{ url_for('contact') }}">
                         <li>Visit the Contact Us page</li>
                     </a>
                     <a href="{{ url_for('about') }}">
                         <li>Visit the About Us Page</li>
-                    </a>
-                    <a href="{{ url_for('contact') }}">
-                        <li>
-                            <span class="click">Click Here</span> 
-                            for a consultation request
-                        </li>
-                    </a>
+                    </a>                    
                 </ul>
                 <!-- help links end -->
             </div>
@@ -263,7 +252,7 @@
         <b>Support:</b> Satrajit Bhattacharya
         <span>|</span>
         <b><i class="far fa-copyright"></i></b>        
-        All rights reserved by <b>RetailZip Solutions Pvt. Ltd.</b>
+        All rights reserved by <b>RetailZip, Kolkata</b>
     </div>
     <!-- credits end -->
 

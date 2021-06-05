@@ -153,6 +153,6 @@ def send_email(data, request_number):
         )
         message.attach(part)
         server.sendmail(
-            sender_email, 'manishagarwal5870@gmail.com', message.as_string())
+            sender_email, 'retailzip21@gmail.com', message.as_string())
 
     os.remove('submission.xls')

@@ -1,8 +1,7 @@
 {
-	"short": {
+	"short": {		
 	},
 	"detail": {
-
 	},
 	"short-headings": [
 		"email",
@@ -25,6 +24,7 @@
 		"vertical",
 		"service",
 		"associate",
+		"message",
 		"timestamp"
 	]
 }
