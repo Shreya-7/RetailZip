@@ -35,7 +35,7 @@ def get_text_content(data, request_number):
         Founder, RetailZip\n\n
         +91 9339570332\n\n
         manish@retailzip.in\n\n
-        www.retailzip.in\n\n
+        https://www.retailzip.in\n\n
     '''
     return content + footer
 
@@ -90,7 +90,7 @@ def get_html_content(data, request_number):
         </b><br>
         +91 9339570332 <br>
         <a href='mailto:manish@retailzip.in'>manish@retailzip.in</a> <br>
-        <a href='www.retailzip.in'>www.retailzip.in</a>
+        <a href='https://www.retailzip.in'>https://www.retailzip.in</a>
     '''
     return html + '<br>' + footer
 

@@ -9,7 +9,7 @@
     <title> {% block title %}{% endblock %} </title>
 
     <!-- stylesheets -->
-    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <link rel="stylesheet" href="static/css/styles.css">
@@ -20,7 +20,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic">
     <link href="static/icons/font-awesome/css/all.css" rel="stylesheet">
-    
+
 </head>
 
 <body id="page-top" class="container-fluid">
@@ -33,10 +33,9 @@
             <a class="navbar-brand js-scroll-trigger" href="{{ url_for('index') }}">
                 <img src="static/img/brand/logo.jpg" class="header-logo">
             </a>
-            
+
             <!-- toggle menu icon -->
-            <button
-                data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
+            <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
                 type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-align-justify"></i></button>
 
@@ -50,7 +49,7 @@
                             HOME
                         </a>
                     </li>
-                    
+
                     <!-- ABOUT US -->
                     <li class="nav-item" id="about-tab">
                         <a class="nav-link color-blue js-scroll-trigger" href="{{ url_for('about') }}">
@@ -99,11 +98,11 @@
     </nav>
     <!-- navbar ends -->
 
-    <div class="contact-sticky">        
-        <a href="{{ url_for('consult') }}" >
+    <div class="contact-sticky">
+        <a href="{{ url_for('consult') }}">
             <p class="text-center"></p>
             <img src="static/img/brand/symbol.jpg">
-        </a>        
+        </a>
     </div>
 
     {% block body %}
@@ -113,11 +112,11 @@
     <div class="main-strip container-fluid">
         <div class="row">
             <div class="col">
-                To get your Solutions Unzipped, 
-                <a href="{{ url_for('consult') }}">click here <i class="far fa-hand-pointer"></i></a> 
+                To get your Solutions Unzipped,
+                <a href="{{ url_for('consult') }}">click here <i class="far fa-hand-pointer"></i></a>
                 and fill the Consultation form!
             </div>
-        </div>        
+        </div>
     </div>
 
     <!-- footer starts -->
@@ -151,7 +150,7 @@
                         <li>Contact Us</li>
                     </a>
                 </ul>
-            
+
             </div>
             <!-- site map ends -->
 
@@ -173,19 +172,11 @@
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </li>
-                    
+
                         <!-- youtube -->
                         <li class="list-inline-item">
-                            <a href="https://youtube.com/channel/UCDYI3cnZD0TxBBiUQJLXbXQ"  target="_blank">
+                            <a href="https://youtube.com/channel/UCDYI3cnZD0TxBBiUQJLXbXQ" target="_blank">
                                 <i class="fab fa-youtube"></i>
-                            </a>
-                        </li>
-
-                        <!-- email -->
-                        <li class="list-inline-item">
-                            
-                            <a href="www.retailzip.in"  target="_blank">
-                                <i class="fas fa-laptop-code"></i>
                             </a>
                         </li>
                     </ul>
@@ -199,11 +190,11 @@
                         </tr>
                         <tr>
                             <td><i class="fas fa-phone-alt"></i></td>
-                            <td><span><a href="#">+91 9339570332</a></span></td>
+                            <td><span style="color: #ee4631">+91 9339570332</span></td>
                         </tr>
                         <tr>
                             <td><i class="fab fa-whatsapp"></i></td>
-                            <td><span><a href="#">+91 9339570332</a></span></td>
+                            <td><span style="color: #ee4631">+91 9339570332</span></td>
                         </tr>
                     </table>
                     <!-- addresses end -->
@@ -217,8 +208,7 @@
             <div class="col-lg-4 col-m-12" id="contact-generic">
 
                 <!-- help heading -->
-                <h4 class="with-logo">Can I Help You</h4>
-                <img src="static/img/handshake.png" class="handshake">
+                <h4>Can I Help You</h4>
 
                 <!-- help links start -->
                 <ul class="text-muted">
@@ -233,25 +223,25 @@
                     </a>
                     <a href="{{ url_for('about') }}">
                         <li>Visit the About Us Page</li>
-                    </a>                    
+                    </a>
                 </ul>
                 <!-- help links end -->
             </div>
             <!-- help ends -->
         </div>
-        
+
     </footer>
     <!-- footer ends  -->
 
     <!-- credits start -->
     <div id="credits">
-        <b>Design & Development:</b> Shreya Agarwal 
-        <span>|</span> 
-        <b>Brand Creatives:</b> Rajarshi Bhattacharyya (Sacred)  
-        <span>|</span> 
+        <b>Design & Development:</b> Shreya Agarwal
+        <span>|</span>
+        <b>Brand Creatives:</b> Rajarshi Bhattacharyya (Sacred)
+        <span>|</span>
         <b>Support:</b> Satrajit Bhattacharya
         <span>|</span>
-        <b><i class="far fa-copyright"></i></b>        
+        <b><i class="far fa-copyright"></i></b>
         All rights reserved by <b>RetailZip, Kolkata</b>
     </div>
     <!-- credits end -->

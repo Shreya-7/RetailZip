@@ -14,7 +14,11 @@ if __name__ == '__main__':
 
 @app.route('/contact_form', methods=["POST"])
 def contact_form():
-
+    if request.headers.get('X-Forwarded-Proto') == 'http':
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        print('Redirecting...')
+        return redirect(url, code=code)
     try:
         json_content = get_data('json/clients.json')
 
@@ -54,6 +58,11 @@ def contact_form():
 @app.route('/')
 @misc_error
 def index():
+    if request.headers.get('X-Forwarded-Proto') == 'http':
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        print('Redirecting...')
+        return redirect(url, code=code)
     data = get_main_content()
     return render_template('index.html',
                            business=data['business'],
@@ -64,6 +73,11 @@ def index():
 @app.route('/services')
 @misc_error
 def services():
+    if request.headers.get('X-Forwarded-Proto') == 'http':
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        print('Redirecting...')
+        return redirect(url, code=code)
     return render_template('services.html', services=get_retail_services())
 
 
@@ -73,6 +87,11 @@ def service():
     """
         Opens the page for a particular service based on its ID (be it retail or associate)
     """
+    if request.headers.get('X-Forwarded-Proto') == 'http':
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        print('Redirecting...')
+        return redirect(url, code=code)
     id = request.args.get('id')
     return render_template('service.html', service=get_service(id), id=id[0])
 
@@ -80,30 +99,55 @@ def service():
 @app.route('/verticals')
 @misc_error
 def segments():
+    if request.headers.get('X-Forwarded-Proto') == 'http':
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        print('Redirecting...')
+        return redirect(url, code=code)
     return render_template('segments.html', segments=get_segments())
 
 
 @app.route('/partners')
 @misc_error
 def partners():
+    if request.headers.get('X-Forwarded-Proto') == 'http':
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        print('Redirecting...')
+        return redirect(url, code=code)
     return render_template('partners.html', services=get_associate_services())
 
 
 @app.route('/about')
 @misc_error
 def about():
+    if request.headers.get('X-Forwarded-Proto') == 'http':
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        print('Redirecting...')
+        return redirect(url, code=code)
     return render_template('about.html', content=get_about_us())
 
 
 @app.route('/contact')
 @misc_error
 def contact():
+    if request.headers.get('X-Forwarded-Proto') == 'http':
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        print('Redirecting...')
+        return redirect(url, code=code)
     return render_template('contact.html')
 
 
 @app.route('/consult')
 @misc_error
 def consult():
+    if request.headers.get('X-Forwarded-Proto') == 'http':
+        url = request.url.replace('http://', 'https://', 1)
+        code = 301
+        print('Redirecting...')
+        return redirect(url, code=code)
     return render_template('consult.html',
                            business=get_segments(),
                            services=get_retail_services(),

@@ -31,6 +31,8 @@ h6 {
   #mainNav .nav-link {
     font-family: "PT Sans", sans-serif !important;
     font-weight: 700 !important; }
+  #mainNav .nav-link:hover {
+    transform: scale(0.8) !important; }
   #mainNav .active {
     background-color: #c5c8cc;
     border-radius: 10px; }
