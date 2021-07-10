@@ -12,12 +12,12 @@ from email_util import send_email
 app = Flask('app', static_url_path='/static')
 app.secret_key = 'veryverysecretisntitormaybeitis'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-
 uri = os.getenv("DATABASE_URL")  # or other relevant config var
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = uri
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
