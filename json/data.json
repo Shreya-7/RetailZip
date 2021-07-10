@@ -320,112 +320,25 @@
                 "Review"
             ]
         },
-        "S18": {
-            "service_name": "Associate Services",
-            "mini_description": "Collaborative Services",
-            "extended_description": "",
-            "image": "collab.jpg",
-            "bg_color": "#a9dbf6",
-            "sub_services": [
-                "Business Segment",
-                "Business Volumes",
-                "Category & Productivity Benchmarks",
-                "Manning Design - Multi Tasking",
-                "Cost Benchmarks",
-                "Training & Development Design",
-                "Rewards & Recogniton Design",
-                "Increment Design",
-                "Report Dashboards",
-                "Review"
-            ]
-        }
-    },
-    "associate-services": {
-        "A2": {
-            "service_name": "Design Services",
-            "mini_description": "",
+        "S20": {
+            "service_name": "Mall Services",
+            "mini_description": "Business, Design & Marketing",
             "extended_description": "",
             "image": "design.jpg",
             "bg_color": "#7ccbc6",
             "sub_services": [
                 "Circulation Design",
                 "Maximising Retail Area",
-                "Services Design",
-                "Fixture Design",
-                "VM Design",
-                "Façade Design",
-                "IT Service Design",
-                "Backend Design",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "A4": {
-            "service_name": "Leasing Services",
-            "mini_description": "",
-            "extended_description": "",
-            "image": "leasing.jpg",
-            "bg_color": "#a5e1cd",
-            "sub_services": [
                 "Target Customer Segment",
                 "Brand & Business Mix",
                 "Brand & Business Planogram",
                 "Retail Area Efficiency",
                 "Realisation per Square Feet",
-                "Other Income Opportunities",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "A3": {
-            "service_name": "Mall Marketing Services",
-            "mini_description": "",
-            "extended_description": "",
-            "image": "mall_mktg.jpg",
-            "bg_color": "#67b6d4",
-            "sub_services": [
-                "Mall Location",
-                "Target Customer Segment",
-                "Competition Mapping",
-                "Brand & Business Mix",
                 "Footfall Enhancement",
                 "Shopping Occasions",
                 "Retailer Tie Ups",
                 "Other Income Monetisation",
                 "Events & Promotions",
-                "Service Standards",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "A1": {
-            "service_name": "Mall Management Services",
-            "mini_description": "",
-            "extended_description": "",
-            "image": "mall_mgmt.jpg",
-            "bg_color": "#f7bbb6",
-            "sub_services": [
-                "Facility Services",
-                "Housekeeping Services",
-                "Security Services",
-                "Admin Services",
-                "Report Dashboards",
-                "Review"
-            ]
-        }, 
-        "A5": {
-            "service_name": "Statutory Services",
-            "mini_description": "",
-            "extended_description": "",
-            "image": "statutory.jpg",
-            "bg_color": "#c1effd",
-            "sub_services": [
-                "Audits",
-                "Direct Taxation",
-                "Indirect Taxation",
-                "Labour Laws",
-                "FSSAI Laws",
-                "Licences",
                 "Report Dashboards",
                 "Review"
             ]
@@ -501,8 +414,7 @@
             "image": "services.jpg",
             "points": {
                 "Business Verticals": "Serving needs of various retail formats",
-                "Retail Services": "Services for managing and growing retail business",
-                "Associate Services": "Collaboration with Business Associates for providing solutions"
+                "Retail Services": "Services for managing and growing retail business"
             }            
         },
         "story": {

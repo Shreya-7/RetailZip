@@ -34,19 +34,13 @@ def get_data(path='json/data.json'):
     return json.load(open(path))
 
 
-def get_next_request_number():
+def get_next_request_number(obj: dict):
 
-    data = get_data(path='json/clients.json')
-    keys = []
-    keys.extend(data['short'].keys())
-    keys.extend(data['detail'].keys())
-
-    if len(keys) == 0:
-        keys.append('RZ100')
-
-    current_max_key_number = int(max(keys)[2:])
-
-    return 'RZ'+str(current_max_key_number+1)
+    if len(obj) == 0:
+        return 'RZ101'
+    else:
+        current_max_key_number = int(obj[0].request_number[2:])
+        return 'RZ'+str(current_max_key_number+1)
 
 
 """
@@ -62,10 +56,6 @@ def get_retail_services():
     return get_data()['retail-services']
 
 
-def get_associate_services():
-    return get_data()['associate-services']
-
-
 def get_about_us():
     return get_data()['about-us']
 
@@ -76,8 +66,8 @@ def get_main_content():
     """
     data = {}
     data['business'] = {i: get_business(i) for i in ['B9', 'B2', 'B8', 'B4']}
-    data['service'] = {i: get_service(i) for i in ['S1', 'S19', 'S8', 'S17']}
-    data['associate'] = {i: get_service(i) for i in ['A2', 'A4', 'A1', 'A3']}
+    data['service'] = {i: get_service(
+        i) for i in ['S1', 'S19', 'S8', 'S17', 'S2', 'S14', 'S10', 'S20']}
     return data
 
 
@@ -85,14 +75,7 @@ def get_service(id):
     """
         Gets the details of a particular service based on the ID from the JSON file
     """
-
-    key = ''
-    if 'A' in id:
-        key = 'associate-services'
-    else:
-        key = 'retail-services'
-
-    return get_data()[key][id]
+    return get_data()['retail-services'][id]
 
 
 def get_business(id):

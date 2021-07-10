@@ -52,7 +52,7 @@
 <section id="segments" class="main-section bg-section">
     <div class="container">
         <div class="row no-gutters">
-            <div class="section-heading-area col-lg-3">
+            <div class="section-heading-area col-lg-2">
                 <!-- zip symbol -->
                 <img src="static/img/brand/symbol.jpg" class="symbol">
                 <!-- section heading -->
@@ -67,7 +67,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-9 card-area">
+            <div class="col-lg-10 card-area">
                 <!-- services content items start -->
                 <div class="container main-container">
                     <div class="row card-group text-center no-gutters" style="margin: 9px;">
@@ -102,7 +102,7 @@
 <section id="services" class="main-section bg-section">
     <div class="container">
         <div class="row no-gutters">
-            <div class="section-heading-area col-lg-3">
+            <div class="section-heading-area col-lg-2">
                 <!-- zip symbol -->
                 <img src="static/img/brand/symbol.jpg" class="symbol">
                 <!-- section heading -->
@@ -117,7 +117,7 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-9 card-area">
+            <div class="col-lg-10 card-area">
                 <!-- services content items start -->
                 <div class="container main-container">
                     <div class="row card-group text-center no-gutters" style="margin: 9px;">
@@ -146,55 +146,6 @@
                     </div>
                 </div>
                 
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="partners" class="main-section bg-section">
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="section-heading-area col-lg-3">
-                <!-- zip symbol -->
-                <img src="static/img/brand/symbol.jpg" class="symbol">
-                <!-- section heading -->
-                <h2 class="text-center section-heading with-logo">Associate Services</h2>
-                <div class="text-center button-div">
-                    <a href="{{ url_for('partners') }}">
-                        <button class="btn btn-primary btn-lg" type="button">
-                            Read More
-                            <!-- hand icon -->
-                            <i class="far fa-hand-pointer"></i>
-                        </button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-9 card-area">
-                <!-- services content items start -->
-                <div class="container main-container">
-                    <div class="row card-group text-center no-gutters" style="margin: 9px;">
-                        {% for key, value in associate.items() %}
-                        
-                        <div class="card card-border card-border-gradient w-100 text-center">
-
-                            <!-- service image -->
-                            <img class="card-img-top" src="static/img/services/{{ value.image }}">
-
-                            <div class="card-body">
-                                <!-- service name & link -->
-                                    <a href="{{ url_for('service',id=key) }}">
-                                        <h5 class="card-title">{{ value.service_name }}</h5>
-                                    </a>                                 
-                                <!-- service description -->
-                                <p class="card-text text-muted">{{ value.mini_description }}</p>
-                            </div>
-                        </div>
-
-                        {% endfor %}
-
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>

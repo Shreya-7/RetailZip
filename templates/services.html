@@ -33,19 +33,6 @@
                     <img class="card-img-top" src="static/img/services/{{ value.image }}">
 
                     <div class="card-body">
-                        <!-- different link if the service is associate services -->
-                        {% if key == 'S18' %}
-                        <a href="{{ url_for('partners') }}">
-                        
-                            <!-- service name -->
-                            <h4 class="card-title">
-                                {{ value.service_name }}
-                                <i class="far fa-hand-pointer"></i>
-                            </h4>
-                        </a>
-                        
-                        <!-- all services except associate services -->
-                        {% else %}
                         <a href="{{ url_for('service',id=key) }}">
                         
                             <!-- service name -->
@@ -54,8 +41,6 @@
                                 <i class="far fa-hand-pointer"></i>
                             </h4>
                         </a>
-                        
-                        {% endif %}
                         
                         <!-- service description -->
                         <p class="card-text text-muted">{{ value.mini_description }}</p>

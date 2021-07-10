@@ -1,14 +1,89 @@
 from flask import Flask, render_template, request, redirect, make_response, jsonify
+from flask_sqlalchemy import SQLAlchemy
 
 import json
+import os
+import traceback
 from datetime import datetime
-from util import get_next_request_number, get_data, get_retail_services, get_associate_services, get_service, get_segments, get_main_content, get_about_us, misc_error, remove_field
+from util import get_next_request_number, get_data, get_retail_services, get_service, get_segments, get_main_content, get_about_us, misc_error, remove_field
 from email_util import send_email
 
 app = Flask('app', static_url_path='/static')
 app.secret_key = 'veryverysecretisntitormaybeitis'
 
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+db = SQLAlchemy(app)
+
+
+class Short(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    request_number = db.Column(db.String(10), nullable=False, default="RZ")
+    email = db.Column(db.String(80), nullable=False)
+    name = db.Column(db.String(80), nullable=False)
+    number = db.Column(db.String(15), nullable=False)
+    message = db.Column(db.String(500), nullable=False)
+    timestamp = db.Column(db.DateTime, nullable=False)
+
+    def __init__(self, **kwargs):
+        self.email = kwargs["email"]
+        self.request_number = kwargs["request_number"]
+        self.number = kwargs["number"]
+        self.message = kwargs["message"]
+        self.timestamp = kwargs["timestamp"]
+        self.name = kwargs["name"]
+
+    def __repr__(self):
+        return '<{} - {} - {}>'.format(self.request_number, self.name, self.email)
+
+
+class Detail(db.Model):
+
+    id = db.Column(db.Integer, primary_key=True)
+    request_number = db.Column(db.String(10), nullable=False, default="RZ")
+    email = db.Column(db.String(80), nullable=False)
+    name = db.Column(db.String(80), nullable=False)
+    number = db.Column(db.String(15), nullable=False)
+    alt_number = db.Column(db.String(15), nullable=True)
+    message = db.Column(db.String(500), nullable=True)
+    timestamp = db.Column(db.DateTime, nullable=False)
+    address = db.Column(db.String(200), nullable=False)
+    state = db.Column(db.String(80), nullable=False)
+    city = db.Column(db.String(80), nullable=False)
+    pincode = db.Column(db.Integer, nullable=False)
+    firm = db.Column(db.String(80), nullable=True)
+    ownership = db.Column(db.String(100), nullable=False)
+    vertical = db.Column(db.String(500), nullable=False)
+    services = db.Column(db.String(500), nullable=False)
+
+    def __init__(self, **kwargs):
+        self.email = kwargs["email"]
+        self.request_number = kwargs["request_number"]
+        self.number = kwargs["number"]
+        self.timestamp = kwargs["timestamp"]
+        self.name = kwargs["name"]
+        self.address = kwargs["address"]
+        self.state = kwargs["state"]
+        self.city = kwargs["city"]
+        self.pincode = kwargs["pincode"]
+        self.ownership = kwargs["ownership"]
+        self.vertical = kwargs["vertical"]
+        self.services = kwargs["service"]
+
+        self.alt_number = kwargs["alt_number"] if "alt_number" in kwargs.keys(
+        ) else 0
+        self.firm = kwargs["firm"] if "firm" in kwargs.keys(
+        ) else 0
+        self.message = kwargs["message"] if "message" in kwargs.keys(
+        ) else 0
+
+    def __repr__(self):
+        return '<{} - {}>'.format(self.request_number, self.name, self.email)
+
+
 if __name__ == '__main__':
+    db.create_all()
     app.run(host='0.0.0.0')
 
 
@@ -20,36 +95,45 @@ def contact_form():
         print('Redirecting...')
         return redirect(url, code=code)
     try:
-        json_content = get_data('json/clients.json')
 
         client_details = request.form.to_dict()
         current_time = datetime.now().strftime('%d-%m-%Y %H:%M:%S')
         client_details['timestamp'] = current_time
 
-        request_number = get_next_request_number()
-
         if client_details['type'] == '0':
 
             client_details.pop('type')
-            json_content['short'][request_number] = client_details
+
+            obj = Short.query.order_by(
+                Short.request_number.desc()).limit(1).all()
+            client_details['request_number'] = get_next_request_number(obj)
+            entry = Short(**client_details)
+
+            db.session.add(entry)
+            db.session.commit()
         else:
             client_details.pop('country')
             client_details.pop('type')
             multi_keys = ['ownership', 'vertical', 'service', 'associate']
             for key in multi_keys:
                 client_details[key] = ', '.join(request.form.getlist(key))
-            json_content['detail'][request_number] = client_details
 
-        json.dump(json_content, open('json/clients.json', 'w'))
+            obj = Detail.query.order_by(
+                Detail.request_number.desc()).limit(1).all()
+            client_details['request_number'] = get_next_request_number(obj)
+            entry = Detail(**client_details)
 
-        send_email(client_details, request_number)
+            db.session.add(entry)
+            db.session.commit()
+
+        send_email(client_details, client_details['request_number'])
 
         return make_response(jsonify({
             'message': 'Thank you for choosing RetailZip. You have successfully made a consultation request. Please check your email for further details :)'
         }), 200)
 
     except Exception as e:
-        print(e)
+        print(traceback.print_exc())
         return make_response(jsonify({
             'error': 'An error occured while making the request. Please try again later or directly reach out to us at manish@retailzip.in'
         }), 400)
@@ -66,8 +150,7 @@ def index():
     data = get_main_content()
     return render_template('index.html',
                            business=data['business'],
-                           services=data['service'],
-                           associate=data['associate'])
+                           services=data['service'])
 
 
 @app.route('/services')
@@ -107,17 +190,6 @@ def segments():
     return render_template('segments.html', segments=get_segments())
 
 
-@app.route('/partners')
-@misc_error
-def partners():
-    if request.headers.get('X-Forwarded-Proto') == 'http':
-        url = request.url.replace('http://', 'https://', 1)
-        code = 301
-        print('Redirecting...')
-        return redirect(url, code=code)
-    return render_template('partners.html', services=get_associate_services())
-
-
 @app.route('/about')
 @misc_error
 def about():
@@ -150,5 +222,4 @@ def consult():
         return redirect(url, code=code)
     return render_template('consult.html',
                            business=get_segments(),
-                           services=get_retail_services(),
-                           associate=get_associate_services())
+                           services=get_retail_services())

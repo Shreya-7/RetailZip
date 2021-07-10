@@ -44,7 +44,7 @@ h6 {
     font-weight: 700 !important;
   }
   .nav-link:hover {
-      transform: scale(0.8) !important;
+    transform: scale(0.8) !important;
   }
   .active {
     background-color: #c5c8cc;
@@ -124,6 +124,9 @@ h6 {
 
   a {
     color: black;
+  }
+  .col {
+    background-color: $logo-red !important;
   }
 }
 
@@ -469,7 +472,7 @@ h6 {
   #middle {
     font-weight: bold;
     i {
-      font-size: x-large;
+      font-size: large;
       color: $logo-red;
     }
 

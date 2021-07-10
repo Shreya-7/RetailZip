@@ -147,24 +147,6 @@
                                     </div>
                                     <div class="alert" id="service"></div>
                                 </fieldset>
-
-                                <fieldset class="form-group">
-                                    <legend>
-                                        <h6>Associate Service(s) <a href="{{ url_for('partners') }}">(details <i
-                                                    class="far fa-hand-pointer"></i>)</a>
-                                        </h6>
-                                    </legend>
-                                    <div style="text-align: left">
-                                        {% for key, service in associate.items() %}
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" id="{{ key }}" name="associate"
-                                                class="custom-control-input" value="{{ service.service_name }}">
-                                            <label class="custom-control-label" for="{{ key }}">{{ service.service_name
-                                                }}</label>
-                                        </div>
-                                        {% endfor %}
-                                    </div>
-                                </fieldset>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Submit</button>
