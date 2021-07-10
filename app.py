@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 import json
 import os
 import traceback
+import re
 from datetime import datetime
 from util import get_next_request_number, get_data, get_retail_services, get_service, get_segments, get_main_content, get_about_us, misc_error, remove_field
 from email_util import send_email
@@ -13,6 +14,10 @@ app.secret_key = 'veryverysecretisntitormaybeitis'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+
+uri = os.getenv("DATABASE_URL")  # or other relevant config var
+if uri.startswith("postgres://"):
+    uri = uri.replace("postgres://", "postgresql://", 1)
 
 db = SQLAlchemy(app)
 
