@@ -1,461 +1,459 @@
 {
-    "retail-services": {
-        "S1": {
-            "service_name": "Store Operations",
-            "mini_description": "Retail & Sales Operations",
-            "extended_description": "Setting up Store Operations Process for managing <br> Retail & Sales Operations",
-            "image": "retail_ops.png",
-            "bg_color": "#47b6ba",
-            "sub_services": [
-                "Retail Operations",
-                "Sales Operations",
-                "Category Operations",
-                "Inventory & LCM",
-                "Supply Chain Operations",
-                "Marketing & Promotion",
-                "Opex Strategy",
-                "People Strategy",
-                "Business Planning",
-                "Data Analysis",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S2": {
-            "service_name": "Store Revival",
-            "mini_description": "Turning Store Profitable",
-            "extended_description": "Analysing and Creating Action Plan for Turning Store Profitable",
-            "image": "revival.jpg",
-            "bg_color": "#e2e8fe",
-            "sub_services": [
-                "Own Data Analysis",
-                "Competition Analysis",
-                "Reasons Identifications",
-                "Action Plan",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S3": {
-            "service_name": "Reimagine Old Stores",
-            "mini_description": "New Strategy and Renovation",
-            "extended_description": "Analysing and Planning New Strategy for making <br> Existing Store more Productive and more Profitable",
-            "image": "reimagine.png",
-            "bg_color": "#f9f5f6",
-            "sub_services": [
-                "Own Data Analysis",
-                "Competition Analysis",
-                "Reasons Identifications",
-                "Action Plan",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S19": {
-            "service_name": "Reimagine Kirana Store",
-            "mini_description": "Modernise Kirana Store",
-            "extended_description": "Creating New Strategy for Modernising Kirana Store ",
-            "image": "kirana.jpg",
-            "bg_color": "#eed7d3",
-            "sub_services": [
-                "Catchment Study",
-                "Widen Product Categories",
-                "Technology Adoption",
-                "Expansion Opportunities",
-                "Omni Opportunities",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S8": {
-            "service_name": "Digital Strategy",
-            "mini_description": "Integration of Physical & Digital ",
-            "extended_description": "Strategy & Action Plan for integrating business into <br> both Physical and Digital Channels ",
-            "image": "omni.jpg",
-            "bg_color": "#2f848c",
-            "sub_services": [
-                "Business Assessment",
-                "Competition Assessment",
-                "Organisation Design",
-                "Tech Development",
-                "Design Input Metrics",
-                "Product & Pricing Strategy",
-                "Offline & Online Integration",
-                "O2O Plans - Online to Offline",
-                "Marketing & Communication Plans",
-                "Execution Plans",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S4": {
-            "service_name": "New Store Incubation",
-            "mini_description": "Establishing New Store Business",
-            "extended_description": "Creating Action plan for Establishing and Incubating <br> New Store Business ",
-            "image": "new_store.jpg",
-            "bg_color": "#8ed9f8",
-            "sub_services": [
-                "Market Study",
-                "Product & Pricing Strategy",
-                "Launch Plan",
-                "Incubation Plan",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S13": {
-            "service_name": "Product & Assortment Strategy",
-            "mini_description": "Product, Pricing & Promotion",
-            "extended_description": "Planning & Designing Strategy on <br> Products, Assortment, Pricing and Promotions ",
-            "image": "product.png",
-            "bg_color": "#f5debc",
-            "sub_services": [
-                "Business Segment",
-                "Target Customer Segment",
-                "Market Study",
-                "Competition Mapping",
-                "Community Understanding",
-                "Assortment Plan",
-                "Product Sales & Margin",
-                "Financial Projections",
-                "Display Planogram",
-                "Execution Plans",
-                "Marketing Plans",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S14": {
-            "service_name": "Marketing & Communication Strategy",
-            "mini_description": "Promote the Brand & Increase Footfall",
-            "extended_description": "Designing Marketing and Communication Strategy for driving footfall, building customer base and delivering consistent sales",
-            "image": "mktg2.jpg",
-            "bg_color": "#b8d5e3",
-            "sub_services": [
-                "Business Segment",
-                "Location of Business",
-                "Target Customer Segment",
-                "Competition Mapping",
-                "Community Understanding",
-                "Product & Pricing Strategy",
-                "Omni Channel Strategy",
-                "Shopping Occasions",
-                "Customer Retention Plans",
-                "Customer Frequency Plans",
-                "Marketing  Calendar & Plans",
-                "Execution Plan",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        
-        "S16": {
-            "service_name": "Brand Strategy",
-            "mini_description": "Vision, Mission, Target Customer, Product & Pricing",
-            "extended_description": "Creating Brand Strategy to connect with Target Customer Segments",
-            "image": "brand.jpg",
-            "bg_color": "#e8e8e6",
-            "sub_services": [
-                "Business Segment",
-                "Target Customer Segment",
-                "Competition Mapping",
-                "Community Understanding",
-                "Product Strategy",
-                "Product & Pricing Strategy",
-                "Omni Channel Scope",
-                "Marketing & Communication Strategy",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S15": {
-            "service_name": "People Strategy",
-            "mini_description": "Manpower Planning, Training, Productivity, Rewards & Retention",
-            "extended_description": "Designing Manpower Strategy for <br> recruitment, growth, retention and productivity",
-            "image": "people.jpg",
-            "bg_color": "#1274fc",
-            "sub_services": [
-                "Business Segment",
-                "Business Volumes",
-                "Category & Productivity Benchmarks",
-                "Manning Design - Multi Tasking",
-                "Cost Benchmarks",
-                "Training & Development",
-                "Rewards & Recogniton",
-                "Increment Design",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S10": {
-            "service_name": "Business Analytics & Review",
-            "mini_description": "Analysing Business Data & Shopping Behaviour",
-            "extended_description": "Designing Templates & Dashboards for Planning & Reviews to make business efficient, realtime and proactive",
-            "image": "analytics.jpg",
-            "bg_color": "#f4f2e5",
-            "sub_services": [
-                "Review Metrics",
-                "Review  Frequency",
-                "Review Calendar",
-                "Early Warning Signals",
-                "Exception Analysis",
-                "Report Dashboards",
-                "Customer Behaviour Analysis"
-            ]
-        },
-        "S11": {
-            "service_name": "Loss Prevention",
-            "mini_description": "Reducing Bad Costs & Pilferage",
-            "extended_description": "Setting up Processes & Reviews for Reducing Bad Cost and Pilferages",
-            "image": "loss.jpg",
-            "bg_color": "#ead4bc",
-            "sub_services": [
-                "Good Cost & Bad Cost",
-                "Benchmark on Bad Cost",
-                "Prevention & Monitoring",
-                "Execution Plans",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S12": {
-            "service_name": "Internal Audits",
-            "mini_description": "Monitoring Processes with high Financial Impact",
-            "extended_description": "Setting up Regular Audit Checklists & Templates for monitoring and reviewing business processes with high financial impact",
-            "image": "audit.jpg",
-            "bg_color": "#6eb9af",
-            "sub_services": [
-                "Financial Processes",
-                "Cost Benchmarking",
-                "Prevention & Monitoring",
-                "Audit Scope & Calendar",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S7": {
-            "service_name": "Footprint Expansion",
-            "mini_description": "Increase Store Count",
-            "extended_description": "Strategy for Expansion of New Stores and Increasing Brand Footprint",
-            "image": "expansion.jpg",
-            "bg_color": "#d5effe",
-            "sub_services": [
-                "City Understanding",
-                "Potential Assessment",
-                "Real Estate Supply",
-                "Real Estate -BTS or Ready",
-                "Strategy Finalisation",
-                "Execution Plans",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S17": {
-            "service_name": "New Business Start-up",
-            "mini_description": "Setting up New Business",
-            "extended_description": "Planning, Designing & Creating Road Map for New Business Start up",
-            "image": "startup.jpg",
-            "bg_color": "#29a7e1",
-            "sub_services": [
-                "Business Segment",
-                "Market Study",
-                "Competition Mapping",
-                "Brand Strategy",
-                "Milestone Setting",
-                "Financial Projections",
-                "Incubation Period",
-                "Execution Plans",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S5": {
-            "service_name": "Market Domination Strategy",
-            "mini_description": "City or Market Strategy",
-            "extended_description": "Strategy for Market & Geographical Dominance for the Brand",
-            "image": "domination.png",
-            "bg_color": "#d4f7fe",
-            "sub_services": [
-                "Market Study",
-                "Competition Mapping",
-                "Potential Assessment",
-                "Execution Plans",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S6": {
-            "service_name": "Competition Assessment",
-            "mini_description": "Understanding Market Participation",
-            "extended_description": "Analysing & Creating Strategy to manage and <br> counter market participation and competition ",
-            "image": "competition.jpg",
-            "bg_color": "#7690ab",
-            "sub_services": [
-                "Competition Mapping",
-                "Product & Pricing Strategy",
-                "Community Understanding",
-                "Marketing & Communication",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S9": {
-            "service_name": "Business Model Design",
-            "mini_description": "Scenario Planning",
-            "extended_description": "Designing Strategy for building an <br> efficient, profitable & sustainable Business ",
-            "image": "model_design.jpg",
-            "bg_color": "#92c7b7",
-            "sub_services": [
-                "Business Segment",
-                "Market Study",
-                "Competition Mapping",
-                "Community Understanding",
-                "Product Sales Mix",
-                "Margin Model",
-                "Opex Model",
-                "Financial Projections",
-                "Goal & Milestone Setting",
-                "Execution Plans",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S20": {
-            "service_name": "Mall Services",
-            "mini_description": "Business, Design & Marketing",
-            "extended_description": "Planning & Designing for creating a successful Mall Business",
-            "image": "design.jpg",
-            "bg_color": "#7ccbc6",
-            "sub_services": [
-                "Circulation Design",
-                "Maximising Retail Area",
-                "Target Customer Segment",
-                "Brand & Business Mix",
-                "Brand & Business Planogram",
-                "Retail Area Efficiency",
-                "Realisation per Square Feet",
-                "Footfall Enhancement",
-                "Shopping Occasions",
-                "Retailer Tie Ups",
-                "Other Income Monetisation",
-                "Events & Promotions",
-                "Report Dashboards",
-                "Review"
-            ]
-        }
+  "retail-services": {
+    "S1": {
+      "service_name": "Store Operations",
+      "mini_description": "Retail & Sales Operations",
+      "extended_description": "Setting up Store Operations Process for managing <br> Retail & Sales Operations",
+      "image": "retail_ops.png",
+      "bg_color": "#47b6ba",
+      "sub_services": [
+        "Retail Operations",
+        "Sales Operations",
+        "Category Operations",
+        "Inventory & LCM",
+        "Supply Chain Operations",
+        "Marketing & Promotion",
+        "Opex Strategy",
+        "People Strategy",
+        "Business Planning",
+        "Data Analysis",
+        "Report Dashboards",
+        "Review"
+      ]
     },
-    "segments": {
-        "B9": {
-            "segment_name": "Digital Retail",
-            "retail_type": "Online or Omni Channel",
-            "image": "digital.jpg",
-            "product_categories": "Food, General Merchandise, Fashion or Marketplace"
-        },        
-        "B2": {
-            "segment_name": "Hypermarket Retail",
-            "retail_type": "Large Destination Store",
-            "image": "hyper.jpg",
-            "product_categories": "Food, Grocery, Fresh, Bakery, FMCG, Fashion, Home-Needs, Luggage, Electronics, Toys, Gifts, Stationery"
-        },
-        "B4": {
-            "segment_name": "Departmental Store Retail",
-            "retail_type": "Large Destination Store",
-            "image": "dept.jpg",
-            "product_categories": "Multi Brand - Clothing, Footwear, Beauty & Accessories, Eyewear, Travel & Luggage, Home Linen"
-        },
-        "B1": {
-            "segment_name": "Supermarket Retail",
-            "retail_type": "Convenience Store",
-            "image": "super.jpg",
-            "product_categories": "Food, Grocery, Fresh, Bakery, FMCG, Kitchen Essentials, Stationery"
-        },
-        "B8": {
-            "segment_name": "Kirana Retail",
-            "retail_type": "Neighbourhood Store",
-            "image": "kirana.jpg",
-            "product_categories": "Food, Grocery, Daily Needs"
-        },
-        "B3": {
-            "segment_name": "Fashion Retail",
-            "retail_type": "Fashion Store",
-            "image": "fashion.jpg",
-            "product_categories": "Multi Brand or Brand Franchise -Dealing in Clothing, Footwear, Beauty & Fashion Accessories "
-        },
-        "B10": {
-            "segment_name": "Mall Retail",
-            "retail_type": "Malls & Shopping Complexes",
-            "image": "leasing.jpg",
-            "product_categories": "Multi-Category and Multi-Brand"
-        },
-        "B6": {
-            "segment_name": "Consumer Durables & IT Retail",
-            "retail_type": "Electronics Store",
-            "image": "consumer.jpg",
-            "product_categories": "Home & Kitchen Appliances, Mobiles, Laptops & IT, Mobile & IT, Cameras"
-        },
-        "B5": {
-            "segment_name": "Books, Toys & Gifts Retail",
-            "retail_type": "Utility Store",
-            "image": "books.png",
-            "product_categories": "Books, Toys, Gifts, Stationery, School & Office Needs, Chocolates & Confectioneries, Mobile Accessories"
-        },
-        "B7": {
-            "segment_name": "Food & Beverage Retail",
-            "retail_type": "Kiosks, Parlours, Shops",
-            "image": "food.png",
-            "product_categories": "Cafes, Parlours, Sweet Shops, Fast Food"
-        }
-        
+    "S2": {
+      "service_name": "Store Revival",
+      "mini_description": "Turning Store Profitable",
+      "extended_description": "Analysing and Creating Action Plan for Turning Store Profitable",
+      "image": "revival.jpg",
+      "bg_color": "#e2e8fe",
+      "sub_services": [
+        "Own Data Analysis",
+        "Competition Analysis",
+        "Reasons Identifications",
+        "Action Plan",
+        "Report Dashboards",
+        "Review"
+      ]
     },
-    "about-us": {
-        "ideals": {
-            "image": "vision.jpg",
-            "points": {
-                "Vision": "Customer is our God - at RetailZip all the Solutions will get Unzipped for them.",
-                "Mission": "Engaging with entrepreneurs in their existing businesses and creating new retail start-ups.",
-                "Reach": "RetailZip solutions will be available Pan-India, with greater emphasis on East India."
-            }            
-        },
-        "work": {
-            "image": "services.jpg",
-            "points": {
-                "Business Verticals": "Serving needs of various retail formats",
-                "Retail Services": "Services for managing and growing retail business"
-            }            
-        },
-        "story": {
-            "india": {
-                "heading": "India Consumption Story",
-                "image": "india.png",
-                "points": [
-                    "India is <span class='color-blue'>1.3 billion people</span>. About <span class='color-red'>65% live in rural India.</span>",
-                    "India is a Young and Aspirational nation. <span class='color-blue'>High potential for Consumption of Goods & Services.</span>",
-                    "<span class='color-blue'>Invest in India</span> is the new desire of <span class='color-red'>Entrepreneurs</span> & Investors.",
-                    "<span class='color-blue'>Rising Income levels</span> have led to huge demand for consumption of goods and services in <span class='color-red'>Rural India</span>.",
-                    "<span class='color-red'>Rural India</span> is new growth engine and outperforming Urban India.  In <span class='color-blue'>Urban India</span>, there is competition to increase market share.",
-                    "Retail businesses as well as <span class='color-blue'>Consumers are changing rapidly</span>. Covid 19 has accelerated this change at a fast pace.</span>",
-                    "<span class='color-red'>New Normal</span> has emerged for businesses, especially for retail and consumer facing businesses. These changes are permanent and will keep gaining pace going forward."
-                ]
-            },            
-            "idea": {
-                "heading": "RetailZip Idea",
-                "image": "rz_idea.jpg",
-                "points": [
-                    "<span class='color-red'>Entrepreneurs</span> desire to create their own Retail Brand or a Retail Destination Mall. ",
-                    "Entrepreneurs need Consultants/Advisors who can provide <span class='color-blue'>One Stop Solutions</span> for all their Retail business needs.",
-                    "Our <span class='color-red'>Business Idea</span> will have <span class='color-blue'>Retail Consultancy & Advisory services</span> at its Core. ",
-                    "Objective is to help Entrepreneurs to <span class='color-blue'>Develop, Expand and Grow</span> their business in a most efficient and profitable manner.", 
-                    "Thus, <span class='color-red'>Retail</span><span class='color-blue'>Zip</span> was BORN."
-                ]
-            }             
-        },
-        "founder": [
-            "A <span class='color-blue'>Retail Professional</span> with <span class='color-blue'>25 years of experience</span> with Future Group, based at Kolkata.",
-            "Member of the core Strategic Team of Big Bazaar, had a key role in making East India most Profitable Market for Future Group.",
-            "Experience in managing business in <span class='color-red'>more than 50 cities</span> of <span class='color-blue'>East India</span>, <span class='color-red'>100 Big Bazaar stores</span>, spread across <span class='color-red'>30 lac sft</span> with revenues of <span class='color-red'>5000 cr</span>. ",
-            "Passed Chartered Accountancy in 1996. Graduated from Saint Xavier’s College, Kolkata in 1992. ",
-            "Interest in Sports, Stock Market, believes and practices Healthy Living",
-            "Strong belief in the principles of Ownership, Respect, Honesty, Simplicity & Supporting people."
-        ]
+    "S3": {
+      "service_name": "Reimagine Old Stores",
+      "mini_description": "New Strategy and Renovation",
+      "extended_description": "Analysing and Planning New Strategy for making <br> Existing Store more Productive and more Profitable",
+      "image": "reimagine.png",
+      "bg_color": "#f9f5f6",
+      "sub_services": [
+        "Own Data Analysis",
+        "Competition Analysis",
+        "Reasons Identifications",
+        "Action Plan",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S19": {
+      "service_name": "Reimagine Kirana Store",
+      "mini_description": "Modernise Kirana Store",
+      "extended_description": "Creating New Strategy for Modernising Kirana Store ",
+      "image": "kirana.jpg",
+      "bg_color": "#eed7d3",
+      "sub_services": [
+        "Catchment Study",
+        "Widen Product Categories",
+        "Technology Adoption",
+        "Expansion Opportunities",
+        "Omni Opportunities",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S8": {
+      "service_name": "Digital Strategy",
+      "mini_description": "Integration of Physical & Digital ",
+      "extended_description": "Strategy & Action Plan for integrating business into <br> both Physical and Digital Channels ",
+      "image": "omni.jpg",
+      "bg_color": "#2f848c",
+      "sub_services": [
+        "Business Assessment",
+        "Competition Assessment",
+        "Organisation Design",
+        "Tech Development",
+        "Design Input Metrics",
+        "Product & Pricing Strategy",
+        "Offline & Online Integration",
+        "O2O Plans - Online to Offline",
+        "Marketing & Communication Plans",
+        "Execution Plans",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S4": {
+      "service_name": "New Store Incubation",
+      "mini_description": "Establishing New Store Business",
+      "extended_description": "Creating Action plan for Establishing and Incubating <br> New Store Business ",
+      "image": "new_store.jpg",
+      "bg_color": "#8ed9f8",
+      "sub_services": [
+        "Market Study",
+        "Product & Pricing Strategy",
+        "Launch Plan",
+        "Incubation Plan",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S13": {
+      "service_name": "Product & Assortment Strategy",
+      "mini_description": "Product, Pricing & Promotion",
+      "extended_description": "Planning & Designing Strategy on <br> Products, Assortment, Pricing and Promotions ",
+      "image": "product.png",
+      "bg_color": "#f5debc",
+      "sub_services": [
+        "Business Segment",
+        "Target Customer Segment",
+        "Market Study",
+        "Competition Mapping",
+        "Community Understanding",
+        "Assortment Plan",
+        "Product Sales & Margin",
+        "Financial Projections",
+        "Display Planogram",
+        "Execution Plans",
+        "Marketing Plans",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S14": {
+      "service_name": "Marketing & Communication Strategy",
+      "mini_description": "Promote the Brand & Increase Footfall",
+      "extended_description": "Designing Marketing and Communication Strategy for driving footfall, building customer base and delivering consistent sales",
+      "image": "mktg2.jpg",
+      "bg_color": "#b8d5e3",
+      "sub_services": [
+        "Business Segment",
+        "Location of Business",
+        "Target Customer Segment",
+        "Competition Mapping",
+        "Community Understanding",
+        "Product & Pricing Strategy",
+        "Omni Channel Strategy",
+        "Shopping Occasions",
+        "Customer Retention Plans",
+        "Customer Frequency Plans",
+        "Marketing  Calendar & Plans",
+        "Execution Plan",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S16": {
+      "service_name": "Brand Strategy",
+      "mini_description": "Vision, Mission, Target Customer, Product & Pricing",
+      "extended_description": "Creating Brand Strategy to connect with Target Customer Segments",
+      "image": "brand.jpg",
+      "bg_color": "#e8e8e6",
+      "sub_services": [
+        "Business Segment",
+        "Target Customer Segment",
+        "Competition Mapping",
+        "Community Understanding",
+        "Product Strategy",
+        "Product & Pricing Strategy",
+        "Omni Channel Scope",
+        "Marketing & Communication Strategy",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S15": {
+      "service_name": "People Strategy",
+      "mini_description": "Manpower Planning, Training, Productivity, Rewards & Retention",
+      "extended_description": "Designing Manpower Strategy for <br> recruitment, growth, retention and productivity",
+      "image": "people.jpg",
+      "bg_color": "#1274fc",
+      "sub_services": [
+        "Business Segment",
+        "Business Volumes",
+        "Category & Productivity Benchmarks",
+        "Manning Design - Multi Tasking",
+        "Cost Benchmarks",
+        "Training & Development",
+        "Rewards & Recogniton",
+        "Increment Design",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S10": {
+      "service_name": "Business Analytics & Review",
+      "mini_description": "Analysing Business Data & Shopping Behaviour",
+      "extended_description": "Designing Templates & Dashboards for Planning & Reviews to make business efficient, realtime and proactive",
+      "image": "analytics.jpg",
+      "bg_color": "#f4f2e5",
+      "sub_services": [
+        "Review Metrics",
+        "Review  Frequency",
+        "Review Calendar",
+        "Early Warning Signals",
+        "Exception Analysis",
+        "Report Dashboards",
+        "Customer Behaviour Analysis"
+      ]
+    },
+    "S11": {
+      "service_name": "Loss Prevention",
+      "mini_description": "Reducing Bad Costs & Pilferage",
+      "extended_description": "Setting up Processes & Reviews for Reducing Bad Cost and Pilferages",
+      "image": "loss.jpg",
+      "bg_color": "#ead4bc",
+      "sub_services": [
+        "Good Cost & Bad Cost",
+        "Benchmark on Bad Cost",
+        "Prevention & Monitoring",
+        "Execution Plans",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S12": {
+      "service_name": "Internal Audits",
+      "mini_description": "Monitoring Processes with high Financial Impact",
+      "extended_description": "Setting up Regular Audit Checklists & Templates for monitoring and reviewing business processes with high financial impact",
+      "image": "audit.jpg",
+      "bg_color": "#6eb9af",
+      "sub_services": [
+        "Financial Processes",
+        "Cost Benchmarking",
+        "Prevention & Monitoring",
+        "Audit Scope & Calendar",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S7": {
+      "service_name": "Footprint Expansion",
+      "mini_description": "Increase Store Count",
+      "extended_description": "Strategy for Expansion of New Stores and Increasing Brand Footprint",
+      "image": "expansion.jpg",
+      "bg_color": "#d5effe",
+      "sub_services": [
+        "City Understanding",
+        "Potential Assessment",
+        "Real Estate Supply",
+        "Real Estate -BTS or Ready",
+        "Strategy Finalisation",
+        "Execution Plans",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S17": {
+      "service_name": "New Business Start-up",
+      "mini_description": "Setting up New Business",
+      "extended_description": "Planning, Designing & Creating Road Map for New Business Start up",
+      "image": "startup.jpg",
+      "bg_color": "#29a7e1",
+      "sub_services": [
+        "Business Segment",
+        "Market Study",
+        "Competition Mapping",
+        "Brand Strategy",
+        "Milestone Setting",
+        "Financial Projections",
+        "Incubation Period",
+        "Execution Plans",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S5": {
+      "service_name": "Market Domination Strategy",
+      "mini_description": "City or Market Strategy",
+      "extended_description": "Strategy for Market & Geographical Dominance for the Brand",
+      "image": "domination.png",
+      "bg_color": "#d4f7fe",
+      "sub_services": [
+        "Market Study",
+        "Competition Mapping",
+        "Potential Assessment",
+        "Execution Plans",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S6": {
+      "service_name": "Competition Assessment",
+      "mini_description": "Understanding Market Participation",
+      "extended_description": "Analysing & Creating Strategy to manage and <br> counter market participation and competition ",
+      "image": "competition.jpg",
+      "bg_color": "#7690ab",
+      "sub_services": [
+        "Competition Mapping",
+        "Product & Pricing Strategy",
+        "Community Understanding",
+        "Marketing & Communication",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S9": {
+      "service_name": "Business Model Design",
+      "mini_description": "Scenario Planning",
+      "extended_description": "Designing Strategy for building an <br> efficient, profitable & sustainable Business ",
+      "image": "model_design.jpg",
+      "bg_color": "#92c7b7",
+      "sub_services": [
+        "Business Segment",
+        "Market Study",
+        "Competition Mapping",
+        "Community Understanding",
+        "Product Sales Mix",
+        "Margin Model",
+        "Opex Model",
+        "Financial Projections",
+        "Goal & Milestone Setting",
+        "Execution Plans",
+        "Report Dashboards",
+        "Review"
+      ]
+    },
+    "S20": {
+      "service_name": "Mall Services",
+      "mini_description": "Business, Design & Marketing",
+      "extended_description": "Planning & Designing for creating a successful Mall Business",
+      "image": "design.jpg",
+      "bg_color": "#7ccbc6",
+      "sub_services": [
+        "Circulation Design",
+        "Maximising Retail Area",
+        "Target Customer Segment",
+        "Brand & Business Mix",
+        "Brand & Business Planogram",
+        "Retail Area Efficiency",
+        "Realisation per Square Feet",
+        "Footfall Enhancement",
+        "Shopping Occasions",
+        "Retailer Tie Ups",
+        "Other Income Monetisation",
+        "Events & Promotions",
+        "Report Dashboards",
+        "Review"
+      ]
     }
+  },
+  "segments": {
+    "B9": {
+      "segment_name": "Digital Retail",
+      "retail_type": "Online or Omni Channel",
+      "image": "digital.jpg",
+      "product_categories": "Food, General Merchandise, Fashion or Marketplace"
+    },
+    "B2": {
+      "segment_name": "Hypermarket Retail",
+      "retail_type": "Large Destination Store",
+      "image": "hyper.jpg",
+      "product_categories": "Food, Grocery, Fresh, Bakery, FMCG, Fashion, Home-Needs, Luggage, Electronics, Toys, Gifts, Stationery"
+    },
+    "B4": {
+      "segment_name": "Departmental Store Retail",
+      "retail_type": "Large Destination Store",
+      "image": "dept.jpg",
+      "product_categories": "Multi Brand - Clothing, Footwear, Beauty & Accessories, Eyewear, Travel & Luggage, Home Linen"
+    },
+    "B1": {
+      "segment_name": "Supermarket Retail",
+      "retail_type": "Convenience Store",
+      "image": "super.jpg",
+      "product_categories": "Food, Grocery, Fresh, Bakery, FMCG, Kitchen Essentials, Stationery"
+    },
+    "B8": {
+      "segment_name": "Kirana Retail",
+      "retail_type": "Neighbourhood Store",
+      "image": "kirana.jpg",
+      "product_categories": "Food, Grocery, Daily Needs"
+    },
+    "B3": {
+      "segment_name": "Fashion Retail",
+      "retail_type": "Fashion Store",
+      "image": "fashion.jpg",
+      "product_categories": "Multi Brand or Brand Franchise -Dealing in Clothing, Footwear, Beauty & Fashion Accessories "
+    },
+    "B10": {
+      "segment_name": "Mall Retail",
+      "retail_type": "Malls & Shopping Complexes",
+      "image": "leasing.jpg",
+      "product_categories": "Multi-Category and Multi-Brand"
+    },
+    "B6": {
+      "segment_name": "Consumer Durables & IT Retail",
+      "retail_type": "Electronics Store",
+      "image": "consumer.jpg",
+      "product_categories": "Home & Kitchen Appliances, Mobiles, Laptops & IT, Mobile & IT, Cameras"
+    },
+    "B5": {
+      "segment_name": "Books, Toys & Gifts Retail",
+      "retail_type": "Utility Store",
+      "image": "books.png",
+      "product_categories": "Books, Toys, Gifts, Stationery, School & Office Needs, Chocolates & Confectioneries, Mobile Accessories"
+    },
+    "B7": {
+      "segment_name": "Food & Beverage Retail",
+      "retail_type": "Kiosks, Parlours, Shops",
+      "image": "food.png",
+      "product_categories": "Cafes, Parlours, Sweet Shops, Fast Food"
+    }
+  },
+  "about-us": {
+    "ideals": {
+      "image": "vision.jpg",
+      "points": {
+        "Vision": "Customer is our God - at RetailZip all the Solutions will get Unzipped for them.",
+        "Mission": "Engaging with entrepreneurs in their existing businesses and creating new retail start-ups.",
+        "Reach": "RetailZip solutions will be available Pan-India, with greater emphasis on East India."
+      }
+    },
+    "work": {
+      "image": "services.jpg",
+      "points": {
+        "Business Verticals": "Serving needs of various retail formats",
+        "Retail Services": "Services for managing and growing retail business"
+      }
+    },
+    "story": {
+      "india": {
+        "heading": "India Consumption Story",
+        "image": "india.png",
+        "points": [
+          "India is <span class='color-blue'>1.3 billion people</span>. About <span class='color-red'>65% live in rural India.</span>",
+          "India is a Young and Aspirational nation. <span class='color-blue'>High potential for Consumption of Goods & Services.</span>",
+          "<span class='color-blue'>Invest in India</span> is the new desire of <span class='color-red'>Entrepreneurs</span> & Investors.",
+          "<span class='color-blue'>Rising Income levels</span> have led to huge demand for consumption of goods and services in <span class='color-red'>Rural India</span>.",
+          "<span class='color-red'>Rural India</span> is new growth engine and outperforming Urban India.  In <span class='color-blue'>Urban India</span>, there is competition to increase market share.",
+          "Retail businesses as well as <span class='color-blue'>Consumers are changing rapidly</span>. Covid 19 has accelerated this change at a fast pace.</span>",
+          "<span class='color-red'>New Normal</span> has emerged for businesses, especially for retail and consumer facing businesses. These changes are permanent and will keep gaining pace going forward."
+        ]
+      },
+      "idea": {
+        "heading": "RetailZip Idea",
+        "image": "rz_idea.jpg",
+        "points": [
+          "<span class='color-red'>Entrepreneurs</span> desire to create their own Retail Brand or a Retail Destination Mall. ",
+          "Entrepreneurs need Consultants/Advisors who can provide <span class='color-blue'>One Stop Solutions</span> for all their Retail business needs.",
+          "Our <span class='color-red'>Business Idea</span> will have <span class='color-blue'>Retail Consultancy & Advisory services</span> at its Core. ",
+          "Objective is to help Entrepreneurs to <span class='color-blue'>Develop, Expand and Grow</span> their business in a most efficient and profitable manner.",
+          "Thus, <span class='color-red'>Retail</span><span class='color-blue'>Zip</span> was BORN."
+        ]
+      }
+    },
+    "founder": [
+      "A <span class='color-blue'>Retail Professional</span> with <span class='color-blue'>25 years of experience</span> with Future Group, based at Kolkata.",
+      "Member of the core Strategic Team of Big Bazaar, had a key role in making East India most Profitable Market for Future Group.",
+      "Experience in managing business in <span class='color-red'>more than 50 cities</span> of <span class='color-blue'>East India</span>, <span class='color-red'>100 Big Bazaar stores</span>, spread across <span class='color-red'>30 lac sft</span> with revenues of <span class='color-red'>5000 cr</span>. ",
+      "Passed Chartered Accountancy in 1996. Graduated from Saint Xavier’s College, Kolkata in 1992. ",
+      "Interest in Sports, Stock Market, believes and practices Healthy Living",
+      "Strong belief in the principles of Ownership, Respect, Honesty, Simplicity & Supporting people."
+    ]
+  }
 }
