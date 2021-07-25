@@ -42,8 +42,8 @@
 <div class="main-strip container-fluid">
     <div class="row">
         <div class="col">
-            To get your Solutions Unzipped, 
-            <a href="{{ url_for('consult') }}">click here <i class="far fa-hand-pointer"></i></a> 
+            To get your Solutions Unzipped,
+            <a href="{{ url_for('consult') }}">click here <i class="far fa-hand-pointer"></i></a>
             and fill the Consultation form!
         </div>
     </div>
@@ -122,30 +122,30 @@
                 <div class="container main-container">
                     <div class="row card-group text-center no-gutters" style="margin: 9px;">
                         {% for key, value in services.items() %}
-                    
+
                         <div class="card card-border card-border-gradient w-100 text-center">
-                    
+
                             <!-- service image -->
                             <img class="card-img-top" src="static/img/services/{{ value.image }}">
-                    
+
                             <div class="card-body">
                                 <!-- service name & link -->
                                 <a href="{{ url_for('service',id=key) }}">
                                     <h5 class="card-title">{{ value.service_name }}</h5>
                                 </a>
-                                
+
                                 <!-- service description -->
                                 <p class="card-text text-muted">{{ value.mini_description }}</p>
                             </div>
-                            
-                    
+
+
                         </div>
-                    
+
                         {% endfor %}
-                    
+
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
