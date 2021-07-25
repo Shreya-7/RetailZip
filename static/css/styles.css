@@ -165,8 +165,10 @@ h6 {
   background-repeat: repeat;
   background-size: 50%; }
 
-.segment-retail-type {
-  color: #0f60b2 !important; }
+.segment-retail-type,
+.service-extended-description {
+  color: #0f60b2 !important;
+  font-weight: bold; }
 
 #contact h2 {
   text-align: center;
