@@ -385,7 +385,7 @@
             "segment_name": "Mall Retail",
             "retail_type": "Malls & Shopping Complexes",
             "image": "leasing.jpg",
-            "product_categories": "Multi-Category and Multi-Brand"
+            "product_categories": "Shopping, Entertainment, Movies & Food"
         },
         "B6": {
             "segment_name": "Consumer Durables & IT Retail",
@@ -413,7 +413,7 @@
             "points": {
                 "Vision": "Customer is our God - at RetailZip all the Solutions will get Unzipped for them.",
                 "Mission": "Engaging with entrepreneurs in their existing businesses and creating new retail start-ups.",
-                "Reach": "RetailZip solutions will be available Pan-India, with greater emphasis on East India."
+                "Reach": "RetailZip services will be available Pan-India."
             }            
         },
         "work": {
