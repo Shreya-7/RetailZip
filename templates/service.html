@@ -23,8 +23,7 @@
                     <!-- service name -->
                     <h1 class="section-heading">{{ service.service_name }}</h1>
 
-                    <!-- service description -->
-                    <p class="text-muted card-subtitle">{{ service.mini_description }}</p>
+                    <p class="card-text text-muted service-extended-description">{{ service.extended_description | safe }}</p>
 
                     <!-- service sub-services-->
                     <div class="container main-container">
