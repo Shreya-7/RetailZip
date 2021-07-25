@@ -625,20 +625,3 @@ $cards-per-line: (
     }
   }
 }
-
-$cards-per-line: (
-  xs: 1,
-  sm: 1,
-  md: 2,
-  lg: 3,
-  xl: 3,
-);
-
-@each $name, $breakpoint in $grid-breakpoints {
-  @media (min-width: $breakpoint) {
-    .segments-special .card-deck .card {
-      flex: 0 0
-        calc(#{100 / map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
-    }
-  }
-}
