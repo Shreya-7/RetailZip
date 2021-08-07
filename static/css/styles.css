@@ -402,8 +402,6 @@ h6 {
 
   #services .container,
   #services .main-container,
-  #partners .container,
-  #partners .main-container,
   #segments .container,
   #segments .main-container {
     padding-left: 10px;
@@ -420,8 +418,6 @@ h6 {
 
   #services .container,
   #services .main-container,
-  #partners .container,
-  #partners .main-container,
   #segments .container,
   #segments .main-container {
     padding-left: 10px;
@@ -438,8 +434,6 @@ h6 {
 
   #services .container,
   #services .main-container,
-  #partners .container,
-  #partners .main-container,
   #segments .container,
   #segments .main-container {
     padding-left: 10px;
@@ -456,8 +450,6 @@ h6 {
 
   #services .container,
   #services .main-container,
-  #partners .container,
-  #partners .main-container,
   #segments .container,
   #segments .main-container {
     padding-left: 10px;
@@ -474,8 +466,6 @@ h6 {
 
   #services .container,
   #services .main-container,
-  #partners .container,
-  #partners .main-container,
   #segments .container,
   #segments .main-container {
     padding-left: 10px;
@@ -486,20 +476,5 @@ h6 {
     flex: 0 0 calc(25% - 30px);
     width: 100% !important;
     height: auto !important; } }
-@media (min-width: 0) {
-  #partners .card-deck .card {
-    flex: 0 0 calc(100% - 30px); } }
-@media (min-width: 576px) {
-  #partners .card-deck .card {
-    flex: 0 0 calc(100% - 30px); } }
-@media (min-width: 768px) {
-  #partners .card-deck .card {
-    flex: 0 0 calc(50% - 30px); } }
-@media (min-width: 992px) {
-  #partners .card-deck .card {
-    flex: 0 0 calc(33.33333% - 30px); } }
-@media (min-width: 1200px) {
-  #partners .card-deck .card {
-    flex: 0 0 calc(20% - 30px); } }
 
 /*# sourceMappingURL=styles.css.map */
