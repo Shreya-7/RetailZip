@@ -1,6 +1,11 @@
-// to highlight the current page on the navbar
-
+window.addEventListener('resize', () => {
+    changeParentHeight();
+});
 document.addEventListener('DOMContentLoaded', () => {
+
+    changeParentHeight();
+
+    // to highlight the current page on the navbar
 
     // get the tabId embedded in the current page
     var tabId = document.querySelector('section').dataset.tab_id;
@@ -31,3 +36,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+function changeParentHeight() {
+    // TODO: add this script to whichever pages need this
+    // don't apply the height changes for < lg windows as the overflow problem doesn't occur there.
+    if (document.documentElement.clientWidth < 992) {
+        return;
+    }
+    let childHeight = 0;
+    let children = document.querySelectorAll(".card-resize");
+    children.forEach(child => {
+        childHeight = childHeight > child.offsetHeight ? childHeight : child.offsetHeight
+    });
+    let cardBodyHeight = $(".card-body").outerHeight();
+    $(".card-body").css("min-height", cardBodyHeight + childHeight);
+}
