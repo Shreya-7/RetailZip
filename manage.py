@@ -4,7 +4,7 @@ from flask_migrate import Migrate, MigrateCommand
 import os
 from app import app, db
 
-uri = os.getenv("DATABASE_URL")  # or other relevant config var
+uri = os.getenv("DATABASE_URL")
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 

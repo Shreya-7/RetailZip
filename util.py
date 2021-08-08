@@ -2,10 +2,11 @@ import json
 import traceback
 from flask import render_template, jsonify, session
 
-# miscellaneous error decorator
-
 
 def misc_error(my_function):
+    """
+        Miscellaneous Error Decorator
+    """
     def wrap(*args, **kwargs):
         try:
             return my_function(*args, **kwargs)
@@ -17,14 +18,29 @@ def misc_error(my_function):
     return wrap
 
 
-def remove_field(obj, fields):
+def get_next_request_number(Short, Detail):
+    """
+        :param obj: record of the max request number
+    """
+    short_request_number = Short.query.order_by(
+        Short.request_number.desc()).limit(1).all()
+    detail_request_number = Detail.query.order_by(
+        Detail.request_number.desc()).limit(1).all()
 
-    new_obj = []
-    for item in obj:
-        for field in fields:
-            item.pop(field)
-        new_obj.append(item)
-    return new_obj
+    if len(short_request_number) == 0 and len(detail_request_number) == 0:
+        return 'RZ101'
+    else:
+        short_num = int(short_request_number[0].request_number[2:]) if len(
+            short_request_number) != 0 else 0
+        detail_num = int(detail_request_number[0].request_number[2:]) if len(
+            detail_request_number) != 0 else 0
+        current_max_key_number = max(short_num, detail_num)
+        return 'RZ'+str(current_max_key_number+1)
+
+
+"""
+    Utility functions to extract data to be displayed on the website from a JSON file.
+"""
 
 
 def get_data(path='json/data.json'):
@@ -32,20 +48,6 @@ def get_data(path='json/data.json'):
         Returns the dictionary representation of the JSON file.
     """
     return json.load(open(path))
-
-
-def get_next_request_number(obj: dict):
-
-    if len(obj) == 0:
-        return 'RZ101'
-    else:
-        current_max_key_number = int(obj[0].request_number[2:])
-        return 'RZ'+str(current_max_key_number+1)
-
-
-"""
-    Utility functions to extract data to be displayed on the website froma JSON file.
-"""
 
 
 def get_segments():

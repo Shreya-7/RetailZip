@@ -6,13 +6,13 @@ import os
 import traceback
 import re
 from datetime import datetime
-from util import get_next_request_number, get_data, get_retail_services, get_service, get_segments, get_main_content, get_about_us, misc_error, remove_field
+from util import get_next_request_number, get_data, get_retail_services, get_service, get_segments, get_main_content, get_about_us, misc_error
 from email_util import send_email
 
 app = Flask('app', static_url_path='/static')
 app.secret_key = 'veryverysecretisntitormaybeitis'
 
-uri = os.getenv("DATABASE_URL")  # or other relevant config var
+uri = os.getenv("DATABASE_URL")
 if uri.startswith("postgres://"):
     uri = uri.replace("postgres://", "postgresql://", 1)
 
@@ -109,9 +109,7 @@ def contact_form():
 
             client_details.pop('type')
 
-            obj = Short.query.order_by(
-                Short.request_number.desc()).limit(1).all()
-            client_details['request_number'] = get_next_request_number(obj)
+            client_details['request_number'] = get_next_request_number(Short, Detail)
             entry = Short(**client_details)
 
             db.session.add(entry)
@@ -123,9 +121,7 @@ def contact_form():
             for key in multi_keys:
                 client_details[key] = ', '.join(request.form.getlist(key))
 
-            obj = Detail.query.order_by(
-                Detail.request_number.desc()).limit(1).all()
-            client_details['request_number'] = get_next_request_number(obj)
+            client_details['request_number'] = get_next_request_number(Short, Detail)
             entry = Detail(**client_details)
 
             db.session.add(entry)
@@ -173,7 +169,7 @@ def services():
 @misc_error
 def service():
     """
-        Opens the page for a particular service based on its ID (be it retail or associate)
+        Opens the page for a particular service based on its ID
     """
     if request.headers.get('X-Forwarded-Proto') == 'http':
         url = request.url.replace('http://', 'https://', 1)

@@ -14,7 +14,6 @@ html {
 }
 
 body {
-  //font-family: "Varela Round", sans-serif !important;
   font-family: "PT Sans", sans-serif !important;
   padding: 0 !important;
   width: 100% !important;
@@ -27,7 +26,6 @@ h3,
 h4,
 h5,
 h6 {
-  //font-family: $heading-font, cursive !important;
   font-family: "PT Sans", sans-serif !important;
   font-weight: 700 !important;
 }
@@ -39,7 +37,6 @@ h6 {
 #mainNav {
   padding: 0 !important;
   .nav-link {
-    //font-family: $heading-font, cursive;
     font-family: "PT Sans", sans-serif !important;
     font-weight: 700 !important;
   }
@@ -50,6 +47,13 @@ h6 {
     background-color: #c5c8cc;
     border-radius: 10px;
   }
+  ul {
+    padding-left: 10px;
+  }
+}
+
+::selection {
+  background: $logo-blue;
 }
 
 .header-logo {
@@ -89,6 +93,11 @@ h6 {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
+.jumbotron-fluid {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .button-div {
   :hover {
     transform: scale(0.8);
@@ -96,7 +105,6 @@ h6 {
   .btn {
     margin-top: 20px;
     margin-bottom: 20px;
-    //font-family: $heading-font, sans-serif !important;
     font-family: "PT Sans", sans-serif !important;
     font-size: small;
   }
@@ -110,6 +118,7 @@ h6 {
 }
 
 .main-banner {
+  display: block;
   width: 100%;
   max-height: calc(100vh - 100px);
 }
@@ -198,7 +207,6 @@ h6 {
   .card-body {
     padding: 10px !important;
     p {
-      //color: $logo-blue !important;
       font-weight: bolder;
       font-size: large;
     }
@@ -330,7 +338,6 @@ h6 {
 
 #story {
   background-color: white;
-  //font-family: "Roboto", sans-serif !important;
   font-family: "PT Sans", sans-serif !important;
 
   .container > .row {
@@ -525,12 +532,6 @@ h6 {
   }
 }
 
-#admin {
-  table {
-    background-color: white;
-  }
-}
-
 .contact-sticky {
   position: fixed;
   bottom: 20px;
@@ -563,8 +564,6 @@ h6 {
   }
 }
 
-// grid breakpoints start here - dont go below
-
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -590,7 +589,6 @@ $cards-per-line: (
       padding-bottom: 5px;
     }
     #services,
-    #partners,
     #segments {
       .container,
       .main-container {
@@ -605,23 +603,6 @@ $cards-per-line: (
 
       width: 100% !important;
       height: auto !important;
-    }
-  }
-}
-
-$cards-per-line: (
-  xs: 1,
-  sm: 1,
-  md: 2,
-  lg: 3,
-  xl: 5,
-);
-
-@each $name, $breakpoint in $grid-breakpoints {
-  @media (min-width: $breakpoint) {
-    #partners .card-deck .card {
-      flex: 0 0
-        calc(#{100 / map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
     }
   }
 }

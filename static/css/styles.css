@@ -36,6 +36,11 @@ h6 {
   #mainNav .active {
     background-color: #c5c8cc;
     border-radius: 10px; }
+  #mainNav ul {
+    padding-left: 10px; }
+
+::selection {
+  background: #0f60b2; }
 
 .header-logo {
   width: 200px;
@@ -67,6 +72,10 @@ h6 {
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important; }
 
+.jumbotron-fluid {
+  padding-top: 0;
+  padding-bottom: 0; }
+
 .button-div :hover {
   transform: scale(0.8); }
 .button-div .btn {
@@ -82,6 +91,7 @@ h6 {
   justify-content: center !important; }
 
 .main-banner {
+  display: block;
   width: 100%;
   max-height: calc(100vh - 100px); }
 
@@ -371,9 +381,6 @@ h6 {
     color: #ee4631;
     font-weight: bold; }
 
-#admin table {
-  background-color: white; }
-
 .contact-sticky {
   position: fixed;
   bottom: 20px;
@@ -402,8 +409,6 @@ h6 {
 
   #services .container,
   #services .main-container,
-  #partners .container,
-  #partners .main-container,
   #segments .container,
   #segments .main-container {
     padding-left: 10px;
@@ -420,8 +425,6 @@ h6 {
 
   #services .container,
   #services .main-container,
-  #partners .container,
-  #partners .main-container,
   #segments .container,
   #segments .main-container {
     padding-left: 10px;
@@ -438,8 +441,6 @@ h6 {
 
   #services .container,
   #services .main-container,
-  #partners .container,
-  #partners .main-container,
   #segments .container,
   #segments .main-container {
     padding-left: 10px;
@@ -456,8 +457,6 @@ h6 {
 
   #services .container,
   #services .main-container,
-  #partners .container,
-  #partners .main-container,
   #segments .container,
   #segments .main-container {
     padding-left: 10px;
@@ -474,8 +473,6 @@ h6 {
 
   #services .container,
   #services .main-container,
-  #partners .container,
-  #partners .main-container,
   #segments .container,
   #segments .main-container {
     padding-left: 10px;
@@ -486,20 +483,5 @@ h6 {
     flex: 0 0 calc(25% - 30px);
     width: 100% !important;
     height: auto !important; } }
-@media (min-width: 0) {
-  #partners .card-deck .card {
-    flex: 0 0 calc(100% - 30px); } }
-@media (min-width: 576px) {
-  #partners .card-deck .card {
-    flex: 0 0 calc(100% - 30px); } }
-@media (min-width: 768px) {
-  #partners .card-deck .card {
-    flex: 0 0 calc(50% - 30px); } }
-@media (min-width: 992px) {
-  #partners .card-deck .card {
-    flex: 0 0 calc(33.33333% - 30px); } }
-@media (min-width: 1200px) {
-  #partners .card-deck .card {
-    flex: 0 0 calc(20% - 30px); } }
 
 /*# sourceMappingURL=styles.css.map */

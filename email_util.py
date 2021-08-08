@@ -96,6 +96,9 @@ def get_html_content(data, request_number):
 
 
 def create_excel_sheet(data, request_number):
+    """
+        Create an excel sheet containing request details to be attached to the reference email.
+    """
     wb = Workbook()
     sheet1 = wb.add_sheet('Sheet 1')
 
@@ -137,8 +140,11 @@ def send_email(data, request_number):
 
     with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
         server.login(sender_email, password)
+
+        # send email to the client
         server.sendmail(sender_email, receiver_email, message.as_string())
 
+        # prepare the reference email
         filename = 'submission.xls'
 
         with open(filename, 'rb') as attachment:
