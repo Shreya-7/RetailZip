@@ -58,7 +58,7 @@
                 <!-- zip symbol -->
                 <img src="static/img/brand/symbol.jpg" class="symbol">
                 <!-- section heading -->
-                <h2 class="text-center section-heading with-logo">Business Verticals</h2>
+                <h2 class="text-center section-heading with-logo">Retail Verticals</h2>
                 <div class="text-center button-div">
                     <a href="{{ url_for('segments') }}">
                         <button class="btn btn-primary btn-lg" type="button">
@@ -99,7 +99,7 @@
         </div>
     </div>
 </section>
-<!-- business verticals tease ends -->
+<!-- Retail Verticals tease ends -->
 
 <section id="services" class="main-section bg-section">
     <div class="container">
@@ -124,30 +124,30 @@
                 <div class="container main-container">
                     <div class="row card-group text-center no-gutters" style="margin: 9px;">
                         {% for key, value in services.items() %}
-                    
+
                         <div class="card card-border card-border-gradient w-100 text-center">
-                    
+
                             <!-- service image -->
                             <img class="card-img-top" src="static/img/services/{{ value.image }}">
-                    
+
                             <div class="card-body">
                                 <!-- service name & link -->
                                 <a href="{{ url_for('service',id=key) }}">
                                     <h5 class="card-title">{{ value.service_name }}</h5>
                                 </a>
-                                
+
                                 <!-- service description -->
                                 <p class="card-text text-muted card-resize">{{ value.mini_description }}</p>
                             </div>
-                            
-                    
+
+
                         </div>
-                    
+
                         {% endfor %}
-                    
+
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
