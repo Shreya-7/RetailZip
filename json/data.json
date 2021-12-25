@@ -21,6 +21,29 @@
                 "Review"
             ]
         },
+        "S20": {
+            "service_name": "Mall Services",
+            "mini_description": "Business, Design & Marketing",
+            "extended_description": "Planning & Designing for creating a successful Mall Business",
+            "image": "design.jpg",
+            "bg_color": "#7ccbc6",
+            "sub_services": [
+                "Circulation Design",
+                "Maximising Retail Area",
+                "Target Customer Segment",
+                "Brand & Business Mix",
+                "Brand & Business Planogram",
+                "Retail Area Efficiency",
+                "Realisation per Square Feet",
+                "Footfall Enhancement",
+                "Shopping Occasions",
+                "Retailer Tie Ups",
+                "Other Income Monetisation",
+                "Events & Promotions",
+                "Report Dashboards",
+                "Review"
+            ]
+        },
         "S2": {
             "service_name": "Store Revival",
             "mini_description": "Turning Store Profitable",
@@ -148,7 +171,6 @@
                 "Review"
             ]
         },
-        
         "S16": {
             "service_name": "Brand Strategy",
             "mini_description": "Vision, Mission, Target Customer, Product & Pricing",
@@ -203,25 +225,10 @@
                 "Customer Behaviour Analysis"
             ]
         },
-        "S11": {
-            "service_name": "Loss Prevention",
-            "mini_description": "Reducing Bad Costs & Pilferage",
-            "extended_description": "Setting up Processes & Reviews for Reducing Bad Cost and Pilferages",
-            "image": "loss.jpg",
-            "bg_color": "#ead4bc",
-            "sub_services": [
-                "Good Cost & Bad Cost",
-                "Benchmark on Bad Cost",
-                "Prevention & Monitoring",
-                "Execution Plans",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
         "S12": {
-            "service_name": "Internal Audits",
+            "service_name": "Internal Audits & Loss Prevention",
             "mini_description": "Monitoring Processes with high Financial Impact",
-            "extended_description": "Setting up Regular Audit Checklists & Templates for monitoring and reviewing business processes with high financial impact",
+            "extended_description": "Setting up Processes & Checklists for monitoring and reviewing business processes with high financial impact",
             "image": "audit.jpg",
             "bg_color": "#6eb9af",
             "sub_services": [
@@ -229,6 +236,10 @@
                 "Cost Benchmarking",
                 "Prevention & Monitoring",
                 "Audit Scope & Calendar",
+                "Good Cost & Bad Cost",
+                "Benchmark on Bad Cost",
+                "Prevention & Monitoring",
+                "Execution Plans",
                 "Report Dashboards",
                 "Review"
             ]
@@ -319,38 +330,21 @@
                 "Report Dashboards",
                 "Review"
             ]
-        },
-        "S20": {
-            "service_name": "Mall Services",
-            "mini_description": "Business, Design & Marketing",
-            "extended_description": "Planning & Designing for creating a successful Mall Business",
-            "image": "design.jpg",
-            "bg_color": "#7ccbc6",
-            "sub_services": [
-                "Circulation Design",
-                "Maximising Retail Area",
-                "Target Customer Segment",
-                "Brand & Business Mix",
-                "Brand & Business Planogram",
-                "Retail Area Efficiency",
-                "Realisation per Square Feet",
-                "Footfall Enhancement",
-                "Shopping Occasions",
-                "Retailer Tie Ups",
-                "Other Income Monetisation",
-                "Events & Promotions",
-                "Report Dashboards",
-                "Review"
-            ]
         }
     },
     "segments": {
+        "B10": {
+            "segment_name": "Mall Retail",
+            "retail_type": "Malls & Shopping Complexes",
+            "image": "leasing.jpg",
+            "product_categories": "Shopping, Entertainment, Movies & Food"
+        },
         "B9": {
-            "segment_name": "Digital Retail",
-            "retail_type": "Online or Omni Channel",
+            "segment_name": "Omni Retail",
+            "retail_type": "Physical + Digital",
             "image": "digital.jpg",
             "product_categories": "Food, General Merchandise, Fashion or Marketplace"
-        },        
+        },
         "B2": {
             "segment_name": "Hypermarket Retail",
             "retail_type": "Large Destination Store",
@@ -381,12 +375,6 @@
             "image": "fashion.jpg",
             "product_categories": "Multi Brand or Brand Franchise -Dealing in Clothing, Footwear, Beauty & Fashion Accessories "
         },
-        "B10": {
-            "segment_name": "Mall Retail",
-            "retail_type": "Malls & Shopping Complexes",
-            "image": "leasing.jpg",
-            "product_categories": "Shopping, Entertainment, Movies & Food"
-        },
         "B6": {
             "segment_name": "Consumer Durables & IT Retail",
             "retail_type": "Electronics Store",
@@ -405,7 +393,6 @@
             "image": "food.png",
             "product_categories": "Cafes, Parlours, Sweet Shops, Fast Food"
         }
-        
     },
     "about-us": {
         "ideals": {
@@ -414,14 +401,14 @@
                 "Vision": "Customer is our God - at RetailZip all the Solutions will get Unzipped for them.",
                 "Mission": "Engaging with entrepreneurs in their existing businesses and creating new retail start-ups.",
                 "Reach": "RetailZip services will be available Pan-India."
-            }            
+            }
         },
         "work": {
             "image": "services.jpg",
             "points": {
-                "Business Verticals": "Serving needs of various retail formats",
+                "Retail Verticals": "Serving needs of various retail formats",
                 "Retail Services": "Services for managing and growing retail business"
-            }            
+            }
         },
         "story": {
             "india": {
@@ -436,7 +423,7 @@
                     "Retail businesses as well as <span class='color-blue'>Consumers are changing rapidly</span>. Covid 19 has accelerated this change at a fast pace.</span>",
                     "<span class='color-red'>New Normal</span> has emerged for businesses, especially for retail and consumer facing businesses. These changes are permanent and will keep gaining pace going forward."
                 ]
-            },            
+            },
             "idea": {
                 "heading": "RetailZip Idea",
                 "image": "rz_idea.jpg",
@@ -444,10 +431,10 @@
                     "<span class='color-red'>Entrepreneurs</span> desire to create their own Retail Brand or a Retail Destination Mall. ",
                     "Entrepreneurs need Consultants/Advisors who can provide <span class='color-blue'>One Stop Solutions</span> for all their Retail business needs.",
                     "Our <span class='color-red'>Business Idea</span> will have <span class='color-blue'>Retail Consultancy & Advisory services</span> at its Core. ",
-                    "Objective is to help Entrepreneurs to <span class='color-blue'>Develop, Expand and Grow</span> their business in a most efficient and profitable manner.", 
+                    "Objective is to help Entrepreneurs to <span class='color-blue'>Develop, Expand and Grow</span> their business in a most efficient and profitable manner.",
                     "Thus, <span class='color-red'>Retail</span><span class='color-blue'>Zip</span> was BORN."
                 ]
-            }             
+            }
         },
         "founder": [
             "A <span class='color-blue'>Retail Professional</span> with <span class='color-blue'>25 years of experience</span> with Future Group, based at Kolkata.",
