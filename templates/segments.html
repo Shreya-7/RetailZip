@@ -2,7 +2,7 @@
 
 {% extends "layout.html" %}
 
-{% block title %} Business Verticals - RetailZip {% endblock %}
+{% block title %} Retail Verticals - RetailZip {% endblock %}
 
 {% block body %}
 <section id="segments" class="main-section segments-special bg-section" data-tab_id="segments-tab">
@@ -17,11 +17,12 @@
                 <img src="static/img/brand/symbol.jpg" class="symbol">
 
                 <!-- section heading -->
-                <h2 class="section-heading with-logo">BUSINESS VERTICALS</h2>
+                <h2 class="section-heading with-logo">RETAIL VERTICALS</h2>
                 <hr class="light my-4">
 
                 <!-- section description -->
-                <p class="section-description text-faded mb-4">Retail Businesses for which Solutions can be Unzipped for You.<br></p>
+                <p class="section-description text-faded mb-4">Retail Businesses for which Solutions can be Unzipped for
+                    You.<br></p>
             </div>
         </div>
         <!-- heading ends -->
@@ -31,24 +32,25 @@
         <!-- content starts -->
         <div class="row card-deck text-center">
             {% for key, segment in segments.items() %}
-                <div class="card card-border card-border-gradient text-center">
+            <div class="card card-border card-border-gradient text-center">
 
-                    <!-- vertical image -->
-                    <img class="card-img-top small" src="static/img/segments/{{ segment.image }}">
-                    <div class="card-body">
+                <!-- vertical image -->
+                <img class="card-img-top small" src="static/img/segments/{{ segment.image }}">
+                <div class="card-body">
 
-                        <!-- vertical name -->
-                        <h4 class="card-title">{{ segment.segment_name }}</h4>
+                    <!-- vertical name -->
+                    <h4 class="card-title">{{ segment.segment_name }}</h4>
 
-                        <!-- vertical description -->
-                        <p class="card-text text-muted segment-retail-type">{{ segment.retail_type }}</p>
-                        <small class="card-text card-resize"><b>{{ segment.product_categories }}</b></small>
-                    </div>
+                    <!-- vertical description -->
+                    <p class="card-text text-muted segment-retail-type">{{ segment.retail_type }}</p>
+                    <small class="card-text card-resize mini-description"><b>{{ segment.product_categories
+                            }}</b></small>
                 </div>
+            </div>
             {% endfor %}
         </div>
         <!-- content ends -->
-        
+
     </div>
 </section>
 <script src="static/js/script.js"></script>

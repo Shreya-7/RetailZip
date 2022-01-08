@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap");
 .service-container-bg .card {
   align-items: center; }
 
@@ -309,6 +310,11 @@ h6 {
   .service-content .card {
     margin-bottom: 0px !important;
     padding-top: 10px; }
+
+.mini-description {
+  font-family: 'Rubik', sans-serif;
+  color: #5f6769 !important;
+  font-size: medium !important; }
 
 .content-img {
   min-width: 80%;
