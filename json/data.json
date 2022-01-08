@@ -2,7 +2,7 @@
     "retail-services": {
         "S20": {
             "service_name": "Mall Design & Service Playbook",
-            "mini_description": "Business, Design & Marketing",
+            "mini_description": "Design & Planning",
             "extended_description": "Planning & Designing for creating a successful Mall Business",
             "image": "design.jpg",
             "bg_color": "#7ccbc6",
@@ -65,7 +65,7 @@
             ]
         },
         "S1": {
-            "service_name": "Store Operating PLaybook",
+            "service_name": "Store Operating Playbook",
             "mini_description": "Retail & Sales Operations",
             "extended_description": "Setting up Store Operations Process for managing <br> Retail & Sales Operations",
             "image": "retail_ops.png",
@@ -87,10 +87,10 @@
         },
         "S14": {
             "service_name": "Markets & Catchment Playbook",
-            "mini_description": "Promote the Brand & Increase Footfall",
+            "mini_description": "Winning Markets & Catchments",
             "extended_description": "Designing Marketing and Communication Strategy for driving footfall, building customer base and delivering consistent sales",
-            "image": "mktg2.jpg",
-            "bg_color": "#b8d5e3",
+            "image": "domination.png",
+            "bg_color": "#d4f7fe",
             "sub_services": [
                 "Business Segment",
                 "Location Dynamics",
@@ -110,8 +110,8 @@
             "service_name": "Customer & Community Playbook",
             "mini_description": "Winning Customers & Communities",
             "extended_description": "Winning Customers & Communities",
-            "image": "expansion.jpg",
-            "bg_color": "#d5effe",
+            "image": "mktg2.jpg",
+            "bg_color": "#b8d5e3",
             "sub_services": [
                 "Community Understanding",
                 "Customer Cohorts",
@@ -129,7 +129,7 @@
             ]
         },
         "S13": {
-            "service_name": "Category/Assortment/Inventory Playbook",
+            "service_name": "Category Assortment & Inventory Playbook",
             "mini_description": "Product, Pricing & Promotion",
             "extended_description": "Planning & Designing Strategy on <br> Products, Assortment, Pricing and Promotions ",
             "image": "product.png",
@@ -222,11 +222,11 @@
             ]
         },
         "S5": {
-            "service_name": "Real Estate/Footprint/Market Domination",
-            "mini_description": "City or Market Strategy",
+            "service_name": "Footprint & Market Domination",
+            "mini_description": "Expansion & Scaling Strategy",
             "extended_description": "Strategy for Market & Geographical Dominance for the Brand",
-            "image": "domination.png",
-            "bg_color": "#d4f7fe",
+            "image": "expansion.jpg",
+            "bg_color": "#d5effe",
             "sub_services": [
                 "Market Study",
                 "Competition Mapping",
@@ -453,12 +453,11 @@
             }
         },
         "founder": [
-            "A <span class='color-blue'>Retail Professional</span> with <span class='color-blue'>25 years of experience</span> with Future Group, based at Kolkata.",
-            "Member of the core Strategic Team of Big Bazaar, had a key role in making East India most Profitable Market for Future Group.",
-            "Experience in managing business in <span class='color-red'>more than 50 cities</span> of <span class='color-blue'>East India</span>, <span class='color-red'>100 Big Bazaar stores</span>, spread across <span class='color-red'>30 lac sft</span> with revenues of <span class='color-red'>5000 cr</span>. ",
-            "Passed Chartered Accountancy in 1996. Graduated from Saint Xavier’s College, Kolkata in 1992. ",
-            "Interest in Sports, Stock Market, believes and practices Healthy Living",
-            "Strong belief in the principles of Ownership, Respect, Honesty, Simplicity & Supporting people."
+            "A Chartered Accountant - <span class='color-blue'>Retail Professional</span> with <span class='color-blue'>25 years of experience</span> with Future Group in retail development and management. Member of the Core Strategic Team of Big Bazaar.",
+            "Experience in managing business in <span class='color-red'>more than 50 cities</span> of <span class='color-blue'>East India</span>, <span class='color-red'>100 Big Bazaar stores</span>, spread across <span class='color-blue'>30 lac sft</span>, revenues of <span class='color-blue'>5000 cr</span> with high profitability. Currently engaged in building Member & Delivery Commerce business for Big Bazaar.",
+            "Passed Chartered Accountancy in 1996. Graduated from Saint Xavier’s College, Kolkata in 1992.",
+            "Strong belief in the principles of Ownership, Respect, Honesty, Simplicity & Supporting people.",
+            "As <span class='color-blue'>Founder of RetailZip</span>, desire to work with Entrepreneurs for providing solutions for their Retail business."
         ]
     }
 }
