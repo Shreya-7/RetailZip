@@ -67,9 +67,8 @@ def get_main_content():
         Get cherry-picked content from the JSON file for the main page
     """
     data = {}
-    data['business'] = {i: get_business(i) for i in ['B9', 'B2', 'B8', 'B4']}
-    data['service'] = {i: get_service(
-        i) for i in ['S1', 'S19', 'S8', 'S17', 'S2', 'S14', 'S10', 'S20']}
+    data['business'] = get_segments()
+    data['service'] = get_retail_services()
     return data
 
 
