@@ -106,6 +106,28 @@
                 "Review"
             ]
         },
+        "S21": {
+            "service_name": "Customer & Community Playbook",
+            "mini_description": "Winning Customers & Communities",
+            "extended_description": "Winning Customers & Communities",
+            "image": "expansion.jpg",
+            "bg_color": "#d5effe",
+            "sub_services": [
+                "Community Understanding",
+                "Customer Cohorts",
+                "Shopping & Consumption Occasions",
+                "National & Regional Festivals",
+                "Consumption & Shopping Trends",
+                "Customer Retention Plans",
+                "Customer Frequency Plans",
+                "Social Indicators",
+                "Market - Money Cycle",
+                "Customer Lifetime Value",
+                "Service Promise & CSAT",
+                "Report Dashboards",
+                "Review"
+            ]
+        },
         "S13": {
             "service_name": "Category/Assortment/Inventory Playbook",
             "mini_description": "Product, Pricing & Promotion",
@@ -321,28 +343,6 @@
                 "Financial Projections",
                 "Goal & Milestone Setting",
                 "Execution Plans",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S21": {
-            "service_name": "Customer & Community Playbook",
-            "mini_description": "Winning Customers & Communities",
-            "extended_description": "Winning Customers & Communities",
-            "image": "expansion.jpg",
-            "bg_color": "#d5effe",
-            "sub_services": [
-                "Community Understanding",
-                "Customer Cohorts",
-                "Shopping & Consumption Occasions",
-                "National & Regional Festivals",
-                "Consumption & Shopping Trends",
-                "Customer Retention Plans",
-                "Customer Frequency Plans",
-                "Social Indicators",
-                "Market - Money Cycle",
-                "Customer Lifetime Value",
-                "Service Promise & CSAT",
                 "Report Dashboards",
                 "Review"
             ]
