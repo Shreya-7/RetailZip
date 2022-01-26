@@ -1,94 +1,22 @@
 from flask import Flask, render_template, request, redirect, make_response, jsonify
-from flask_sqlalchemy import SQLAlchemy
+from pymongo import MongoClient
 
 import json
 import os
 import traceback
 import re
 from datetime import datetime
-from util import get_next_request_number, get_data, get_retail_services, get_service, get_segments, get_main_content, get_about_us, misc_error
+from util import get_next_request_number, get_data, get_retail_services, get_service, get_segments, get_main_content, get_about_us, misc_error, domain_mapper
 from email_util import send_email
 
 app = Flask('app', static_url_path='/static')
 app.secret_key = 'veryverysecretisntitormaybeitis'
 
-uri = os.getenv("DATABASE_URL")
-if uri.startswith("postgres://"):
-    uri = uri.replace("postgres://", "postgresql://", 1)
-
-app.config['SQLALCHEMY_DATABASE_URI'] = uri
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-
-db = SQLAlchemy(app)
-
-
-class Short(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    request_number = db.Column(db.String(10), nullable=False, default="RZ")
-    email = db.Column(db.String(80), nullable=False)
-    name = db.Column(db.String(80), nullable=False)
-    number = db.Column(db.String(15), nullable=False)
-    message = db.Column(db.String(500), nullable=False)
-    timestamp = db.Column(db.DateTime, nullable=False)
-
-    def __init__(self, **kwargs):
-        self.email = kwargs["email"]
-        self.request_number = kwargs["request_number"]
-        self.number = kwargs["number"]
-        self.message = kwargs["message"]
-        self.timestamp = kwargs["timestamp"]
-        self.name = kwargs["name"]
-
-    def __repr__(self):
-        return '<{} - {} - {}>'.format(self.request_number, self.name, self.email)
-
-
-class Detail(db.Model):
-
-    id = db.Column(db.Integer, primary_key=True)
-    request_number = db.Column(db.String(10), nullable=False, default="RZ")
-    email = db.Column(db.String(80), nullable=False)
-    name = db.Column(db.String(80), nullable=False)
-    number = db.Column(db.String(15), nullable=False)
-    alt_number = db.Column(db.String(15), nullable=True)
-    message = db.Column(db.String(500), nullable=True)
-    timestamp = db.Column(db.DateTime, nullable=False)
-    address = db.Column(db.String(200), nullable=False)
-    state = db.Column(db.String(80), nullable=False)
-    city = db.Column(db.String(80), nullable=False)
-    pincode = db.Column(db.Integer, nullable=False)
-    firm = db.Column(db.String(80), nullable=True)
-    ownership = db.Column(db.String(100), nullable=False)
-    vertical = db.Column(db.String(500), nullable=False)
-    services = db.Column(db.String(500), nullable=False)
-
-    def __init__(self, **kwargs):
-        self.email = kwargs["email"]
-        self.request_number = kwargs["request_number"]
-        self.number = kwargs["number"]
-        self.timestamp = kwargs["timestamp"]
-        self.name = kwargs["name"]
-        self.address = kwargs["address"]
-        self.state = kwargs["state"]
-        self.city = kwargs["city"]
-        self.pincode = kwargs["pincode"]
-        self.ownership = kwargs["ownership"]
-        self.vertical = kwargs["vertical"]
-        self.services = kwargs["service"]
-
-        self.alt_number = kwargs["alt_number"] if "alt_number" in kwargs.keys(
-        ) else 0
-        self.firm = kwargs["firm"] if "firm" in kwargs.keys(
-        ) else 0
-        self.message = kwargs["message"] if "message" in kwargs.keys(
-        ) else 0
-
-    def __repr__(self):
-        return '<{} - {}>'.format(self.request_number, self.name, self.email)
-
+client = MongoClient(
+    'MONGO_URL')
+db = client["RetailZip"]["rzForm"]
 
 if __name__ == '__main__':
-    db.create_all()
     app.run(host='0.0.0.0')
 
 
@@ -104,16 +32,16 @@ def contact_form():
         client_details = request.form.to_dict()
         current_time = datetime.now().strftime('%d-%m-%Y %H:%M:%S')
         client_details['timestamp'] = current_time
+        entry = {}
 
         if client_details['type'] == '0':
 
             client_details.pop('type')
 
-            client_details['request_number'] = get_next_request_number(Short, Detail)
-            entry = Short(**client_details)
+            client_details['request_number'] = get_next_request_number(db)
+            entry = domain_mapper(client_details, [
+                                  "email", "request_number", "name", "number", "message", "timestamp"])
 
-            db.session.add(entry)
-            db.session.commit()
         else:
             client_details.pop('country')
             client_details.pop('type')
@@ -121,11 +49,11 @@ def contact_form():
             for key in multi_keys:
                 client_details[key] = ', '.join(request.form.getlist(key))
 
-            client_details['request_number'] = get_next_request_number(Short, Detail)
-            entry = Detail(**client_details)
+            client_details['request_number'] = get_next_request_number(db)
+            entry = domain_mapper(client_details, [
+                                  "email", "request_number", "name", "number", "message", "timestamp", "address", "city", "state", "pincode", "ownership", "vertical", "service"])
 
-            db.session.add(entry)
-            db.session.commit()
+        db.insert_one(entry)
 
         send_email(client_details, client_details['request_number'])
 

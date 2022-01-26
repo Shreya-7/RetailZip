@@ -18,24 +18,25 @@ def misc_error(my_function):
     return wrap
 
 
-def get_next_request_number(Short, Detail):
+def get_next_request_number(db):
     """
         :param obj: record of the max request number
     """
-    short_request_number = Short.query.order_by(
-        Short.request_number.desc()).limit(1).all()
-    detail_request_number = Detail.query.order_by(
-        Detail.request_number.desc()).limit(1).all()
+    request = db.find({}).sort("request_number", -1).limit(1)
 
-    if len(short_request_number) == 0 and len(detail_request_number) == 0:
+    if request is None:
         return 'RZ101'
     else:
-        short_num = int(short_request_number[0].request_number[2:]) if len(
-            short_request_number) != 0 else 0
-        detail_num = int(detail_request_number[0].request_number[2:]) if len(
-            detail_request_number) != 0 else 0
-        current_max_key_number = max(short_num, detail_num)
-        return 'RZ'+str(current_max_key_number+1)
+        current_request_number = int(request[0]["request_number"][2:])
+        return 'RZ'+str(current_request_number+1)
+
+
+def domain_mapper(source, fields=[]):
+    dest = {}
+    for field in fields:
+        field = field.lower()
+        dest[field] = source[field]
+    return dest
 
 
 """
