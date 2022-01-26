@@ -13,7 +13,7 @@ app = Flask('app', static_url_path='/static')
 app.secret_key = 'veryverysecretisntitormaybeitis'
 
 client = MongoClient(
-    'mongodb+srv://admin:r3ta1lz1p@retailzip.17gdr.mongodb.net/RetailZip?retryWrites=true&w=majority')
+    'MONGO_URL')
 db = client["RetailZip"]["rzForm"]
 
 if __name__ == '__main__':
