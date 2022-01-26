@@ -12,8 +12,7 @@ from email_util import send_email
 app = Flask('app', static_url_path='/static')
 app.secret_key = 'veryverysecretisntitormaybeitis'
 
-client = MongoClient(
-    'MONGO_URL')
+client = MongoClient(os.getenv('MONGO_URL'))
 db = client["RetailZip"]["rzForm"]
 
 if __name__ == '__main__':
@@ -29,6 +28,7 @@ def contact_form():
         return redirect(url, code=code)
     try:
 
+        print("Received form request.. processing")
         client_details = request.form.to_dict()
         current_time = datetime.now().strftime('%d-%m-%Y %H:%M:%S')
         client_details['timestamp'] = current_time
