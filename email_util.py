@@ -33,7 +33,7 @@ def get_text_content(data, request_number):
         Namaste\n\n
         Manish\n\n
         Founder, RetailZip\n\n
-        +91 9339570332\n\n
+        +91 9339725675\n\n
         manish@retailzip.in\n\n
         https://www.retailzip.in\n\n
     '''
@@ -88,7 +88,7 @@ def get_html_content(data, request_number):
                 <span style='color: #ee4631'>Retail</span><span style='color: #0f60b2'>Zip</span>
             
         </b><br>
-        +91 9339570332 <br>
+        +91 9339725675 <br>
         <a href='mailto:manish@retailzip.in'>manish@retailzip.in</a> <br>
         <a href='https://www.retailzip.in'>https://www.retailzip.in</a>
     '''
@@ -117,7 +117,7 @@ def create_excel_sheet(data, request_number):
 
 def send_email(data, request_number):
 
-    create_excel_sheet(data, request_number)
+    # create_excel_sheet(data, request_number)
 
     sender_email, password = 'manish@retailzip.in', os.getenv('RZ_EMAIL_PASS')
     port = 465
@@ -145,20 +145,20 @@ def send_email(data, request_number):
         server.sendmail(sender_email, receiver_email, message.as_string())
 
         # prepare the reference email
-        filename = 'submission.xls'
+        # filename = 'submission.xls'
 
-        with open(filename, 'rb') as attachment:
-            part = MIMEBase('application', 'octet-stream')
-            part.set_payload(attachment.read())
+        # with open(filename, 'rb') as attachment:
+        #     part = MIMEBase('application', 'octet-stream')
+        #     part.set_payload(attachment.read())
 
-        encoders.encode_base64(part)
+        # encoders.encode_base64(part)
 
-        part.add_header(
-            'Content-Disposition',
-            f'attachment; filename= {filename}',
-        )
-        message.attach(part)
+        # part.add_header(
+        #     'Content-Disposition',
+        #     f'attachment; filename= {filename}',
+        # )
+        # message.attach(part)
         server.sendmail(
             sender_email, 'retailzip21@gmail.com', message.as_string())
 
-    os.remove('submission.xls')
+    # os.remove('submission.xls')

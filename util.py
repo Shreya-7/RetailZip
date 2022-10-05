@@ -35,7 +35,8 @@ def domain_mapper(source, fields=[]):
     dest = {}
     for field in fields:
         field = field.lower()
-        dest[field] = source[field]
+        if field in source.keys():
+            dest[field] = source[field]
     return dest
 
 

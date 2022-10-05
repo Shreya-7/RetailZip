@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-
+{% block title %} Retail Services - RetailZip {% endblock %}
 {% block body %}
 
 <section id="services" class="main-section bg-section" data-tab_id="services-tab">
@@ -44,7 +44,7 @@
                     </a>
 
                     <!-- service description -->
-                    <p class="card-text text-muted mini-description">{{ value.mini_description }}</p>
+                    <p class="card-text text-muted mini-description">{{ value.mini_description | safe}}</p>
                 </div>
 
             </div>

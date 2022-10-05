@@ -47,17 +47,18 @@
     </div>
 </div>
 
-<section id="segments" class="main-section bg-section">
-    <!-- contact strip -->
-    <div class="main-strip container-fluid">
-        <div class="row">
-            <div class="col">
-                To get your Solutions Unzipped,
-                <a href="{{ url_for('consult') }}">click here <i class="far fa-hand-pointer"></i></a>
-                and fill the Consultation form!
-            </div>
+<!-- contact strip -->
+<div class="main-strip-red container-fluid">
+    <div class="row">
+        <div class="col">
+            To get your Solutions Unzipped, 
+            <a href="{{ url_for('consult') }}">&nbsp; click here <i class="far fa-hand-pointer"></i></a>
+            and fill the Consultation form!
         </div>
     </div>
+</div>
+
+<section id="segments" class="main-section bg-section">
     <div class="container">
         <div class="row no-gutters">
             <div class="section-heading-area col-lg-2">
@@ -107,6 +108,16 @@
 </section>
 <!-- Retail Verticals tease ends -->
 
+<div class="main-strip-red container-fluid">
+    <div class="row">
+        <div class="col">
+            To get your Solutions Unzipped, 
+            <a href="{{ url_for('consult') }}">&nbsp; click here <i class="far fa-hand-pointer"></i></a>
+            and fill the Consultation form!
+        </div>
+    </div>
+</div>
+
 <section id="services" class="main-section bg-section">
     <div class="container">
         <div class="row no-gutters">
@@ -143,8 +154,7 @@
                                 </a>
 
                                 <!-- service description -->
-                                <p class="card-text text-muted card-resize mini-description">{{ value.mini_description
-                                    }}</p>
+                                <p class="card-text text-muted card-resize mini-description">{{ value.mini_description | safe }}</p>
                             </div>
 
 
