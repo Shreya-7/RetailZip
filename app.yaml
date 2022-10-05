@@ -4,5 +4,5 @@ entrypoint: gunicorn -b :$PORT main:app
 env_variables:
   FLASK_RUN_PORT: 8080
   PORT: 8080
-  MONGO_URL: mongodb+srv://admin:H18o7r0FEoIiR6YI@retailzip.17gdr.mongodb.net/RetailZip?retryWrites=true&w=majority
-  RZ_EMAIL_PASS: MAniSH1970@@
+  MONGO_URL: 
+  RZ_EMAIL_PASS: 
