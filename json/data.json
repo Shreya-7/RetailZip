@@ -44,26 +44,6 @@
                 "Review"
             ]
         },
-        "S17": {
-            "service_name": "New Business Start-up Playbook",
-            "mini_description": "Setting up New Business",
-            "extended_description": "Planning, Designing & Creating Road Map for New Business Start up",
-            "image": "startup.jpg",
-            "bg_color": "#29a7e1",
-            "sub_services": [
-                "Business Segment",
-                "Market Study",
-                "Competition Mapping",
-                "Target Customer Profile",
-                "Brand Strategy",
-                "Scenario Planning",
-                "Financial Projections",
-                "Incubation Period",
-                "Execution Plans",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
         "S1": {
             "service_name": "Store Operating Playbook",
             "mini_description": "Retail & Sales Operations",
@@ -81,73 +61,6 @@
                 "People Strategy",
                 "Financial Projections",
                 "Data Analysis",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S14": {
-            "service_name": "Markets & Catchment Playbook",
-            "mini_description": "Winning Markets & Catchments",
-            "extended_description": "Designing Marketing and Communication Strategy for driving footfall, building customer base and delivering consistent sales",
-            "image": "domination.png",
-            "bg_color": "#d4f7fe",
-            "sub_services": [
-                "Business Segment",
-                "Location Dynamics",
-                "Customer Profile",
-                "Competition Mapping",
-                "Community Understanding",
-                "Product & Pricing Strategy",
-                "Omni Channel Strategy",
-                "Shopping Occasions",
-                "Marketing & Promotion Calendar",
-                "Execution Plans",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S21": {
-            "service_name": "Customer & Community Playbook",
-            "mini_description": "Winning Customers & Communities",
-            "extended_description": "Winning Customers & Communities",
-            "image": "mktg2.jpg",
-            "bg_color": "#b8d5e3",
-            "sub_services": [
-                "Community Understanding",
-                "Customer Cohorts",
-                "Shopping & Consumption Occasions",
-                "National & Regional Festivals",
-                "Consumption & Shopping Trends",
-                "Customer Retention Plans",
-                "Customer Frequency Plans",
-                "Social Indicators",
-                "Market - Money Cycle",
-                "Customer Lifetime Value",
-                "Service Promise & CSAT",
-                "Report Dashboards",
-                "Review"
-            ]
-        },
-        "S13": {
-            "service_name": "Category Assortment & Inventory Playbook",
-            "mini_description": "Product, Pricing & Promotion",
-            "extended_description": "Planning & Designing Strategy on <br> Products, Assortment, Pricing and Promotions ",
-            "image": "product.png",
-            "bg_color": "#f5debc",
-            "sub_services": [
-                "Business Segment",
-                "Customer Profile",
-                "Market Study",
-                "Competition Mapping",
-                "Community Understanding",
-                "Assortment Plan",
-                "Pricing and Markdown",
-                "Lifecycle Management",
-                "Product Sales & Margin",
-                "Display Planogram",
-                "Financial Projections",
-                "Pomotion Plans",
-                "Execution Plans",
                 "Report Dashboards",
                 "Review"
             ]
@@ -216,6 +129,93 @@
                 "Product Sales & Margin Mix",
                 "Redesign Cost Structure",
                 "Review Productivity Parameters",
+                "Execution Plans",
+                "Report Dashboards",
+                "Review"
+            ]
+        },
+        "S17": {
+            "service_name": "New Business Start-up Playbook",
+            "mini_description": "Setting up New Business",
+            "extended_description": "Planning, Designing & Creating Road Map for New Business Start up",
+            "image": "startup.jpg",
+            "bg_color": "#29a7e1",
+            "sub_services": [
+                "Business Segment",
+                "Market Study",
+                "Competition Mapping",
+                "Target Customer Profile",
+                "Brand Strategy",
+                "Scenario Planning",
+                "Financial Projections",
+                "Incubation Period",
+                "Execution Plans",
+                "Report Dashboards",
+                "Review"
+            ]
+        },
+        "S14": {
+            "service_name": "Markets & Catchment Playbook",
+            "mini_description": "Winning Markets & Catchments",
+            "extended_description": "Designing Marketing and Communication Strategy for driving footfall, building customer base and delivering consistent sales",
+            "image": "domination.png",
+            "bg_color": "#d4f7fe",
+            "sub_services": [
+                "Business Segment",
+                "Location Dynamics",
+                "Customer Profile",
+                "Competition Mapping",
+                "Community Understanding",
+                "Product & Pricing Strategy",
+                "Omni Channel Strategy",
+                "Shopping Occasions",
+                "Marketing & Promotion Calendar",
+                "Execution Plans",
+                "Report Dashboards",
+                "Review"
+            ]
+        },
+        "S21": {
+            "service_name": "Customer & Community Playbook",
+            "mini_description": "Winning Customers & Communities",
+            "extended_description": "Winning Customers & Communities",
+            "image": "mktg2.jpg",
+            "bg_color": "#b8d5e3",
+            "sub_services": [
+                "Community Understanding",
+                "Customer Cohorts",
+                "Shopping & Consumption Occasions",
+                "National & Regional Festivals",
+                "Consumption & Shopping Trends",
+                "Customer Retention Plans",
+                "Customer Frequency Plans",
+                "Social Indicators",
+                "Market - Money Cycle",
+                "Customer Lifetime Value",
+                "Service Promise & CSAT",
+                "Report Dashboards",
+                "Review"
+            ]
+        },
+        "S13": {
+            "service_name": "Category Assortment & Inventory Playbook",
+            "mini_description": "Product, Pricing & Promotion",
+            "extended_description": "Planning & Designing Strategy on <br> Products, Assortment, Pricing and Promotions ",
+            "image": "product.png",
+            "bg_color": "#f5debc",
+            "sub_services": [
+                "Business Segment",
+                "Customer Profile",
+                "Market Study",
+                "Competition Mapping",
+                "Community Understanding",
+                "Assortment Plan",
+                "Pricing and Markdown",
+                "Lifecycle Management",
+                "Product Sales & Margin",
+                "Display Planogram",
+                "Financial Projections",
+                "Pomotion Plans",
                 "Execution Plans",
                 "Report Dashboards",
                 "Review"
@@ -363,7 +363,7 @@
         },
         "B2": {
             "segment_name": "Hypermarket Retail",
-            "retail_type": "Large Destination Store",
+            "retail_type": "Large Value Departmental Store",
             "image": "hyper.jpg",
             "product_categories": "Food, Grocery, Fresh, Bakery, FMCG, Fashion, Home-Needs, Luggage, Electronics, Toys, Gifts, Stationery"
         },
@@ -398,10 +398,10 @@
             "product_categories": "Books, Toys, Gifts, Stationery, School & Office Needs, Chocolates & Confectioneries, Mobile Accessories"
         },
         "B6": {
-            "segment_name": "Consumer Durables & IT Retail",
-            "retail_type": "Electronics Store",
+            "segment_name": "Home & Consumer Durables Retail",
+            "retail_type": "Home & Electronics Store",
             "image": "consumer.jpg",
-            "product_categories": "Home & Kitchen Appliances, Mobiles, Laptops & IT, Mobile & IT, Cameras"
+            "product_categories": "Furniture & Home Decor, Home & Kitchen Appliances, Mobiles, Laptops & IT, Mobile & IT, Cameras"
         },
         "B7": {
             "segment_name": "Food & Beverage Retail",
@@ -415,7 +415,7 @@
             "image": "vision.jpg",
             "points": {
                 "Vision": "Customer is our God - at RetailZip all the Solutions will get Unzipped for them.",
-                "Mission": "Engaging with entrepreneurs in their existing businesses and creating new retail start-ups.",
+                "Mission": "Engaging with entrepreneurs in their existing retail businesses and creating new retail ventures.",
                 "Reach": "RetailZip services will be available Pan-India."
             }
         },
@@ -423,7 +423,8 @@
             "image": "services.jpg",
             "points": {
                 "Retail Verticals": "Serving needs of various retail formats",
-                "Retail Services": "Services for managing and growing retail business"
+                "Retail Services": "Advisory & Consulting Services for setting up, managing and growing retail business",
+                "Retail Education": "Retail Literacy"
             }
         },
         "story": {
@@ -448,16 +449,16 @@
                     "Entrepreneurs need Consultants/Advisors who can provide <span class='color-blue'>One Stop Solutions</span> for all their Retail business needs.",
                     "Our <span class='color-red'>Business Idea</span> will have <span class='color-blue'>Retail Consultancy & Advisory services</span> at its Core. ",
                     "Objective is to help Entrepreneurs to <span class='color-blue'>Develop, Expand and Grow</span> their business in a most efficient and profitable manner.",
-                    "Thus, <span class='color-red'>Retail</span><span class='color-blue'>Zip</span> was BORN."
+                    "Thus, <span class='color-red'>Retail</span><span class='color-blue'>Zip</span> is BORN."
                 ]
             }
         },
         "founder": [
-            "A Chartered Accountant - <span class='color-blue'>Retail Professional</span> with <span class='color-blue'>25 years of experience</span> with Future Group in retail development and management. Member of the Core Strategic Team of Big Bazaar.",
-            "Experience in managing business in <span class='color-red'>more than 50 cities</span> of <span class='color-blue'>East India</span>, <span class='color-red'>100 Big Bazaar stores</span>, spread across <span class='color-blue'>30 lac sft</span>, revenues of <span class='color-blue'>5000 cr</span> with high profitability. Currently engaged in building Member & Delivery Commerce business for Big Bazaar.",
+            "<span class='color-blue'>A Retail Professional with 25 years of experience with Future Group in Retail Development and Management.</span> Experience in managing retail stores spread across more than 35 Lac sq ft space in more than 50 cities of India.",
+            "Real Estate, Sales & Operations, Marketing & Communication, Business Planning & Review, Customer Data Analytics & Loyalty Programs, People Management, Stakeholder Management & Ownership of PnL and incubating Delivery Commerce and Omni channel business for Big Bazaar.",
             "Passed Chartered Accountancy in 1996. Graduated from Saint Xavier’s College, Kolkata in 1992.",
             "Strong belief in the principles of Ownership, Respect, Honesty, Simplicity & Supporting people.",
-            "As <span class='color-blue'>Founder of RetailZip</span>, desire to work with Entrepreneurs for providing solutions for their Retail business."
+            "As <span class='color-red'>Founder of RetailZip</span>, desire to work with Entrepreneurs for providing solutions for their Retail business and creating new Retail Destinations."
         ]
     }
 }

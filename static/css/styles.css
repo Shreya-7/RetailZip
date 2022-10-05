@@ -67,6 +67,9 @@ h6 {
 .color-blue {
   color: #0f60b2 !important; }
 
+.color-black {
+  color: black !important; }
+
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important; }
 
@@ -96,17 +99,40 @@ h6 {
   width: 100%;
   max-height: calc(100vh - 100px); }
 
-.main-strip {
+.main-strip-red, .main-strip-blue {
   color: white;
   background-color: #ee4631;
   text-align: center;
   border-bottom: 5px solid white;
   padding: 10px;
   font-weight: bold; }
-  .main-strip a {
+  .main-strip-red a, .main-strip-blue a {
     color: black; }
-  .main-strip .col {
+  .main-strip-red .col, .main-strip-blue .col {
     background-color: #ee4631 !important; }
+  .main-strip-red i, .main-strip-blue i {
+    margin-left: 5px;
+    margin-right: 5px; }
+  .main-strip-red .strip-image, .main-strip-blue .strip-image {
+    max-height: 100%;
+    max-width: 100%; }
+
+.main-strip-blue {
+  background-color: #0f60b2; }
+  .main-strip-blue .col {
+    background-color: #0f60b2 !important; }
+
+.franchise-table {
+  margin-left: 20px; }
+  .franchise-table img {
+    padding-left: 20px; }
+  .franchise-table td {
+    text-align: center;
+    vertical-align: middle; }
+  .franchise-table .handshake {
+    width: 60%; }
+  .franchise-table h5 {
+    color: black; }
 
 .card-border {
   border: 10px solid;
@@ -161,6 +187,10 @@ h6 {
   .main-section .card-img-top {
     margin-bottom: 10px !important;
     height: 50% !important; }
+  .main-section .franchise-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
   .main-section .card-title {
     background: linear-gradient(to right, #ee4631, #0f60b2);
     -webkit-background-clip: text;
