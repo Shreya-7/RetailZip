@@ -1,5 +1,7 @@
 retailzip.code-workspace
 .sass-cache/
+.icons/
 __pycache__/
 venv/
 TODO.md
+app.yaml

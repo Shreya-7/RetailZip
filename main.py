@@ -6,7 +6,7 @@ import os
 import traceback
 import re
 from datetime import datetime
-from util import get_next_request_number, get_data, get_retail_services, get_service, get_segments, get_main_content, get_about_us, misc_error, domain_mapper
+from util import get_next_request_number, get_data, get_retail_services, get_service, get_segments, get_main_content, get_about_us, misc_error, domain_mapper, redirect_to_https
 from email_util import send_email
 
 app = Flask('app', static_url_path='/static')
@@ -20,12 +20,8 @@ if __name__ == '__main__':
 
 
 @app.route('/contact_form', methods=["POST"])
+@redirect_to_https
 def contact_form():
-    if request.headers.get('X-Forwarded-Proto') == 'http':
-        url = request.url.replace('http://', 'https://', 1)
-        code = 301
-        print('Redirecting...')
-        return redirect(url, code=code)
     try:
 
         print("Received form request.. processing")
@@ -70,12 +66,8 @@ def contact_form():
 
 @app.route('/')
 @misc_error
+@redirect_to_https
 def index():
-    if request.headers.get('X-Forwarded-Proto') == 'http':
-        url = request.url.replace('http://', 'https://', 1)
-        code = 301
-        print('Redirecting...')
-        return redirect(url, code=code)
     data = get_main_content()
     return render_template('index.html',
                            business=data['business'],
@@ -84,71 +76,47 @@ def index():
 
 @app.route('/services')
 @misc_error
+@redirect_to_https
 def services():
-    if request.headers.get('X-Forwarded-Proto') == 'http':
-        url = request.url.replace('http://', 'https://', 1)
-        code = 301
-        print('Redirecting...')
-        return redirect(url, code=code)
     return render_template('services.html', services=get_retail_services())
 
 
 @app.route('/service')
 @misc_error
+@redirect_to_https
 def service():
     """
         Opens the page for a particular service based on its ID
     """
-    if request.headers.get('X-Forwarded-Proto') == 'http':
-        url = request.url.replace('http://', 'https://', 1)
-        code = 301
-        print('Redirecting...')
-        return redirect(url, code=code)
     id = request.args.get('id')
     return render_template('service.html', service=get_service(id), id=id[0])
 
 
 @app.route('/verticals')
 @misc_error
+@redirect_to_https
 def segments():
-    if request.headers.get('X-Forwarded-Proto') == 'http':
-        url = request.url.replace('http://', 'https://', 1)
-        code = 301
-        print('Redirecting...')
-        return redirect(url, code=code)
     return render_template('segments.html', segments=get_segments())
 
 
 @app.route('/about')
 @misc_error
+@redirect_to_https
 def about():
-    if request.headers.get('X-Forwarded-Proto') == 'http':
-        url = request.url.replace('http://', 'https://', 1)
-        code = 301
-        print('Redirecting...')
-        return redirect(url, code=code)
     return render_template('about.html', content=get_about_us())
 
 
 @app.route('/contact')
 @misc_error
+@redirect_to_https
 def contact():
-    if request.headers.get('X-Forwarded-Proto') == 'http':
-        url = request.url.replace('http://', 'https://', 1)
-        code = 301
-        print('Redirecting...')
-        return redirect(url, code=code)
     return render_template('contact.html')
 
 
 @app.route('/consult')
 @misc_error
+@redirect_to_https
 def consult():
-    if request.headers.get('X-Forwarded-Proto') == 'http':
-        url = request.url.replace('http://', 'https://', 1)
-        code = 301
-        print('Redirecting...')
-        return redirect(url, code=code)
     return render_template('consult.html',
                            business=get_segments(),
                            services=get_retail_services())
