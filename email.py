@@ -1,3 +1,5 @@
+# This file deals with all functions related to constructing and sending out consultation emails
+
 import smtplib
 import ssl
 import os
