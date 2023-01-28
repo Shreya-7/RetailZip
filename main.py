@@ -8,7 +8,7 @@ import traceback
 import re
 from datetime import datetime
 from data import get_next_request_number, get_data, get_retail_services, get_service, get_segments, get_main_content, get_about_us, domain_mapper
-from email import send_email
+from emails import send_email
 
 app = Flask('app', static_url_path='/static')
 app.secret_key = 'veryverysecretisntitormaybeitis'
