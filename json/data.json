@@ -349,108 +349,86 @@
         }
     },
     "segments": {
+        "B3": {
+            "segment_name": "Fashion",
+            "retail_type": "Fashion Store",
+            "image": "fashion.jpg",
+            "product_categories": "Multi Brand or Brand Franchise -Dealing in Clothing, Footwear, Beauty & Fashion Accessories "
+        },
         "B9": {
-            "segment_name": "Omni Retail",
+            "segment_name": "Grocery & FMCG",
             "retail_type": "Physical + Digital",
             "image": "digital.jpg",
             "product_categories": "Food, General Merchandise, Fashion or Marketplace"
         },
-        "B10": {
-            "segment_name": "Mall Retail",
-            "retail_type": "Malls & Shopping Complexes",
-            "image": "leasing.jpg",
-            "product_categories": "Shopping, Entertainment, Movies & Food"
+        "B6": {
+            "segment_name": "Home & Consumer Durables",
+            "retail_type": "Home & Electronics Store",
+            "image": "consumer.jpg",
+            "product_categories": "Furniture & Home Decor, Home & Kitchen Appliances, Mobiles, Laptops & IT, Mobile & IT, Cameras"
+        },
+        "B8": {
+            "segment_name": "Food & Beverage",
+            "retail_type": "Neighbourhood Store",
+            "image": "kirana.jpg",
+            "product_categories": "Food, Grocery, Daily Needs"
+        },
+        "B12": {
+            "segment_name": "Health & Beauty",
+            "retail_type": "Home & Electronics Store",
+            "image": "consumer.jpg",
+            "product_categories": "Furniture & Home Decor, Home & Kitchen Appliances, Mobiles, Laptops & IT, Mobile & IT, Cameras"
+        },
+        "B5": {
+            "segment_name": "Toys & Gaming",
+            "retail_type": "Utility Store",
+            "image": "books.png",
+            "product_categories": "Books, Toys, Gifts, Stationery, School & Office Needs, Chocolates & Confectioneries, Mobile Accessories"
         },
         "B2": {
-            "segment_name": "Hypermarket Retail",
+            "segment_name": "Hypermarket",
             "retail_type": "Large Value Departmental Store",
             "image": "hyper.jpg",
             "product_categories": "Food, Grocery, Fresh, Bakery, FMCG, Fashion, Home-Needs, Luggage, Electronics, Toys, Gifts, Stationery"
         },
         "B1": {
-            "segment_name": "Supermarket Retail",
+            "segment_name": "Supermarket",
             "retail_type": "Convenience Store",
             "image": "super.jpg",
             "product_categories": "Food, Grocery, Fresh, Bakery, FMCG, Kitchen Essentials, Stationery"
         },
-        "B8": {
-            "segment_name": "Kirana Retail",
-            "retail_type": "Neighbourhood Store",
-            "image": "kirana.jpg",
-            "product_categories": "Food, Grocery, Daily Needs"
-        },
         "B4": {
-            "segment_name": "Departmental Store Retail",
+            "segment_name": "Departmental Store",
             "retail_type": "Large Destination Store",
             "image": "dept.jpg",
             "product_categories": "Multi Brand - Clothing, Footwear, Beauty & Accessories, Eyewear, Travel & Luggage, Home Linen"
         },
-        "B3": {
-            "segment_name": "Fashion Retail",
-            "retail_type": "Fashion Store",
-            "image": "fashion.jpg",
-            "product_categories": "Multi Brand or Brand Franchise -Dealing in Clothing, Footwear, Beauty & Fashion Accessories "
+        "B7": {
+            "segment_name": "Food Court & Banquets",
+            "retail_type": "Kiosks, Parlours, Shops",
+            "image": "food.png",
+            "product_categories": "Cafes, Parlours, Sweet Shops, Fast Food"
         },
-        "B5": {
-            "segment_name": "Books, Toys & Gifts Retail",
-            "retail_type": "Utility Store",
-            "image": "books.png",
-            "product_categories": "Books, Toys, Gifts, Stationery, School & Office Needs, Chocolates & Confectioneries, Mobile Accessories"
-        },
-        "B6": {
-            "segment_name": "Home & Consumer Durables Retail",
+        "B11": {
+            "segment_name": "Health & Hospitality",
             "retail_type": "Home & Electronics Store",
             "image": "consumer.jpg",
             "product_categories": "Furniture & Home Decor, Home & Kitchen Appliances, Mobiles, Laptops & IT, Mobile & IT, Cameras"
         },
-        "B7": {
-            "segment_name": "Food & Beverage Retail",
-            "retail_type": "Kiosks, Parlours, Shops",
-            "image": "food.png",
-            "product_categories": "Cafes, Parlours, Sweet Shops, Fast Food"
+        "B10": {
+            "segment_name": "Shopping Malls",
+            "retail_type": "Malls & Shopping Complexes",
+            "image": "leasing.jpg",
+            "product_categories": "Shopping, Entertainment, Movies & Food"
         }
     },
     "about-us": {
-        "ideals": {
-            "image": "vision.jpg",
-            "points": {
-                "Vision": "Customer is our God - at RetailZip all the Solutions will get Unzipped for them.",
-                "Mission": "Engaging with entrepreneurs in their existing retail businesses and creating new retail ventures.",
-                "Reach": "RetailZip services will be available Pan-India."
-            }
-        },
         "work": {
             "image": "services.jpg",
             "points": {
-                "Retail Verticals": "Serving needs of various retail formats",
-                "Retail Services": "Advisory & Consulting Services for setting up, managing and growing retail business",
-                "Retail Education": "Retail Literacy"
-            }
-        },
-        "story": {
-            "india": {
-                "heading": "India Consumption Story",
-                "image": "india.png",
-                "points": [
-                    "India is <span class='color-blue'>1.3 billion people</span>. About <span class='color-red'>65% live in rural India.</span>",
-                    "India is a Young and Aspirational nation. <span class='color-blue'>High potential for Consumption of Goods & Services.</span>",
-                    "<span class='color-blue'>Invest in India</span> is the new desire of <span class='color-red'>Entrepreneurs</span> & Investors.",
-                    "<span class='color-blue'>Rising Income levels</span> have led to huge demand for consumption of goods and services in <span class='color-red'>Rural India</span>.",
-                    "<span class='color-red'>Rural India</span> is new growth engine and outperforming Urban India.  In <span class='color-blue'>Urban India</span>, there is competition to increase market share.",
-                    "Retail businesses as well as <span class='color-blue'>Consumers are changing rapidly</span>. Covid 19 has accelerated this change at a fast pace.</span>",
-                    "<span class='color-red'>New Normal</span> has emerged for businesses, especially for retail and consumer facing businesses. These changes are permanent and will keep gaining pace going forward."
-                ]
-            },
-            "idea": {
-                "heading": "RetailZip Idea",
-                "image": "rz_idea.jpg",
-                "points": [
-                    "<span class='color-red'>Entrepreneurs</span> desire to create their own Retail Brand or a Retail Destination Mall. ",
-                    "Entrepreneurs need Consultants/Advisors who can provide <span class='color-blue'>One Stop Solutions</span> for all their Retail business needs.",
-                    "Our <span class='color-red'>Business Idea</span> will have <span class='color-blue'>Retail Consultancy & Advisory services</span> at its Core. ",
-                    "Objective is to help Entrepreneurs to <span class='color-blue'>Develop, Expand and Grow</span> their business in a most efficient and profitable manner.",
-                    "Thus, <span class='color-red'>Retail</span><span class='color-blue'>Zip</span> is BORN."
-                ]
+                "Business Services": "Services for managing and growing retail business",
+                "Business Categories": "Serving needs of Retail business categories and formats",
+                "Business Education": "Spreading Retail Literacy"
             }
         },
         "founder": [

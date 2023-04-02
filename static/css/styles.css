@@ -123,7 +123,7 @@ h6 {
     background-color: #0f60b2 !important; }
 
 .franchise-table {
-  margin-left: 20px; }
+  margin-right: 20px; }
   .franchise-table img {
     padding-left: 20px; }
   .franchise-table td {
@@ -135,12 +135,7 @@ h6 {
     color: black; }
 
 .card-border {
-  border: 10px solid;
-  border-image-slice: 1;
-  border-width: 4px; }
-
-.card-border-gradient {
-  border-image-source: linear-gradient(to bottom, #ee4631, #0f60b2); }
+  border: none; }
 
 .main-section {
   padding: 0px 0px 10px 0px;
@@ -186,7 +181,8 @@ h6 {
     color: gray; }
   .main-section .card-img-top {
     margin-bottom: 10px !important;
-    height: 50% !important; }
+    height: 50% !important;
+    width: 50% !important; }
   .main-section .franchise-img {
     height: 100%;
     width: 100%;

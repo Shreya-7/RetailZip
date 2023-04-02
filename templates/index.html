@@ -47,17 +47,6 @@
     </div>
 </div>
 
-<!-- contact strip -->
-<div class="main-strip-red container-fluid">
-    <div class="row">
-        <div class="col">
-            To get your Solutions Unzipped, 
-            <a href="{{ url_for('consult') }}">&nbsp; click here <i class="far fa-hand-pointer"></i></a>
-            and fill the Consultation form!
-        </div>
-    </div>
-</div>
-
 <section id="segments" class="main-section bg-section">
     <div class="container">
         <div class="row no-gutters">
@@ -65,16 +54,7 @@
                 <!-- zip symbol -->
                 <img src="static/img/brand/symbol.jpg" class="symbol">
                 <!-- section heading -->
-                <h2 class="text-center section-heading with-logo">Retail Verticals</h2>
-                <div class="text-center button-div">
-                    <a href="{{ url_for('segments') }}">
-                        <button class="btn btn-primary btn-lg" type="button">
-                            Read More
-                            <!-- hand icon -->
-                            <i class="far fa-hand-pointer"></i>
-                        </button>
-                    </a>
-                </div>
+                <h2 class="text-center section-heading with-logo">Business Services</h2>
             </div>
             <div class="col-lg-10 card-area">
                 <!-- services content items start -->
@@ -85,38 +65,21 @@
                         <div class="card card-border card-border-gradient w-100 text-center">
 
                             <!-- service image -->
-                            <img class="card-img-top" src="static/img/segments/{{ value.image }}">
+                            <img class="card-img-top rounded-circle" src="static/img/segments/{{ value.image }}", loading="lazy">
 
                             <div class="card-body">
                                 <h5 class="card-title">{{ value.segment_name }}</h5>
-
-                                <!-- service description -->
-                                <p class="card-text text-muted card-resize mini-description">{{ value.retail_type }}</p>
                             </div>
-
-
                         </div>
 
                         {% endfor %}
 
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </section>
-<!-- Retail Verticals tease ends -->
-
-<div class="main-strip-red container-fluid">
-    <div class="row">
-        <div class="col">
-            To get your Solutions Unzipped, 
-            <a href="{{ url_for('consult') }}">&nbsp; click here <i class="far fa-hand-pointer"></i></a>
-            and fill the Consultation form!
-        </div>
-    </div>
-</div>
 
 <section id="services" class="main-section bg-section">
     <div class="container">
@@ -125,16 +88,7 @@
                 <!-- zip symbol -->
                 <img src="static/img/brand/symbol.jpg" class="symbol">
                 <!-- section heading -->
-                <h2 class="text-center section-heading with-logo">Retail Services</h2>
-                <div class="text-center button-div">
-                    <a href="{{ url_for('services') }}">
-                        <button class="btn btn-primary btn-lg" type="button">
-                            Read More
-                            <!-- hand icon -->
-                            <i class="far fa-hand-pointer"></i>
-                        </button>
-                    </a>
-                </div>
+                <h2 class="text-center section-heading with-logo">Business Services</h2>
             </div>
             <div class="col-lg-10 card-area">
                 <!-- services content items start -->
@@ -145,29 +99,220 @@
                         <div class="card card-border card-border-gradient w-100 text-center">
 
                             <!-- service image -->
-                            <img class="card-img-top" src="static/img/services/{{ value.image }}">
+                            <img class="card-img-top rounded-circle" src="static/img/services/{{ value.image }}" />
 
                             <div class="card-body">
                                 <!-- service name & link -->
                                 <a href="{{ url_for('service',id=key) }}">
                                     <h5 class="card-title">{{ value.service_name }}</h5>
                                 </a>
-
-                                <!-- service description -->
-                                <p class="card-text text-muted card-resize mini-description">{{ value.mini_description | safe }}</p>
                             </div>
-
-
                         </div>
-
                         {% endfor %}
-
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </section>
+
+<section id="story" class="main-section new-page" data-tab_id="about-tab">
+
+    <!-- values & help panel starts -->
+    <div class="container" id="values-and-help">
+        <div class="row">
+
+            <!-- help panel image -->
+            <div class="col-lg-6 col-sm-12">
+                <img src="static/img/about/{{content.work.image}}" class="story">
+            </div>
+
+            <!-- help panel content starts -->
+            <div class="col-lg-6 col-sm-12 story-text" style="padding-left: 10px;">
+                <br><br>
+
+                <!-- help panel content items start -->
+                {% for heading, point in content.work.points.items() %}
+                <h4>{{ heading }}</h4>
+                <p>{{ point }}</p>
+                <br>
+                {% endfor %}
+                <!-- help panel content items end -->
+
+            </div>
+            <!-- help panel content ends -->
+
+        </div>
+
+    </div>
+
+    <!-- about panel starts -->
+    <div class="container">
+
+        <!-- about panel heading starts -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <img src="static/img/brand/symbol.jpg" class="symbol">
+                <h2 class="section-heading with-logo">About the Founder</h2>
+            </div>
+        </div>
+        <!-- about panel heading ends -->
+
+        <div class="row">
+
+            <!-- about panel content starts -->
+            <div class="col-lg-8 col-sm-12 story-text">
+
+                <!-- about panel content items start -->
+                <table class="table table-sm">
+                    {% for point in content.founder %}
+                    <tr>
+                        <td>{{ point|safe }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                <!-- about panel content items end -->
+
+            </div>
+            <!-- about panel content ends -->
+
+            <!-- about panel image starts -->
+            <div class="col-lg-4 col-sm-12">
+                <figure>
+                    <img src="static/img/about/manish.jpeg" class="manish img-fluid">
+
+                    <!-- about panel image captions -->
+                    <figcaption>Manish Agarwal</figcaption>
+                    <p class="text-muted">Founder @ RetailZip</p>
+                    <div class="icons">
+
+                        <!-- socials start -->
+                        <ul class="list-inline">
+                            <!-- twitter -->
+                            <li class="list-inline-item">
+                                <a href="https://twitter.com/manishagarwal20" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+
+                            <!-- linkedin -->
+                            <li class="list-inline-item">
+                                <a href="https://www.linkedin.com/in/manish-agarwal-01b684217" target="_blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </figure>
+            </div>
+            <!-- about panel image ends -->
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="main-section bg-section" data-tab_id="contact-tab">
+    <div class="container text-center">
+
+        <!-- contact section heading -->
+        <!-- zip symbol -->
+
+        <h2 class="section-heading with-logo">Drop us a message for a Consultation!</h2>
+        <img src="static/img/handshake.png" class="handshake">
+
+        <!-- short query area starts -->
+        <div class="row">
+            <div class="col-lg-7 col-md-12">
+                <div class="card card-border card-border-gradient" id="contact_short">
+
+                    <!-- area heading -->
+                    <h4 class="card-title">Short Query Form</h4>
+
+                    <div class="card-body">
+                        <form id="contact_short_form" method="post">
+                            <small class="form-text text-muted">Fields marked * are required</small>
+                            <div class="form-group">
+                                <input class="form-control" type="email" name="email" placeholder="Contact Email *"
+                                    required>
+                            </div>
+                            <div class="row" id="adjust-margin">
+                                <div class="col-lg-6 col-md-12 form-group">
+                                    <input class="form-control" type="text" name="name" placeholder="Name *" required>
+                                </div>
+                                <div class="col-lg-6 col-md-12 form-group">
+                                    <input class="form-control" type="text" name="number" placeholder="Contact Number *"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" type="text" name="message" placeholder="Your Message *"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="alert" id="contact-short-alert"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <div class="card  card-border card-border-gradient contact-connects">
+                    <h4 class="card-title">Web Connects</h4>
+
+                    <div class="card-body">
+                        <!-- web connect icons start -->
+                        <div class="icons">
+
+                            <!-- socials start -->
+                            <ul class="list-inline">
+                                <!-- twitter -->
+                                <li class="list-inline-item">
+                                    <a href="https://twitter.com/retail_zip" target="_blank">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+
+                                <!-- linkedin -->
+                                <li class="list-inline-item">
+                                    <a href="https://www.linkedin.com/company/retailzip/" target="_blank">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <!-- addresses start -->
+                            <table>
+                                <!-- email -->
+                                <tr>
+                                    <td><i class="fas fa-at"></i></td>
+                                    <td style="text-align: start"><span><a
+                                                href="mailto:manish@retailzip.in">manish@retailzip.in</a></span></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-phone-alt"></i></td>
+                                    <td><span>+91 9339725675</span></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fab fa-whatsapp"></i></td>
+                                    <td><span>+91 9339725675</span></td>
+                                </tr>
+                            </table>
+                            <!-- addresses end -->
+
+                        </div>
+                        <!-- web connect icons end -->
+                    </div>
+                    <img class="img-fluid" src="static/img/brand/logo.jpg">
+                </div>
+
+            </div>
+        </div>
+        <!-- short query area ends -->
+    </div>
+</section>
+
 <script src="static/js/script.js"></script>
+<script src="static/js/about.js"></script>
+<script src="static/js/script.js"></script>
+<script src="static/js/contact-short.js"></script>
+
 {% endblock %}

@@ -52,35 +52,28 @@
 
                     <!-- ABOUT US -->
                     <li class="nav-item" id="about-tab">
-                        <a class="nav-link color-blue js-scroll-trigger" href="{{ url_for('about') }}">
+                        <a class="nav-link color-blue js-scroll-trigger" href="#story">
                             ABOUT US
                         </a>
                     </li>
 
-                    <!-- VERTICALS -->
-                    <li class="nav-item" id="segments-tab">
-                        <a class="nav-link color-red js-scroll-trigger" href="{{ url_for('segments') }}">
-                            RETAIL VERTICALS
-                        </a>
-                    </li>
-
                     <!-- SERVICES -->
-                    <li class="nav-item" id="services-tab">
-                        <a class="nav-link color-blue js-scroll-trigger" href="{{ url_for('services') }}">
-                            RETAIL SERVICES
+                    <li class="nav-item" id="segments-tab">
+                        <a class="nav-link color-red js-scroll-trigger" href="#segments">
+                            BUSINESS SERVICES
                         </a>
                     </li>
 
-                    <!-- CONSULTATION -->
-                    <li class="nav-item" id="consult-tab">
-                        <a class="nav-link color-red js-scroll-trigger" href="{{ url_for('consult') }}">
-                            CONSULTATION FORM
+                    <!-- CATEGORIES -->
+                    <li class="nav-item" id="services-tab">
+                        <a class="nav-link color-blue js-scroll-trigger" href="#services">
+                            BUSINESS CATEGORIES
                         </a>
                     </li>
 
                     <!-- CONTACT US -->
                     <li class="nav-item" id="contact-tab">
-                        <a class="nav-link color-blue js-scroll-trigger" href="{{ url_for('contact') }}">
+                        <a class="nav-link color-blue js-scroll-trigger" href="#contacts">
                             CONTACT US
                         </a>
                     </li>
@@ -92,7 +85,7 @@
     <!-- navbar ends -->
 
     <div class="contact-sticky">
-        <a href="{{ url_for('consult') }}">
+        <a href="{{ url_for('contact') }}">
             <p class="text-center"></p>
             <img src="static/img/brand/symbol.jpg">
         </a>
@@ -100,16 +93,6 @@
 
     {% block body %}
     {% endblock %}
-
-    <div class="main-strip-red container-fluid">
-        <div class="row">
-            <div class="col">
-                To get your Solutions Unzipped,
-                <a href="{{ url_for('consult') }}">click here <i class="far fa-hand-pointer"></i></a>
-                and fill the Consultation form!
-            </div>
-        </div>
-    </div>
 
     <!-- footer starts -->
     <footer class="my-footer container-fluid">
@@ -126,11 +109,11 @@
                     <a href="{{ url_for('index') }}">
                         <li>Home</li>
                     </a>
-                    <a href="{{ url_for('segments') }}">
-                        <li>Retail Verticals</li>
-                    </a>
                     <a href="{{ url_for('services') }}">
-                        <li>Retail Services</li>
+                        <li>Business Services</li>
+                    </a>
+                    <a href="{{ url_for('segments') }}">
+                        <li>Business Categories</li>
                     </a>
                     <a href="{{ url_for('about') }}">
                         <li>About Us</li>
@@ -162,24 +145,10 @@
                             </a>
                         </li>
 
-                        <!-- youtube -->
-                        <li class="list-inline-item">
-                            <a href="https://youtube.com/channel/UCDYI3cnZD0TxBBiUQJLXbXQ" target="_blank">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </li>
-
                         <!-- linkedin -->
                         <li class="list-inline-item">
                             <a href="https://www.linkedin.com/company/retailzip/" target="_blank">
                                 <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </li>
-
-                        <!-- instagram -->
-                        <li class="list-inline-item">
-                            <a href="https://www.instagram.com/retailzip/" target="_blank">
-                                <i class="fab fa-instagram"></i>
                             </a>
                         </li>
                     </ul>
@@ -215,12 +184,6 @@
 
                 <!-- help links start -->
                 <ul class="text-muted">
-                    <a href="{{ url_for('consult') }}">
-                        <li>
-                            <span class="click">Click Here <i class="far fa-hand-pointer"></i></span>
-                            for a consultation request
-                        </li>
-                    </a>
                     <a href="{{ url_for('contact') }}">
                         <li>Visit the Contact Us page</li>
                     </a>

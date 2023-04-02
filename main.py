@@ -72,7 +72,8 @@ def index():
     data = get_main_content()
     return render_template('index.html',
                            business=data['business'],
-                           services=data['service'])
+                           services=data['service'],
+                           content=get_about_us())
 
 
 @app.route('/services')

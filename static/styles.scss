@@ -194,14 +194,15 @@ h6 {
 }
 
 .card-border {
-    border: 10px solid;
-    border-image-slice: 1;
-    border-width: 4px;
+    border: none;
+    // border: 10px solid;
+    // border-image-slice: 1;
+    // border-width: 4px;
 }
 
-.card-border-gradient {
-    border-image-source: linear-gradient(to bottom, $logo-red, $logo-blue);
-}
+// .card-border-gradient {
+//     border-image-source: linear-gradient(to bottom, $logo-red, $logo-blue);
+// }
 
 .main-section {
     padding: 0px 0px 10px 0px;
@@ -276,6 +277,7 @@ h6 {
     .card-img-top {
         margin-bottom: 10px !important;
         height: 50% !important;
+        width: 50% !important;
     }
 
     .franchise-img {
@@ -683,17 +685,19 @@ h6 {
     }
 }
 
-$grid-breakpoints: (xs: 0,
+$grid-breakpoints: (
+    xs: 0,
     sm: 576px,
     md: 768px,
     lg: 992px,
     xl: 1200px,
-) !default;
+    ) !default;
 
 $grid-gutter-width: 30px !default;
 
 // number of cards per line for each breakpoint
-$cards-per-line: (xs: 1,
+$cards-per-line: (
+    xs: 1,
     sm: 1,
     md: 2,
     lg: 4,
