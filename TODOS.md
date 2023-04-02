@@ -1,7 +1,15 @@
 [] change logo to TM logo
-[] keep nav menu the same (styling)
 [x] menu - home, about us, business services, business categories, contact us
 [x] keep only twitter and linkedin for social media 
-[] add our clients section
+[x] add our clients section
 [] change pictures to icons
-[] update pictures in slider
+[x] update pictures in slider
+[x] add a differentiator between categories and services in the homepage
+[x] move mini logo to top for headings
+[x] remove mission/vision section and move text to headings
+[x] remove home from menu
+[] add instagram
+[] remove heading from contact us
+[x] add content from ad
+[x] add contacts to menu bar as "get started"
+[x] lighten colours in menu bar

@@ -1,225 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- page title -->
     <title> {% block title %}{% endblock %} </title>
 
-    <!-- stylesheets -->
-    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
-    <link rel="stylesheet" href="static/css/styles.css">
+    <link href="static/img/brand/symbol.jpg" rel="icon">
+    <link href="static/img/brand/symbol.jpg" rel="apple-touch-icon">
 
-    <!-- icons & fonts -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic">
-    <link href="static/icons/font-awesome/css/all.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
+    <!-- TODO: add/remove from old layout.html -->
+    <link href="static/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="static/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- TODO: replace css and js file paths with RZ ones -->
+    <link href="static/css/styles.css" rel="stylesheet">
 </head>
 
-<body id="page-top" class="container-fluid">
+<body>
 
-    <!-- navbar starts -->
-    <nav class="navbar navbar-light navbar-expand-lg" id="mainNav">
-        <div class="container-fluid">
+    <!-- nav bar -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center">
+            <a href="index.html" class="logo me-auto"><img src="static/img/brand/logo.jpg" alt="" class="img-fluid"></a>
 
-            <!-- brand image -->
-            <a class="navbar-brand js-scroll-trigger" href="{{ url_for('index') }}">
-                <img src="static/img/brand/logo.jpg" class="header-logo">
-            </a>
-
-            <!-- toggle menu icon -->
-            <button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
-                type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa fa-align-justify"></i></button>
-
-            <!-- navbar items start -->
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-
-                    <!-- HOME -->
-                    <li class="nav-item active" id="home-tab">
-                        <a class="nav-link color-red js-scroll-trigger" href="{{ url_for('index') }}">
-                            HOME
-                        </a>
-                    </li>
-
-                    <!-- ABOUT US -->
-                    <li class="nav-item" id="about-tab">
-                        <a class="nav-link color-blue js-scroll-trigger" href="#story">
-                            ABOUT US
-                        </a>
-                    </li>
-
-                    <!-- SERVICES -->
-                    <li class="nav-item" id="segments-tab">
-                        <a class="nav-link color-red js-scroll-trigger" href="#segments">
-                            BUSINESS SERVICES
-                        </a>
-                    </li>
-
-                    <!-- CATEGORIES -->
-                    <li class="nav-item" id="services-tab">
-                        <a class="nav-link color-blue js-scroll-trigger" href="#services">
-                            BUSINESS CATEGORIES
-                        </a>
-                    </li>
-
-                    <!-- CONTACT US -->
-                    <li class="nav-item" id="contact-tab">
-                        <a class="nav-link color-blue js-scroll-trigger" href="#contacts">
-                            CONTACT US
-                        </a>
-                    </li>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="#services">Business Services</a></li>
+                    <li><a href="#categories">Business Categories</a></li>
+                    <li><a href="#about"><span>About</span></a></li>
+                    <li><a href="https://www.linkedin.com/company/retailzip/"><i class="bx bxl-linkedin"></i></a></li>
+                    <li><a href="https://twitter.com/retail_zip"><i class="bx bxl-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/retailzip/"><i class="bx bxl-instagram"></i></a></li>
+                    <li><a href="#contact" class="getstarted">Get Started</a></li>
                 </ul>
-            </div>
-            <!-- navbar items end -->
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
         </div>
-    </nav>
-    <!-- navbar ends -->
+    </header>
 
-    <div class="contact-sticky">
-        <a href="{{ url_for('contact') }}">
-            <p class="text-center"></p>
-            <img src="static/img/brand/symbol.jpg">
-        </a>
-    </div>
 
     {% block body %}
     {% endblock %}
 
-    <!-- footer starts -->
-    <footer class="my-footer container-fluid">
-        <div class="row">
-
-            <!-- site map starts -->
-            <div class="col-lg-4 col-m-12" id="site-map">
-
-                <!-- site map heading -->
-                <h4> Site Map </h4>
-
-                <!-- site map links -->
-                <ul class="text-muted">
-                    <a href="{{ url_for('index') }}">
-                        <li>Home</li>
-                    </a>
-                    <a href="{{ url_for('services') }}">
-                        <li>Business Services</li>
-                    </a>
-                    <a href="{{ url_for('segments') }}">
-                        <li>Business Categories</li>
-                    </a>
-                    <a href="{{ url_for('about') }}">
-                        <li>About Us</li>
-                    </a>
-                    <a href="{{ url_for('contact') }}">
-                        <li>Contact Us</li>
-                    </a>
-                </ul>
-
-            </div>
-            <!-- site map ends -->
-
-            <!-- web connect starts -->
-            <div class="col-lg-4 col-m-12" id="middle">
-
-                <!-- web connect heading -->
-                <h4>Web Connects</h4>
-                <span class="oi oi-account-login" title="icon name" aria-hidden="true"></span>
-
-                <!-- web connect icons start -->
-                <div class="icons">
-
-                    <!-- socials start -->
-                    <ul class="list-inline">
-                        <!-- twitter -->
-                        <li class="list-inline-item">
-                            <a href="https://twitter.com/retail_zip" target="_blank">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-
-                        <!-- linkedin -->
-                        <li class="list-inline-item">
-                            <a href="https://www.linkedin.com/company/retailzip/" target="_blank">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <!-- addresses start -->
-                    <table>
-                        <!-- email -->
-                        <tr>
-                            <td><i class="fas fa-at"></i></td>
-                            <td><span><a href="mailto:manish@retailzip.in">manish@retailzip.in</a></span></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-phone-alt"></i></td>
-                            <td><span style="color: #ee4631">+91 9339725675</span></td>
-                        </tr>
-                        <tr>
-                            <td><i class="fab fa-whatsapp"></i></td>
-                            <td><span style="color: #ee4631">+91 9339725675</span></td>
-                        </tr>
-                    </table>
-                    <!-- addresses end -->
-
-                </div>
-                <!-- web connect icons end -->
-            </div>
-            <!-- web connect ends -->
-
-            <!-- help starts -->
-            <div class="col-lg-4 col-m-12" id="contact-generic">
-
-                <!-- help heading -->
-                <h4>Can I Help You</h4>
-
-                <!-- help links start -->
-                <ul class="text-muted">
-                    <a href="{{ url_for('contact') }}">
-                        <li>Visit the Contact Us page</li>
-                    </a>
-                    <a href="{{ url_for('about') }}">
-                        <li>Visit the About Us Page</li>
-                    </a>
-                </ul>
-                <!-- help links end -->
-            </div>
-            <!-- help ends -->
-        </div>
-
-    </footer>
-    <!-- footer ends  -->
-
-    <!-- credits start -->
-    <div id="credits">
-        <b>Design & Development:</b> Shreya Agarwal
-        <span>|</span>
-        <b>Brand Creatives:</b> Rajarshi Bhattacharyya (Sacred)
-        <span>|</span>
-        <b>Support:</b> Satrajit Bhattacharya
-        <span>|</span>
-        <b><i class="far fa-copyright"></i></b>
-        All rights reserved by <b>RetailZip Private Limited, India</b>
-    </div>
-    <!-- credits end -->
-
-    <!-- js files -->
-    <script src="static/js/jquery.min.js"></script>
-    <script src="static/bootstrap/js/bootstrap.min.js"></script>
-    <script src="static/js/bs-init.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <script src="static/js/creative.js"></script>
 </body>
 
 </html>

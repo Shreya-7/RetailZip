@@ -310,7 +310,7 @@
         "S16": {
             "service_name": "Brand Playbook",
             "mini_description": "Vision, Mission, Target Customer, Product & Pricing",
-            "extended_description": "Creating Brand Strategy to connect with Target Customer Segments",
+            "extended_description": "Creating Brand Strategy to connect with Target Customer categories",
             "image": "brand.jpg",
             "bg_color": "#e8e8e6",
             "sub_services": [
@@ -348,7 +348,7 @@
             ]
         }
     },
-    "segments": {
+    "categories": {
         "B3": {
             "segment_name": "Fashion",
             "retail_type": "Fashion Store",
@@ -420,6 +420,28 @@
             "retail_type": "Malls & Shopping Complexes",
             "image": "leasing.jpg",
             "product_categories": "Shopping, Entertainment, Movies & Food"
+        }
+    },
+    "service-model": {
+        "M1": {
+            "stage": "Business Understanding",
+            "description": "Data Understanding, Brand Ambition, Improvement & Growth Areas"
+        },
+        "M2": {
+            "stage": "Finalize Scope of Work",
+            "description": "Define, Agree and Prioritise Scope of Work"
+        },
+        "M3": {
+            "stage": "Goals & Timelines",
+            "description": "Long Term & Short Term Goals with Milestones & Action Plans"
+        },
+        "M4": {
+            "stage": "Commercials & Contracts",
+            "description": "Nature of Engagement, Consulting Fee and Contract Signing"
+        },
+        "M5": {
+            "stage": "Collaborate, Review & Grow",
+            "description": "Actions, Execution and Review"
         }
     },
     "about-us": {

@@ -38,12 +38,16 @@ def get_data(path='json/data.json'):
     return json.load(open(path))
 
 
-def get_segments():
-    return get_data()['segments']
+def get_categories():
+    return get_data()['categories']
 
 
 def get_retail_services():
     return get_data()['retail-services']
+
+
+def get_service_model():
+    return get_data()['service-model']
 
 
 def get_about_us():
@@ -55,8 +59,9 @@ def get_main_content():
         Get cherry-picked content from the JSON file for the main page
     """
     data = {}
-    data['business'] = get_segments()
+    data['business'] = get_categories()
     data['service'] = get_retail_services()
+    data['service_model'] = get_service_model()
     return data
 
 
@@ -71,4 +76,4 @@ def get_business(id):
     """
         Gets the details of a particular business based on the ID from the JSON file
     """
-    return get_data()['segments'][id]
+    return get_data()['categories'][id]
