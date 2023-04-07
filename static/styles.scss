@@ -29,7 +29,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Raleway", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .back-to-top {
@@ -309,16 +309,16 @@ h6 {
 }
 
 #slider {
+    margin-top: 80px;
     width: 100%;
-    height: 100vh;
-    background-color: rgba(63, 73, 83, 0.8);
+    height: 90vh;
     overflow: hidden;
     position: relative;
 
     .carousel,
     .carousel-inner {
         position: absolute;
-        top: 0;
+        top: 20px;
         right: 0;
         left: 0;
         bottom: 0;
@@ -338,7 +338,6 @@ h6 {
             left: 0;
             bottom: 0;
             content: "";
-            background-color: rgba(30, 35, 40, 0.6);
         }
 
         background-size: cover;
@@ -536,19 +535,17 @@ section {
     }
 }
 
-.categories .icon-box {
+.icon-box {
     margin-bottom: 20px;
-    padding: 30px;
+    padding: 25px;
     border-radius: 6px;
 
-    i {
-        float: left;
-        color: $color-logo-red;
-        font-size: 40px;
+    .img {
+        width: 70px;
+        height: auto;
     }
 
     h4 {
-        margin-left: 70px;
         font-weight: 700;
         margin-bottom: 15px;
         font-size: 18px;
@@ -560,13 +557,17 @@ section {
     }
 
     p {
-        margin-left: 70px;
         line-height: 24px;
         font-size: 14px;
     }
 
-    &:hover h4 a {
-        color: $color-logo-red;
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 0 60px 0 rgba(72, 86, 100, 0.1);
+
+        h4 a {
+            color: $color-logo-blue;
+        }
     }
 }
 
@@ -577,6 +578,16 @@ section {
 
     &:hover h4 a {
         color: $color-logo-blue;
+    }
+}
+
+#categories .icon-box {
+    i {
+        color: $color-logo-red;
+    }
+
+    &:hover h4 a {
+        color: $color-logo-red;
     }
 }
 

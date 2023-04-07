@@ -12,16 +12,7 @@
 
         <div class="carousel-inner" role="listbox">
 
-            <!-- Slide 1 -->
-            <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg)">
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg)">
+            <div class="carousel-item active" style="background-image: url(static/img/banner_wa.jpg)">
             </div>
 
         </div>
@@ -70,40 +61,17 @@
         </div>
     </section>
 
-    <!-- clients -->
+    <!-- clients 
     <section id="clients" class="clients section-bg">
         <div class="container">
-
             <div class="row">
-
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                     <img src="static/img/clients/client-1.png" class="img-fluid" alt="">
                 </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="static/img/clients/client-2.png" class="img-fluid" alt="">
                 </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="static/img/clients/client-3.png" class="img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="static/img/clients/client-4.png" class="img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="static/img/clients/client-5.png" class="img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="static/img/clients/client-6.png" class="img-fluid" alt="">
-                </div>
-
             </div>
-
         </div>
-    </section>
+    </section> -->
 
     <!-- services -->
     <section id="services" class="categories">
@@ -117,27 +85,16 @@
             <div class="row">
 
                 {% for key, value in services.items() %}
-                    <!-- <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="service-item">
-                            <div class="img">
+                    <div class="col-md-4 mt-4 mt-md-0 icon-box">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-3 img">
                                 <img src="static/img/services/{{ value.image }}" class="img-fluid" alt="">
+                                
                             </div>
-                            <div class="details position-relative">
-                                <div class="icon">
-                                    <i class="bi bi-activity"></i>
-                                </div>
-                                <a href="#" class="stretched-link">
-                                    <h3>{{ value.service_name }}</h3>
-                                </a>
-                                <p>{{ value.mini_description | safe }}</p>
+                            <div class="col-lg-9 col-md-9 col-sm-9">
+                                <h4>{{ value.service_name }}</h4>
+                                <p>{{ value.mini_description }}</p>
                             </div>
-                        </div>
-                    </div> -->
-                    <div class="col-md-4 mt-4 mt-md-0">
-                        <div class="icon-box">
-                            <i class="bi bi-card-checklist"></i>
-                            <h4>{{ value.service_name }}</h4>
-                            <p>{{ value.mini_description }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -157,11 +114,16 @@
 
             <div class="row">
                 {% for key, category in business.items() %}
-                <div class="col-md-4 mt-4 mt-md-0">
-                    <div class="icon-box">
-                        <i class="bi bi-card-checklist"></i>
-                        <h4>{{ category.segment_name }}</h4>
-                        <p>{{ category.retail_type }}</p>
+                <div class="col-md-4 mt-4 mt-md-0 icon-box">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 img">
+                            <img src="static/img/categories/{{ category.image }}" class="img-fluid" alt="">
+                            
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9">
+                            <h4>{{ category.segment_name }}</h4>
+                            <p>{{ category.product_categories }}</p>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
@@ -180,10 +142,15 @@
             <div class="row gy-4">
                 {% for key, value in model.items() %}
                 <div class="col-xl-4 col-md-4 d-flex" data-aos="zoom-out" data-aos-delay="200">
-                    <div class="service-item position-relative">
-                        <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-                        <h4><a href="" class="stretched-link">{{ value.stage }} </a></h4>
-                        <p>{{ value.description }}</p>
+                    <div class="row service-item position-relative icon-box">
+                        <div class="col-lg-3 col-md-3 col-sm-3 img">
+                            <img src="static/img/model/{{ value.image }}" class="img-fluid" alt="">
+                            
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9">
+                            <h4>{{ value.stage }}</h4>
+                            <p>{{ value.description }}</p>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
@@ -328,68 +295,5 @@
 
 
 </main>
-
-<!-- footer -->
-<footer id="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-6 col-md-6">
-                    <div class="footer-info">
-                        <h3>RetailZip</h3>
-                        <p>
-                            <strong>Phone:</strong> +91 9339725675<br>
-                            <strong>Email:</strong> manish@retailzip.in<br>
-                        </p>
-                        <div class="social-links mt-3">
-                            <a href="https://www.linkedin.com/company/retailzip/" class="linkedin"><i
-                                    class="bx bxl-linkedin"></i></a>
-                            <a href="https://twitter.com/retail_zip" class="twitter"><i
-                                    class="bx bxl-twitter"></i></a>
-                            <a href="https://www.instagram.com/retailzip/" class="instagram"><i class="bx bxl-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#story">About</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#services">Business Services</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#categories">Business Categories</a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="copyright">
-            <b>Development:</b> Shreya Agarwal
-            <span>|</span>
-            <b>Brand Creatives:</b> Rajarshi Bhattacharyya (Sacred)
-            <span>|</span>
-            <b>Support:</b> Satrajit Bhattacharya
-            <span>|</span>
-            <b><i class="far fa-copyright"></i></b>
-            All rights reserved by <b>RetailZip Pvt Ltd, India</b>
-        </div>
-    </div>
-</footer>
-
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
-
-<script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="static/vendor/aos/aos.js"></script>
-<script src="static/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="static/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="static/vendor/waypoints/noframework.waypoints.js"></script>
-
-<script src="static/js/main.js"></script>
-<script src="static/js/contact-short.js"></script>
 
 {% endblock %}
