@@ -207,6 +207,12 @@ h6 {
     .navbar ul {
         display: none;
     }
+
+    .navbar i {
+        margin-left: 0px !important;
+        margin-top: 0px !important;
+        margin-bottom: 10px;
+    }
 }
 
 .navbar-mobile {
@@ -469,6 +475,7 @@ section {
 }
 
 .section-bg,
+.service-model .icon-box,
 .categories .icon-box {
     background-color: #f8f9fa;
 }
@@ -512,19 +519,16 @@ section {
 }
 
 .clients {
-    padding: 15px 0;
-    text-align: center;
+    padding: 0 0 60px 0;
 
-    img {
-        max-width: 45%;
-        transition: all 0.4s ease-in-out;
-        display: inline-block;
-        padding: 15px 0;
+    .swiper-slide img {
+        opacity: 0.5;
+        transition: 0.3s;
         filter: grayscale(100);
 
         &:hover {
             filter: none;
-            transform: scale(1.15);
+            opacity: 1;
         }
     }
 }
@@ -532,6 +536,10 @@ section {
 @media (max-width: 768px) {
     .clients img {
         max-width: 40%;
+    }
+
+    .swiper-slide {
+        margin-right: 50px !important;
     }
 }
 
@@ -844,7 +852,7 @@ section {
 
         textarea {
             padding: 10px 12px;
-            height: 290px;
+            height: 225px;
         }
 
         button[type=submit] {

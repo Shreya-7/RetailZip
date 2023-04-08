@@ -141,7 +141,12 @@ h6 {
     display: block; }
 
   .navbar ul {
-    display: none; } }
+    display: none; }
+
+  .navbar i {
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 10px; } }
 .navbar-mobile {
   position: fixed;
   overflow: hidden;
@@ -313,6 +318,7 @@ section {
   overflow: hidden; }
 
 .section-bg,
+.service-model .icon-box,
 .categories .icon-box {
   background-color: #f8f9fa; }
 
@@ -342,21 +348,21 @@ section {
   margin-bottom: 0; }
 
 .clients {
-  padding: 15px 0;
-  text-align: center; }
-  .clients img {
-    max-width: 45%;
-    transition: all 0.4s ease-in-out;
-    display: inline-block;
-    padding: 15px 0;
+  padding: 0 0 60px 0; }
+  .clients .swiper-slide img {
+    opacity: 0.5;
+    transition: 0.3s;
     filter: grayscale(100); }
-    .clients img:hover {
+    .clients .swiper-slide img:hover {
       filter: none;
-      transform: scale(1.15); }
+      opacity: 1; }
 
 @media (max-width: 768px) {
   .clients img {
-    max-width: 40%; } }
+    max-width: 40%; }
+
+  .swiper-slide {
+    margin-right: 50px !important; } }
 .icon-box {
   margin-bottom: 20px;
   padding: 25px;
@@ -552,7 +558,7 @@ section {
     padding: 10px 15px; }
   .contact .email-form textarea {
     padding: 10px 12px;
-    height: 290px; }
+    height: 225px; }
   .contact .email-form button[type=submit] {
     background: #0f60b2;
     border: 0;

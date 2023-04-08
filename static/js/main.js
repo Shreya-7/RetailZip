@@ -104,82 +104,33 @@
             myCarouselIndicators.innerHTML += "<li data-bs-target='#myCarousel' data-bs-slide-to='" + index + "'></li>"
     });
 
-    /**
-     * Porfolio isotope and filter
-     */
-    window.addEventListener('load', () => {
-        let portfolioContainer = select('.portfolio-container');
-        if (portfolioContainer) {
-            let portfolioIsotope = new Isotope(portfolioContainer, {
-                itemSelector: '.portfolio-item'
-            });
-
-            let portfolioFilters = select('#portfolio-flters li', true);
-
-            on('click', '#portfolio-flters li', function (e) {
-                e.preventDefault();
-                portfolioFilters.forEach(function (el) {
-                    el.classList.remove('filter-active');
-                });
-                this.classList.add('filter-active');
-
-                portfolioIsotope.arrange({
-                    filter: this.getAttribute('data-filter')
-                });
-            }, true);
-        }
-
-    });
-
-    /**
-     * Initiate portfolio lightbox 
-     */
-    const portfolioLightbox = GLightbox({
-        selector: '.portfolio-lightbox'
-    });
-
-    /**
-     * Portfolio details slider
-     */
-    new Swiper('.portfolio-details-slider', {
+    new Swiper('.clients-slider', {
         speed: 400,
         loop: true,
         autoplay: {
             delay: 5000,
             disableOnInteraction: false
         },
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true
+        slidesPerView: 'auto',
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 40
+            },
+            480: {
+                slidesPerView: 3,
+                spaceBetween: 60
+            },
+            640: {
+                slidesPerView: 4,
+                spaceBetween: 80
+            },
+            992: {
+                slidesPerView: 6,
+                spaceBetween: 120
+            }
         }
     });
-
-    /**
-     * Initiate portfolio details lightbox 
-     */
-    const portfolioDetailsLightbox = GLightbox({
-        selector: '.portfolio-details-lightbox',
-        width: '90%',
-        height: '90vh'
-    });
-
-    /**
-     * Skills animation
-     */
-    let skilsContent = select('.skills-content');
-    if (skilsContent) {
-        new Waypoint({
-            element: skilsContent,
-            offset: '80%',
-            handler: function (direction) {
-                let progress = select('.progress .progress-bar', true);
-                progress.forEach((el) => {
-                    el.style.width = el.getAttribute('aria-valuenow') + '%'
-                });
-            }
-        })
-    }
 
 
     /**
