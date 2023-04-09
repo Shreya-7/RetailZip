@@ -32,7 +32,7 @@ h6 {
     font-family: "Poppins", sans-serif;
 }
 
-.back-to-top {
+s .back-to-top {
     position: fixed;
     visibility: hidden;
     opacity: 0;
@@ -159,6 +159,19 @@ h6 {
 
     li:hover>a {
         color: $color-logo-red;
+    }
+
+
+    .linkedin:hover {
+        color: #0e76a8;
+    }
+
+    .twitter:hover {
+        color: #00acee;
+    }
+
+    .instagram:hover {
+        color: #d62976;
     }
 
     .getstarted {
@@ -346,7 +359,7 @@ h6 {
             content: "";
         }
 
-        background-size: cover;
+        background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -439,7 +452,7 @@ h6 {
 
 @media (max-width: 992px) {
     #slider {
-        height: 100vh;
+        height: 22vh;
 
         .carousel-container {
             top: 8px;
@@ -475,9 +488,26 @@ section {
 }
 
 .section-bg,
+.services .icon-box,
+.intro .icon-box,
 .service-model .icon-box,
 .categories .icon-box {
     background-color: #f8f9fa;
+}
+
+.social-links,
+.social {
+    .linkedin:hover {
+        background: #0e76a8 !important;
+    }
+
+    .twitter:hover {
+        background: #00acee !important;
+    }
+
+    .instagram:hover {
+        background: #d62976 !important;
+    }
 }
 
 .intro .content {
@@ -513,13 +543,17 @@ section {
         }
     }
 
+    .icon-box {
+        padding: 10px;
+    }
+
     p:last-child {
         margin-bottom: 0;
     }
 }
 
 .clients {
-    padding: 0 0 60px 0;
+    padding: 10px 0 10px 0;
 
     .swiper-slide img {
         opacity: 0.5;
@@ -658,7 +692,7 @@ section {
         a {
             transition: color 0.3s;
             color: $color-white;
-            background: $color-logo-blue;
+            background: $color-secondary;
             margin: 0 5px;
             display: inline-flex;
             align-items: center;
@@ -671,10 +705,6 @@ section {
             i {
                 line-height: 0;
                 font-size: 16px;
-            }
-
-            &:hover {
-                background: $color-logo-blue;
             }
         }
 
@@ -772,6 +802,7 @@ section {
             color: $color-secondary-light;
             margin-bottom: 30px;
             font-size: 15px;
+            font-weight: bold;
         }
     }
 
@@ -982,7 +1013,7 @@ section {
                 font-size: 14px;
                 line-height: 24px;
                 margin-bottom: 0;
-                font-family: "Raleway", sans-serif;
+                font-family: "Poppins", sans-serif;
                 color: $color-white;
             }
         }
@@ -1001,11 +1032,11 @@ section {
             height: 36px;
             transition: 0.3s;
 
-            &:hover {
-                background: $color-logo-red;
-                color: $color-white;
-                text-decoration: none;
-            }
+            // &:hover {
+            //     background: $color-logo-red;
+            //     color: $color-white;
+            //     text-decoration: none;
+            // }
         }
 
         h4 {

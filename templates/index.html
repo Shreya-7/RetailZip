@@ -48,13 +48,22 @@
                         and profitable
                         way.
                     </p>
-                    <ul>
-                        <li><i class="ri-check-double-line"></i> Services for managing and growing Retail Business
-                        </li>
-                        <li><i class="ri-check-double-line"></i> Serving needs of Retail Business Categories and
-                            Formats</li>
-                        <li><i class="ri-check-double-line"></i> Spreading Retail Literacy</li>
-                    </ul>
+                    <div class="container">
+                            {% for key, value in content.items() %}
+                        <div class="row gy-4 justify-content-center">
+                            <div class="col-12 icon-box">
+                                <div class="row">
+                                    <div class="col-3 img">
+                                        <img src="static/img/about/{{ value.image }}" class="img-fluid" alt="">                      
+                                    </div>
+                                    <div class="col-9">
+                                        <p>{{ value.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            {% endfor %}
+                    </div>
                 </div>
             </div>
 
@@ -76,10 +85,10 @@
                         <img src="static/img/clients/style bazaar.png" class="img-fluid" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="static/img/clients/sanvi.jpg" class="img-fluid" alt="">
+                        <img src="static/img/clients/zedd.png" class="img-fluid" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="static/img/clients/zedd.png" class="img-fluid" alt="">
+                        <img src="static/img/clients/sanvi.jpg" class="img-fluid" alt="">
                     </div>
                     <div class="swiper-slide">
                         <img src="static/img/clients/glg.png" class="img-fluid" alt="">
@@ -93,7 +102,7 @@
     </section>
 
     <!-- services -->
-    <section id="services" class="categories">
+    <section id="services" class="services">
         <div class="container" data-aos="fade-up">
 
             <div class="section-header">
@@ -125,7 +134,7 @@
 
     <!-- categories -->
     <section id="categories" class="categories">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <div class="section-header">
                 <h2>Business Categories</h2>
                 <br>
@@ -153,7 +162,7 @@
 
     <!-- service model -->
     <section id="service-model" class="service-model">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <div class="section-header">
                 <h2>Service Model</h2>
                 <br>
@@ -173,7 +182,6 @@
                     </div>
                 </div>
                 {% endfor %}
-
             </div>
 
         </div>
@@ -218,10 +226,10 @@
                     <div class="team-member">
                         <div class="member-info">
                             <div class="social">
-                                <a href="https://www.linkedin.com/in/manish-agarwal-01b684217"><i
+                                <a href="https://www.linkedin.com/in/manish-agarwal-01b684217" class="linkedin"><i
                                         class="bi bi-linkedin"></i></a>
-                                <a href="https://twitter.com/manishagarwal20"><i class="bi bi-twitter"></i></a>
-                                <a href="https://www.instagram.com/retailzip/"><i class="bi bi-instagram"></i></a>
+                                <a href="https://twitter.com/manishagarwal20" class="twitter"><i class="bi bi-twitter"></i></a>
+                                <a href="https://www.instagram.com/retailzip/" class="instagram"><i class="bi bi-instagram"></i></a>
                             </div>
                             <h4>Manish Agarwal</h4>
                             <span>Founder</span>

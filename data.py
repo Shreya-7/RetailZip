@@ -51,7 +51,7 @@ def get_service_model():
 
 
 def get_about_us():
-    return get_data()['about-us']
+    return get_data()['intro']
 
 
 def get_main_content():

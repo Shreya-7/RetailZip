@@ -17,7 +17,7 @@ h5,
 h6 {
   font-family: "Poppins", sans-serif; }
 
-.back-to-top {
+s .back-to-top {
   position: fixed;
   visibility: hidden;
   opacity: 0;
@@ -29,14 +29,14 @@ h6 {
   height: 40px;
   border-radius: 4px;
   transition: all 0.4s; }
-  .back-to-top i {
+  s .back-to-top i {
     font-size: 28px;
     color: #ffffff;
     line-height: 0; }
-  .back-to-top:hover {
+  s .back-to-top:hover {
     background: #e24d55;
     color: #ffffff; }
-  .back-to-top.active {
+  s .back-to-top.active {
     visibility: visible;
     opacity: 1; }
 
@@ -108,6 +108,12 @@ h6 {
       color: #ee4631; }
   .navbar li:hover > a {
     color: #ee4631; }
+  .navbar .linkedin:hover {
+    color: #0e76a8; }
+  .navbar .twitter:hover {
+    color: #00acee; }
+  .navbar .instagram:hover {
+    color: #d62976; }
   .navbar .getstarted {
     background: #0f60b2;
     padding: 8px 25px;
@@ -232,7 +238,7 @@ h6 {
     right: 0;
     left: 0;
     bottom: 0;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat; }
     #slider .carousel-item::before {
@@ -300,7 +306,7 @@ h6 {
 
 @media (max-width: 992px) {
   #slider {
-    height: 100vh; }
+    height: 22vh; }
     #slider .carousel-container {
       top: 8px; } }
 @media (max-width: 768px) {
@@ -318,9 +324,21 @@ section {
   overflow: hidden; }
 
 .section-bg,
+.services .icon-box,
+.intro .icon-box,
 .service-model .icon-box,
 .categories .icon-box {
   background-color: #f8f9fa; }
+
+.social-links .linkedin:hover,
+.social .linkedin:hover {
+  background: #0e76a8 !important; }
+.social-links .twitter:hover,
+.social .twitter:hover {
+  background: #00acee !important; }
+.social-links .instagram:hover,
+.social .instagram:hover {
+  background: #d62976 !important; }
 
 .intro .content h2 {
   font-weight: 700;
@@ -344,11 +362,13 @@ section {
     position: absolute;
     font-size: 20px;
     color: #ee4631; }
+.intro .content .icon-box {
+  padding: 10px; }
 .intro .content p:last-child {
   margin-bottom: 0; }
 
 .clients {
-  padding: 0 0 60px 0; }
+  padding: 10px 0 10px 0; }
   .clients .swiper-slide img {
     opacity: 0.5;
     transition: 0.3s;
@@ -437,7 +457,7 @@ section {
   .team-member .social a {
     transition: color 0.3s;
     color: #ffffff;
-    background: #0f60b2;
+    background: #485664;
     margin: 0 5px;
     display: inline-flex;
     align-items: center;
@@ -449,8 +469,6 @@ section {
     .team-member .social a i {
       line-height: 0;
       font-size: 16px; }
-    .team-member .social a:hover {
-      background: #0f60b2; }
   .team-member .social i {
     font-size: 18px;
     margin: 0 2px; }
@@ -515,7 +533,8 @@ section {
   .contact .info p {
     color: #8f9fae;
     margin-bottom: 30px;
-    font-size: 15px; }
+    font-size: 15px;
+    font-weight: bold; }
 .contact .info-item + .info-item {
   padding-top: 20px;
   margin-top: 20px;
@@ -646,7 +665,7 @@ section {
         font-size: 14px;
         line-height: 24px;
         margin-bottom: 0;
-        font-family: "Raleway", sans-serif;
+        font-family: "Poppins", sans-serif;
         color: #ffffff; }
     #footer .footer-top .social-links a {
       font-size: 18px;
@@ -661,10 +680,6 @@ section {
       width: 36px;
       height: 36px;
       transition: 0.3s; }
-      #footer .footer-top .social-links a:hover {
-        background: #ee4631;
-        color: #ffffff;
-        text-decoration: none; }
     #footer .footer-top h4 {
       font-size: 16px;
       font-weight: 600;

@@ -210,21 +210,18 @@
             "image": "collaborate, review & grow.png"
         }
     },
-    "about-us": {
-        "work": {
-            "image": "services.jpg",
-            "points": {
-                "Business Services": "Services for managing and growing retail business",
-                "Business Categories": "Serving needs of Retail business categories and formats",
-                "Business Education": "Spreading Retail Literacy"
-            }
+    "intro": {
+        "I1": {
+            "description": "Services for managing and growing Retail Business",
+            "image": "services.png"
         },
-        "founder": [
-            "<span class='color-blue'>A Retail Professional with 25 years of experience with Future Group in Retail Development and Management.</span> Experience in managing retail stores spread across more than 35 Lac sq ft space in more than 50 cities of India.",
-            "Real Estate, Sales & Operations, Marketing & Communication, Business Planning & Review, Customer Data Analytics & Loyalty Programs, People Management, Stakeholder Management & Ownership of PnL and incubating Delivery Commerce and Omni channel business for Big Bazaar.",
-            "Passed Chartered Accountancy in 1996. Graduated from Saint Xavier’s College, Kolkata in 1992.",
-            "Strong belief in the principles of Ownership, Respect, Honesty, Simplicity & Supporting people.",
-            "As <span class='color-red'>Founder of RetailZip</span>, desire to work with Entrepreneurs for providing solutions for their Retail business and creating new Retail Destinations."
-        ]
+        "I2": {
+            "description": "Serving needs of Retail Business Categories and Formats",
+            "image": "category.png"
+        },
+        "I3": {
+            "description": "Spreading Retail Literacy",
+            "image": "literacy.png"
+        }
     }
 }
