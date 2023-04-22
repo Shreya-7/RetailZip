@@ -7,7 +7,7 @@ import os
 import traceback
 import re
 from datetime import datetime
-from data import get_next_request_number, get_data, get_retail_services, get_service, get_segments, get_main_content, get_about_us, domain_mapper
+from data import get_next_request_number, get_data, get_retail_services, get_service, get_categories, get_main_content, get_about_us, domain_mapper
 from emails import send_email
 
 app = Flask('app', static_url_path='/static')
@@ -69,10 +69,14 @@ def contact_form():
 @misc_error
 @redirect_to_https
 def index():
+    print("os env", os.getenv('MONGO_URL'))
+    print("connection string: ",  client)
     data = get_main_content()
     return render_template('index.html',
                            business=data['business'],
-                           services=data['service'])
+                           services=data['service'],
+                           model=data['service_model'],
+                           content=get_about_us())
 
 
 @app.route('/services')
@@ -96,8 +100,8 @@ def service():
 @app.route('/verticals')
 @misc_error
 @redirect_to_https
-def segments():
-    return render_template('segments.html', segments=get_segments())
+def categories():
+    return render_template('categories.html', categories=get_categories())
 
 
 @app.route('/about')
@@ -119,5 +123,5 @@ def contact():
 @redirect_to_https
 def consult():
     return render_template('consult.html',
-                           business=get_segments(),
+                           business=get_categories(),
                            services=get_retail_services())
