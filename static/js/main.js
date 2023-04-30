@@ -1,10 +1,3 @@
-/**
-* Template Name: Sailor
-* Updated: Mar 10 2023 with Bootstrap v5.2.3
-* Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function () {
     "use strict";
 
@@ -77,10 +70,20 @@
      * Mobile nav toggle
      */
     on('click', '.mobile-nav-toggle', function (e) {
-        select('#navbar').classList.toggle('navbar-mobile')
-        this.classList.toggle('bi-list')
-        this.classList.toggle('bi-x')
+        performMobileNavToggle()
     })
+
+    on('click', '#navbar a', function (e) {
+        if (select('#navbar').classList.contains('navbar-mobile')) {
+            performMobileNavToggle()
+        }
+    }, true)
+
+    function performMobileNavToggle() {
+        select('#navbar').classList.toggle('navbar-mobile')
+        select('.mobile-nav-toggle').classList.toggle('bi-list')
+        select('.mobile-nav-toggle').classList.toggle('bi-x')
+    }
 
     /**
      * Mobile nav dropdowns activate
@@ -108,7 +111,7 @@
         speed: 400,
         loop: true,
         autoplay: {
-            delay: 5000,
+            delay: 2000,
             disableOnInteraction: false
         },
         slidesPerView: 'auto',
