@@ -8,6 +8,10 @@ $color-muted-red: #e24d55;
 $color-white: #ffffff;
 $color-gray: #6c757d;
 
+html {
+    scroll-padding-top: 80px;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     color: $color-secondary;

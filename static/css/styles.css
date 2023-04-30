@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 80px;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #485664;
