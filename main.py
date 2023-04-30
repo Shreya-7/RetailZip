@@ -69,8 +69,6 @@ def contact_form():
 @misc_error
 @redirect_to_https
 def index():
-    print("os env", os.getenv('MONGO_URL'))
-    print("connection string: ",  client)
     data = get_main_content()
     return render_template('index.html',
                            business=data['business'],
